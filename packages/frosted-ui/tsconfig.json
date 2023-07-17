@@ -7,5 +7,5 @@
     "target": "ESNEXT",
     "module": "es2020"
   },
-  "include": ["src/**/*.ts"],
+  "include": ["components/**/*.ts", "lib/**/*.ts", "index.ts"]
 }
