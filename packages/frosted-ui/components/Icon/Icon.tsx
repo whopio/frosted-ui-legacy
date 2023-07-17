@@ -8,11 +8,16 @@ import { IconDefinition } from '../../lib/icon-types';
 export interface IconProps {
   icon: IconDefinition;
   className?: string;
-  size?: FontAwesomeIconProps['size'];
+  fontawesomeSize?: FontAwesomeIconProps['size'];
 }
 
-export const Icon = ({ icon, size, className }: IconProps) => {
+export const Icon = ({ icon, fontawesomeSize, className }: IconProps) => {
   return (
-    <FontAwesomeIcon icon={icon} size={size} className={className} fixedWidth />
+    <FontAwesomeIcon
+      icon={icon}
+      size={fontawesomeSize}
+      className={className}
+      fixedWidth
+    />
   );
 };
