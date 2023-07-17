@@ -2,8 +2,8 @@ import {
   FontAwesomeIcon,
   FontAwesomeIconProps,
 } from '@fortawesome/react-fontawesome';
-import { IconDefinition } from '@lib/icon-types';
 import React from 'react';
+import { IconDefinition } from '../../lib/icon-types';
 
 export interface IconProps {
   icon: IconDefinition;

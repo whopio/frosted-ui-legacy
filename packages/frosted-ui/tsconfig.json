@@ -5,11 +5,7 @@
     "declarationMap": false,
     "downlevelIteration": true,
     "target": "ESNEXT",
-    "module": "es2020",
-    "baseUrl": ".",
-    "paths": {
-      "@lib/*": ["lib/*"]
-    }
+    "module": "es2020"
   },
   "include": ["components/**/*.{tsx,ts}", "lib/**/*.ts", "index.ts"]
 }
