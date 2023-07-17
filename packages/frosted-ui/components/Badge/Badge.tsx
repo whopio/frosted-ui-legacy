@@ -1,5 +1,5 @@
-import { cn } from '../../lib/classnames';
-import { ColorScheme, Size } from '../../lib/shared-component-types';
+import { cn } from '@lib/classnames';
+import { ColorScheme, Size } from '@lib/shared-component-types';
 
 export type BadgeSize = Extract<Size, 'sm' | 'md'>;
 export const BadgeSizes: { [key: string]: BadgeSize } = {
