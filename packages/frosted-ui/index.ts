@@ -59,3 +59,4 @@ export * from "./components/RadioGroup";
 export * from "./components/RadioItem";
 export * from "./components/RadioCardItem";
 export * from "./components/RadioCardGroup";
+export * from "./components/Skeleton";
