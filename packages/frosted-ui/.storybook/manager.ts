@@ -7,31 +7,21 @@ const customWhopTheme = create({
   brandUrl: 'https://whop.com',
   brandImage: 'https://i.imgur.com/5xPi7Gj.png',
 
+  barBg: '#ffffff',
+  barTextColor: '#0e0e0f',
+  barSelectedColor: '#ff6243',
+
+  appContentBg: '#ffffff',
+  appBg: '#ffffff',
+  appBorderColor: '#e8e8e8',
+  appBorderRadius: 8,
+  textColor: '#0e0e0f',
+  textInverseColor: '#ffffff',
+
   // Base colors
   colorPrimary: '#ff6243',
   colorSecondary: '#625bf6',
 });
-
-// // UI
-// appBg: '#ffffff',
-// appContentBg: '#ffffff',
-// appBorderColor: '#585C6D',
-// appBorderRadius: 4,
-
-// // Text colors
-// textColor: '#10162F',
-// textInverseColor: '#ffffff',
-
-// // Toolbar default and active colors
-// barTextColor: '#9E9E9E',
-// barSelectedColor: '#585C6D',
-// barBg: '#ffffff',
-
-// // Form colors
-// inputBg: '#ffffff',
-// inputBorder: '#10162F',
-// inputTextColor: '#10162F',
-// inputBorderRadius: 2,
 
 addons.setConfig({
   theme: customWhopTheme,
