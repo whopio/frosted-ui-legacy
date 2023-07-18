@@ -5,7 +5,6 @@
   "private": false,
   "main": "index.js",
   "types": "index.d.ts",
-  "type": "module",
   "scripts": {
     "build": "concurrently \"pnpm run build:tsc\" \"pnpm run build:swc\"",
     "build:tsc": "tsc --emitDeclarationOnly",
@@ -20,7 +19,8 @@
     "vite-build": "tsc && vite build",
     "vite-preview": "vite preview",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "create": "npx turbo gen create-component"
   },
   "keywords": [],
   "author": "",
