@@ -40,3 +40,10 @@ export * from './components/Tag';
 export * from './components/TextButton';
 export * from './components/Tooltip';
 export * from './components/TooltipProvider';
+
+export * from "./components/HorizontalTabGroup";
+export * from "./components/HorizontalTabGroupContext";
+export * from "./components/HorizontalTabList";
+export * from "./components/HorizontalTabListItem";
+export * from "./components/HorizontalTabPanel";
+export * from "./components/HorizontalTabPanelGroup";
