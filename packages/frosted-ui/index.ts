@@ -57,3 +57,5 @@ export * from "./components/ModalDefaultFooter";
 export * from "./components/NumberInput";
 export * from "./components/RadioGroup";
 export * from "./components/RadioItem";
+export * from "./components/RadioCardItem";
+export * from "./components/RadioCardGroup";
