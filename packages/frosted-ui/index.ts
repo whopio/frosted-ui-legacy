@@ -47,3 +47,4 @@ export * from "./components/HorizontalTabList";
 export * from "./components/HorizontalTabListItem";
 export * from "./components/HorizontalTabPanel";
 export * from "./components/HorizontalTabPanelGroup";
+export * from "./components/CodeInput";
