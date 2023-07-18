@@ -61,3 +61,4 @@ export * from "./components/RadioCardItem";
 export * from "./components/RadioCardGroup";
 export * from "./components/Skeleton";
 export * from "./components/Select";
+export * from "./components/Slider";
