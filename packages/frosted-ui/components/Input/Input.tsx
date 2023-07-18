@@ -104,7 +104,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(function Input(
         {leftText && !leftIcon && (
           <label
             className={cn(
-              'text-whop-dark-gray text-text1 mr-1 select-none max-w-[70%] whitespace-nowrap overflow-x-auto flex flex-row-reverse',
+              'text-whop-dark-gray text-text1 mr-1 select-none w-fit max-w-[128px] whitespace-nowrap overflow-x-auto flex flex-row-reverse',
             )}
             htmlFor={name}
           >
