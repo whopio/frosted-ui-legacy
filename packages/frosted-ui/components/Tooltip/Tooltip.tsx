@@ -13,6 +13,10 @@ import { Icon } from '../Icon';
 import { TextButton } from '../TextButton';
 
 export type TooltipVariant = 'default' | 'compact';
+export const TooltipVariants: { [key: string]: TooltipVariant } = {
+  Default: 'default',
+  Compact: 'compact',
+};
 
 export type PlacementType =
   | 'top-start'
@@ -73,7 +77,12 @@ export const Tooltip = forwardRef<
 
     return (
       <Root open={open} defaultOpen={defaultOpen} onOpenChange={onOpenChange}>
-        <Trigger>
+        <Trigger
+          className={cn(
+            'text-whop-gray focus:outline-none cursor-default',
+            buttonClassName,
+          )}
+        >
           {children || <Icon icon={faInfoCircle} className="h-3 w-3" />}
         </Trigger>
         <Content
@@ -82,6 +91,7 @@ export const Tooltip = forwardRef<
           align={align}
           sideOffset={8}
           className={cn(
+            'animate-in fade-in-0 zoom-in-95 data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2',
             'w-max-content relative z-50 max-w-[276px] whitespace-normal rounded-md shadow',
             {
               'bg-whop-black px-2 py-1.5': variant === 'compact',
@@ -104,6 +114,7 @@ export const Tooltip = forwardRef<
             >
               {description}
             </p>
+            {/* TODO: When this becomes polymorphic, allow for linkCtaProps to be passed through instead of just text */}
             {variant === 'default' && linkText && (
               <TextButton colorScheme="purple" size="sm" variant="arrow">
                 {linkText || 'Learn more'}
