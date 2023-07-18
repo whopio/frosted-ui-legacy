@@ -21,3 +21,8 @@ export * from './components/Tag';
 export * from './components/TextButton';
 export * from './components/Tooltip';
 export * from './components/TooltipProvider';
+
+export * from "./components/Checkbox";
+export * from "./components/MenuGroup";
+export * from "./components/MenuItem";
+export * from "./components/MenuSeparator";
