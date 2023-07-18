@@ -34,3 +34,5 @@ export * from './components/TooltipProvider';
 export * from "./components/MenuTrigger";
 export * from "./components/MenuRoot";
 export * from "./components/Drawer";
+export * from "./components/Dropzone";
+export * from "./components/Progress";
