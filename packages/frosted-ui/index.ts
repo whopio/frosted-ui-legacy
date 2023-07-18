@@ -33,3 +33,4 @@ export * from './components/TooltipProvider';
 
 export * from "./components/MenuTrigger";
 export * from "./components/MenuRoot";
+export * from "./components/Drawer";
