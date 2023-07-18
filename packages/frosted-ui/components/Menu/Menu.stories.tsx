@@ -76,11 +76,6 @@ export const Sizes: Story = {
 };
 
 export const Composable: Story = {
-  argTypes: {
-    size: {
-      control: false,
-    },
-  },
   args: {
     items: undefined,
   },
@@ -91,26 +86,34 @@ export const Composable: Story = {
     const [item, setItem] = React.useState('item1');
 
     return (
-      <Menu {...args}>
-        <MenuItem>New tab</MenuItem>
-        <MenuItem icon={faStar}>New tab</MenuItem>
+      <Menu {...args} size={args.size}>
+        <MenuItem size={args.size}>New tab</MenuItem>
+        <MenuItem icon={faStar} size={args.size}>
+          New tab
+        </MenuItem>
         <MenuGroup>
           <MenuLabel>Windows</MenuLabel>
-          <MenuItem icon={faStar} onClick={() => alert('Delete clicked')}>
+          <MenuItem
+            icon={faStar}
+            onClick={() => alert('Delete clicked')}
+            size={args.size}
+          >
             New window
           </MenuItem>
-          <MenuItem>New private window</MenuItem>
+          <MenuItem size={args.size}>New private window</MenuItem>
         </MenuGroup>
         <MenuGroup label="Checkbox group">
           <MenuCheckboxItem
             checked={bookmarksChecked}
             onCheckedChange={setBookmarksChecked}
+            size={args.size}
           >
             Show bookmarks
           </MenuCheckboxItem>
           <MenuCheckboxItem
             checked={urlsChecked}
             onCheckedChange={setUrlsChecked}
+            size={args.size}
           >
             Show full urls
           </MenuCheckboxItem>
@@ -120,8 +123,12 @@ export const Composable: Story = {
           value={item}
           onValueChange={setItem}
         >
-          <MenuRadioItem value="item1">RadioItem</MenuRadioItem>
-          <MenuRadioItem value="item2">RadioItem</MenuRadioItem>
+          <MenuRadioItem value="item1" size={args.size}>
+            RadioItem
+          </MenuRadioItem>
+          <MenuRadioItem value="item2" size={args.size}>
+            RadioItem
+          </MenuRadioItem>
         </MenuRadioGroup>
       </Menu>
     );

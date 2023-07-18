@@ -14,7 +14,7 @@ export const MenuRadioItem = forwardRef<
     <RadioItem
       ref={forwardedRef}
       className={cn(
-        'text-subtitle3 mx-1 flex items-center rounded pl-[34px] pr-2 transition',
+        'text-subtitle3 mx-1 flex items-center rounded pl-3 pr-2 transition',
         'focus:bg-whop-hover cursor-pointer select-none outline-none focus:outline-none',
         'data-[disabled]:cursor-not-allowed data-[disabled]:opacity-50',
         {
@@ -25,10 +25,17 @@ export const MenuRadioItem = forwardRef<
       )}
       {...props}
     >
+      <span
+        className={cn('mr-3 flex items-center justify-center', {
+          'h-8 w-4': size === 'sm',
+          'h-10 w-5': size === 'md',
+        })}
+      >
+        <ItemIndicator className="text-sm">
+          <Icon icon={faCheck} />
+        </ItemIndicator>
+      </span>
       {children}
-      <ItemIndicator className="absolute left-3 text-sm">
-        <Icon icon={faCheck} />
-      </ItemIndicator>
     </RadioItem>
   );
 });
