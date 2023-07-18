@@ -18,6 +18,11 @@ type Story = StoryObj<typeof Badge>;
 export const Default: Story = {};
 
 export const Variants: Story = {
+  argTypes: {
+    variant: {
+      control: false,
+    },
+  },
   render: (args) => {
     const variants = Object.values(BadgeVariants);
     return (
@@ -31,6 +36,11 @@ export const Variants: Story = {
 };
 
 export const ColorSchemes: Story = {
+  argTypes: {
+    colorScheme: {
+      control: false,
+    },
+  },
   render: (args) => {
     const colorSchemes = Object.values(BadgeColorSchemes);
     return (
@@ -44,6 +54,11 @@ export const ColorSchemes: Story = {
 };
 
 export const Sizes: Story = {
+  argTypes: {
+    size: {
+      control: false,
+    },
+  },
   render: (args) => {
     const sizes = Object.values(BadgeSizes);
     return (

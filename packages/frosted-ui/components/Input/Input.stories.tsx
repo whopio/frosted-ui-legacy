@@ -53,6 +53,11 @@ export const ReadOnly: Story = {
 };
 
 export const Sizes: Story = {
+  argTypes: {
+    size: {
+      control: false,
+    },
+  },
   render: (args) => {
     const sizes = Object.values(InputSizes);
     return (
@@ -66,6 +71,14 @@ export const Sizes: Story = {
 };
 
 export const Messages: Story = {
+  argTypes: {
+    helpMessage: {
+      control: false,
+    },
+    errorMessage: {
+      control: false,
+    },
+  },
   render: (args) => {
     return (
       <div className="space-y-6">

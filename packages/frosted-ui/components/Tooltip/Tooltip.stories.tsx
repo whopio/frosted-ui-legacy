@@ -22,6 +22,11 @@ export const Variants: Story = {
     description: 'Description',
     linkText: 'Link',
   },
+  argTypes: {
+    variant: {
+      control: false,
+    },
+  },
   render: (args) => {
     const variants = Object.values(TooltipVariants);
     return (

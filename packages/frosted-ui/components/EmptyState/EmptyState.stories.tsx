@@ -31,6 +31,11 @@ export const WithButtons: Story = {
 };
 
 export const Sizes: Story = {
+  argTypes: {
+    size: {
+      control: false,
+    },
+  },
   render: (args) => {
     const sizes = Object.values(EmptyStateSizes);
     return (

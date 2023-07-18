@@ -31,6 +31,11 @@ export const CustomIcon: Story = {
 };
 
 export const Variants: Story = {
+  argTypes: {
+    variant: {
+      control: false,
+    },
+  },
   render: (args) => {
     const variants = Object.values(TextButtonVariants);
     return (
@@ -44,6 +49,11 @@ export const Variants: Story = {
 };
 
 export const ColorSchemes: Story = {
+  argTypes: {
+    colorScheme: {
+      control: false,
+    },
+  },
   render: (args) => {
     const colorSchemes = Object.values(TextButtonColorSchemes);
     return (
@@ -57,6 +67,11 @@ export const ColorSchemes: Story = {
 };
 
 export const Sizes: Story = {
+  argTypes: {
+    size: {
+      control: false,
+    },
+  },
   render: (args) => {
     const sizes = Object.values(TextButtonSizes);
     return (

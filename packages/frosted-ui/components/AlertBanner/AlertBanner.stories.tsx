@@ -25,6 +25,11 @@ type Story = StoryObj<typeof AlertBanner>;
 export const Default: Story = {};
 
 export const Variants: Story = {
+  argTypes: {
+    variant: {
+      control: false,
+    },
+  },
   render: (args) => {
     const variants = Object.values(AlertBannerVariants);
     return (
@@ -42,6 +47,11 @@ export const Variants: Story = {
 };
 
 export const ColorSchemes: Story = {
+  argTypes: {
+    colorScheme: {
+      control: false,
+    },
+  },
   render: (args) => {
     const colorSchemes = Object.values(AlertBannerColorSchemes);
     return (

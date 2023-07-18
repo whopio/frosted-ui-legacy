@@ -30,6 +30,11 @@ export const WithRightIcon: Story = {
 };
 
 export const ColorSchemes: Story = {
+  argTypes: {
+    colorScheme: {
+      control: false,
+    },
+  },
   render: (args) => {
     const colorSchemes = Object.values(TagColorSchemes);
     return (
@@ -43,6 +48,11 @@ export const ColorSchemes: Story = {
 };
 
 export const Sizes: Story = {
+  argTypes: {
+    size: {
+      control: false,
+    },
+  },
   render: (args) => {
     const sizes = Object.values(TagSizes);
     return (

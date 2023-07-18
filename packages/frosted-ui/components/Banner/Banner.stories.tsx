@@ -25,6 +25,11 @@ export const Dismissable: Story = {
 };
 
 export const ColorSchemes: Story = {
+  argTypes: {
+    colorScheme: {
+      control: false,
+    },
+  },
   render: (args) => {
     const colorSchemes = Object.values(BannerColorSchemes);
     return (

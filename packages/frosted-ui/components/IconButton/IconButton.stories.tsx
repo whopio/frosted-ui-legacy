@@ -28,6 +28,11 @@ type Story = StoryObj<typeof IconButton>;
 export const Default: Story = {};
 
 export const Variants: Story = {
+  argTypes: {
+    variant: {
+      control: false,
+    },
+  },
   render: (args) => {
     const variants = Object.values(IconButtonVariants);
     return (
@@ -55,6 +60,11 @@ export const Variants: Story = {
 };
 
 export const ColorSchemes: Story = {
+  argTypes: {
+    colorScheme: {
+      control: false,
+    },
+  },
   render: (args) => {
     const colorSchemes = Object.values(IconButtonColorSchemes);
     return (
@@ -79,6 +89,11 @@ export const ColorSchemes: Story = {
 };
 
 export const Sizes: Story = {
+  argTypes: {
+    size: {
+      control: false,
+    },
+  },
   render: (args) => {
     const sizes = Object.values(IconButtonSizes);
     return (
@@ -96,6 +111,14 @@ export const Sizes: Story = {
 };
 
 export const States: Story = {
+  argTypes: {
+    isDisabled: {
+      control: false,
+    },
+    isLoading: {
+      control: false,
+    },
+  },
   render: (args) => {
     return (
       <div
