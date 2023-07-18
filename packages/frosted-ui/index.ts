@@ -54,3 +54,4 @@ export * from "./components/ModalBody";
 export * from "./components/ModalFooter";
 export * from "./components/ModalContext";
 export * from "./components/ModalDefaultFooter";
+export * from "./components/NumberInput";
