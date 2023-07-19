@@ -42,11 +42,13 @@ export const Composed: Story = {
     items: undefined,
   },
   render: (args) => {
-    const [accordion, setAccordion] = React.useState<string | null>(null);
+    const [accordion, setAccordion] = React.useState<string>('item-1');
     return (
+      // TODO: Redo the accordion with absolute types
+      // @ts-expect-error This works but it's not the best
       <Accordion
         {...args}
-        onValueChange={(value: any) => setAccordion(value)}
+        onValueChange={(value: string) => setAccordion(value)}
         className="min-h-[280px] w-full"
       >
         <AccordionItem value="item-1">

@@ -144,19 +144,19 @@ export const Sizes: Story = {
       >
         {sizes
           // Remove white colorScheme
-          .filter((_) =>
+          .filter(() =>
             args.colorScheme === 'white'
               ? args.variant !== 'elevated'
               : args.variant,
           )
           // Only show the black colorScheme for the secondary variant
-          .filter((_) =>
+          .filter(() =>
             args.variant === 'secondary'
               ? args.colorScheme === 'black' || args.colorScheme === 'white'
               : args.colorScheme,
           )
           // Remove all but the primary variant if the colorScheme is gold-gradient
-          .filter((_) =>
+          .filter(() =>
             args.colorScheme === 'gold-gradient'
               ? args.variant === 'primary'
               : args.variant,
