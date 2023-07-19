@@ -46,7 +46,7 @@ export const Composed: Story = {
     return (
       <Accordion
         {...args}
-        onValueChange={(value) => setAccordion(value)}
+        onValueChange={(value: any) => setAccordion(value)}
         className="min-h-[280px] w-full"
       >
         <AccordionItem value="item-1">
