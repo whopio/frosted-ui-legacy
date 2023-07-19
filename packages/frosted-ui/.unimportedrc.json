@@ -1,5 +1,5 @@
 {
-  "entry": ["index.ts", "lib/**/*.ts"],
+  "entry": ["index.ts", "lib/**/*.ts", "preset/**/*.{ts,js}"],
   "extensions": [".ts", ".tsx", ".d.ts"],
   "ignorePatterns": [
     "**/node_modules/**",
