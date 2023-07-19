@@ -1,5 +1,4 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import * as React from 'react';
 import { InputSizes } from '../Input';
 import { NumberInput, NumberInputVariants } from './NumberInput';
 
@@ -79,7 +78,7 @@ export const Sizes: Story = {
     const variants = Object.values(NumberInputVariants);
     return (
       <div className="space-y-12">
-        {sizes.map((size, i) => (
+        {sizes.map((size) => (
           <div className="space-y-6">
             {variants.map((variant) => (
               <NumberInput

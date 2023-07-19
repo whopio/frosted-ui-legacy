@@ -1,5 +1,4 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import * as React from 'react';
 import { RadioColorSchemes, RadioGroup, RadioSizes } from './RadioGroup';
 
 const meta: Meta<typeof RadioGroup> = {

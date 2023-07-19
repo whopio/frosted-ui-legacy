@@ -1,6 +1,5 @@
 import { faCheck } from '@fortawesome/free-solid-svg-icons';
 import type { Meta, StoryObj } from '@storybook/react';
-import * as React from 'react';
 import { Tag, TagColorSchemes, TagSizes } from './Tag';
 
 const meta: Meta<typeof Tag> = {

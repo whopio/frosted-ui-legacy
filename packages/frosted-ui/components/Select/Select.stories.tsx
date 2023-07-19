@@ -1,6 +1,5 @@
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 import type { Meta, StoryObj } from '@storybook/react';
-import * as React from 'react';
 import { Select, SelectGroup, SelectItem } from './Select';
 
 const meta: Meta<typeof Select> = {
