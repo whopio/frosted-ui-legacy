@@ -5,12 +5,14 @@ import themeProvider from 'tailwindcss-themer';
 import { fontFamily as _fontFamily } from 'tailwindcss/defaultTheme';
 import { light } from './themes/light';
 
+type ThemeConfig = Parameters<typeof themeProvider>[0]['themes'];
+
 export default function frostedPreset({
   content,
   themes,
 }: {
-  content: object;
-  themes: object;
+  content?: string[];
+  themes?: ThemeConfig;
 }) {
   const themePlugin = themeProvider({
     defaultTheme: {
@@ -444,8 +446,8 @@ export default function frostedPreset({
       require('tailwindcss-animate'),
     ],
     content: [
-      ...content,
-      join(relative(process.cwd(), __dirname), '../../**/*.tsx'),
+      ...(content || []),
+      join(relative(process.cwd(), __dirname), '../components/**/*.js'),
     ],
   };
 }
