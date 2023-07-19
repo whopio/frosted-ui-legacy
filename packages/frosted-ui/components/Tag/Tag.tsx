@@ -1,4 +1,3 @@
-import React from 'react';
 import { cn } from '../../lib/classnames';
 import { IconDefinition } from '../../lib/icon-types';
 import { ColorScheme, Size } from '../../lib/shared-component-types';

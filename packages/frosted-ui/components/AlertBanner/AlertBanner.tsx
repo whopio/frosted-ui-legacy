@@ -3,7 +3,6 @@ import {
   faLightbulb,
   faXmark,
 } from '@fortawesome/free-solid-svg-icons';
-import * as React from 'react';
 import { ButtonHTMLAttributes, ReactNode } from 'react';
 import { cn } from '../../lib/classnames';
 import { IconDefinition } from '../../lib/icon-types';

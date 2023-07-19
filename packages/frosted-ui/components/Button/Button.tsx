@@ -1,5 +1,4 @@
 import { faSpinner } from '@fortawesome/free-solid-svg-icons';
-import * as React from 'react';
 import {
   ButtonHTMLAttributes,
   FormEventHandler,

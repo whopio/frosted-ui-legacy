@@ -1,0 +1,14 @@
+{
+  "entry": [
+    "index.ts",
+    "lib/**/*.ts",
+    "*.config.js",
+    "*.config.ts",
+    "turbo/**/*.ts"
+  ],
+  "extensions": [".ts", ".tsx", ".d.ts"],
+  "ignorePatterns": ["**/node_modules/**", "public/**"],
+  "ignoreUnimported": ["next-env.d.ts", "gen.js"],
+  "ignoreUnused": [],
+  "ignoreUnresolved": []
+}

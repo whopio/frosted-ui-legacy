@@ -4,3 +4,8 @@ tsconfig.json
 **/*.tsx
 !**/*.d.ts
 .swcrc
+.storybook
+index.html
+stories
+turbo
+.eslintrc.cjs
