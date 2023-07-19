@@ -103,7 +103,7 @@ jobs:
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
           exitOnceUploaded: true
           onlyChanged: true
-          storybookBaseDir: 'packages/frosted-ui'
+          workingDir: 'packages/frosted-ui'
 
   test:
     name: Test repository
