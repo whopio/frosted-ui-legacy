@@ -25,6 +25,14 @@ type Story = StoryObj<typeof Button>;
 
 export const Default: Story = {};
 
+export const Polymorphic: Story = {
+  args: {
+    asComponent: 'a',
+    href: 'https://www.google.com',
+    target: '_blank',
+  },
+};
+
 export const LeftIcon: Story = {
   render: (args) => {
     return (
