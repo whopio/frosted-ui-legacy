@@ -63,3 +63,4 @@ export * from "./components/Skeleton";
 export * from "./components/Select";
 export * from "./components/Slider";
 export * from "./components/Switch";
+export * from "./components/TextArea";
