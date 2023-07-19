@@ -45,6 +45,12 @@ importers:
 
   packages/frosted-ui:
     dependencies:
+      '@fortawesome/free-regular-svg-icons':
+        specifier: ^6.4.0
+        version: 6.4.0
+      '@fortawesome/free-solid-svg-icons':
+        specifier: ^6.4.0
+        version: 6.4.0
       '@fortawesome/react-fontawesome':
         specifier: ^0.2.0
         version: 0.2.0(@fortawesome/fontawesome-svg-core@6.4.0)(react@18.2.0)
@@ -109,12 +115,6 @@ importers:
         specifier: ^3.1.0
         version: 3.1.0(tailwindcss@3.3.3)
     devDependencies:
-      '@fortawesome/free-regular-svg-icons':
-        specifier: ^6.4.0
-        version: 6.4.0
-      '@fortawesome/free-solid-svg-icons':
-        specifier: ^6.4.0
-        version: 6.4.0
       '@storybook/addon-essentials':
         specifier: ^7.1.0
         version: 7.1.0(react-dom@18.2.0)(react@18.2.0)
@@ -2080,6 +2080,7 @@ packages:
     resolution: {integrity: sha512-HNii132xfomg5QVZw0HwXXpN22s7VBHQBv9CeOu9tfJnhsWQNd2lmTNi8CSrnw5B+5YOmzu1UoPAyxaXsJ6RgQ==}
     engines: {node: '>=6'}
     requiresBuild: true
+    dev: false
 
   /@fortawesome/fontawesome-svg-core@6.4.0:
     resolution: {integrity: sha512-Bertv8xOiVELz5raB2FlXDPKt+m94MQ3JgDfsVbrqNpLU9+UE2E18GKjLKw+d3XbeYPqg1pzyQKGsrzbw+pPaw==}
@@ -2095,7 +2096,7 @@ packages:
     requiresBuild: true
     dependencies:
       '@fortawesome/fontawesome-common-types': 6.4.0
-    dev: true
+    dev: false
 
   /@fortawesome/free-solid-svg-icons@6.4.0:
     resolution: {integrity: sha512-kutPeRGWm8V5dltFP1zGjQOEAzaLZj4StdQhWVZnfGFCvAPVvHh8qk5bRrU4KXnRRRNni5tKQI9PBAdI6MP8nQ==}
@@ -2103,7 +2104,7 @@ packages:
     requiresBuild: true
     dependencies:
       '@fortawesome/fontawesome-common-types': 6.4.0
-    dev: true
+    dev: false
 
   /@fortawesome/react-fontawesome@0.2.0(@fortawesome/fontawesome-svg-core@6.4.0)(react@18.2.0):
     resolution: {integrity: sha512-uHg75Rb/XORTtVt7OS9WoK8uM276Ufi7gCzshVWkUJbHhh3svsUUeqXerrM96Wm7fRiDzfKRwSoahhMIkGAYHw==}
