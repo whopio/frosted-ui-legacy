@@ -5,7 +5,7 @@ import themeProvider from 'tailwindcss-themer';
 import { fontFamily as _fontFamily } from 'tailwindcss/defaultTheme';
 import { light } from './themes/light';
 
-type ThemeConfig = Parameters<typeof themeProvider>[0]['themes'];
+export type ThemeConfig = Parameters<typeof themeProvider>[0]['themes'];
 
 export default function frostedPreset({
   content,
