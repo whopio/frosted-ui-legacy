@@ -25,7 +25,8 @@ export const Breadcrumb = ({ children, className }: BreadcrumbProps) => {
           if (needsTruncation && index === 1) {
             return (
               <li key={index} className="flex items-center">
-                {cloneElement(child as any, {
+                {cloneElement(child as never, {
+                  // eslint-disable-next-line @typescript-eslint/no-explicit-any
                   ...((child as any).props || {}),
                 })}
                 <BreadcrumbTruncationIcon />

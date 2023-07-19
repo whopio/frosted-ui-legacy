@@ -126,7 +126,7 @@ export const Dropzone = ({
         <Progress isIndeterminate={loading} value={100} className="mt-4" />
       ) : null}
 
-      {uploadButtonText && !Boolean(loading) && (
+      {uploadButtonText && !loading && (
         <Button
           colorScheme="black"
           variant="elevated"

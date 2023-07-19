@@ -22,7 +22,7 @@ export const Accordion = React.forwardRef<
 >(({ items, children, ...props }, ref) => {
   const [open, setOpen] = React.useState<string | undefined>(items?.[0].value);
   return (
-    // @ts-ignore
+    // @ts-expect-error this problem is caused by conditional types
     <Root
       ref={ref}
       value={open}

@@ -65,7 +65,7 @@ export const IconButtonColorSchemes: { [key: string]: IconButtonColorScheme } =
 const hasShadow = (variant: string) => variant === 'elevated';
 
 export interface IconButtonProps
-  extends ButtonHTMLAttributes<HTMLButtonElement> {
+  extends Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'children'> {
   shape?: IconButtonShape;
   type?: ButtonType;
   size?: IconButtonSize;
@@ -91,7 +91,6 @@ export const IconButton = forwardRef<HTMLButtonElement, IconButtonProps>(
       variant = 'primary',
       colorScheme = 'brand',
       icon,
-      children,
       onClick,
       onSubmit,
       onReset,

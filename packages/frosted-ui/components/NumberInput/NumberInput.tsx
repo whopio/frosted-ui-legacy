@@ -104,6 +104,7 @@ export const NumberInput = ({
     <div className="group relative">
       <Input
         ref={inputRef}
+        id={id}
         type="number"
         step={step}
         leftIcon={
