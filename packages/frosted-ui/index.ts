@@ -64,3 +64,6 @@ export * from "./components/Select";
 export * from "./components/Slider";
 export * from "./components/Switch";
 export * from "./components/TextArea";
+export * from "./components/SelectItem";
+export * from "./components/SelectGroup";
+export * from "./components/SelectSeparator";

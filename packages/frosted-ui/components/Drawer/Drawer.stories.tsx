@@ -2,6 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import * as React from 'react';
 import { Button } from '../Button';
 import { Input } from '../Input';
+import { Select } from '../Select';
 import { Drawer } from './Drawer';
 
 const meta: Meta<typeof Drawer> = {
@@ -18,8 +19,7 @@ const meta: Meta<typeof Drawer> = {
             children: 'Name',
           }}
         />
-        {/* TODO: add this back when the select component is ready */}
-        {/* <Select
+        <Select
           label={{
             children: 'T-shirt size',
             tooltip: {
@@ -39,7 +39,7 @@ const meta: Meta<typeof Drawer> = {
               value: 'lg',
             },
           ]}
-        /> */}
+        />
       </form>
     ),
     footer: {

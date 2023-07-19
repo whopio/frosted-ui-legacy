@@ -1,7 +1,6 @@
 'use client';
 
 import {
-  faCheck,
   faChevronDown,
   faChevronUp,
   faExclamationCircle,
@@ -10,14 +9,7 @@ import {
 import type * as Radix from '@radix-ui/react-primitive';
 import {
   Content,
-  Group,
   Icon as IconPrimitive,
-  Item,
-  ItemIndicator,
-  ItemText,
-  Label as LabelPrimitive,
-  SelectGroupProps as RadixSelectGroupProps,
-  SelectItemProps as RadixSelectItemProps,
   SelectProps as RadixSelectProps,
   Root,
   ScrollDownButton,
@@ -27,7 +19,6 @@ import {
   SelectPortalProps,
   SelectTriggerProps,
   SelectValueProps,
-  Separator,
   Trigger,
   Value,
   Viewport,
@@ -38,6 +29,7 @@ import { IconDefinition } from '../../lib/icon-types';
 import { Size } from '../../lib/shared-component-types';
 import { Icon } from '../Icon';
 import { Label, LabelProps } from '../Label';
+import { SelectItem, SelectItemProps } from '../SelectItem';
 
 export type SelectSize = Extract<Size, 'sm' | 'md' | 'lg'>;
 export const SelectSizes: { [key: string]: SelectSize } = {
@@ -45,87 +37,6 @@ export const SelectSizes: { [key: string]: SelectSize } = {
   Medium: 'md',
   Large: 'lg',
 };
-
-export type SelectItemProps = {
-  isDisabled?: boolean;
-  className?: string;
-} & Omit<RadixSelectItemProps, 'disabled'>;
-
-// TODO: Move this to a separate file for barrel imports
-export const SelectItem = forwardRef<
-  React.ElementRef<typeof Item>,
-  Radix.ComponentPropsWithoutRef<typeof Item> & SelectItemProps
->(({ children, textValue, isDisabled, className, ...props }, forwardedRef) => {
-  return (
-    <Item
-      className={cn(
-        'text-subtitle3 mx-1 flex h-8 items-center rounded pl-[34px] pr-2 transition',
-        'focus:bg-whop-hover cursor-pointer select-none outline-none focus:outline-none',
-        'data-[disabled]:cursor-not-allowed data-[disabled]:opacity-50',
-        className,
-      )}
-      disabled={isDisabled}
-      {...props}
-      ref={forwardedRef}
-    >
-      <ItemIndicator className="absolute left-3 text-sm">
-        <Icon icon={faCheck} />
-      </ItemIndicator>
-      <span className="truncate">
-        <ItemText>{textValue || children}</ItemText>
-      </span>
-    </Item>
-  );
-});
-
-export type SelectGroupProps = {
-  label?: string;
-  className?: string;
-  separatorTop?: boolean;
-  separatorBottom?: boolean;
-} & RadixSelectGroupProps;
-
-// TODO: Move this to a separate file for barrel imports
-export const SelectGroup = forwardRef<
-  React.ElementRef<typeof Group>,
-  Radix.ComponentPropsWithoutRef<typeof Group> & SelectGroupProps
->(
-  (
-    {
-      children,
-      label,
-      className,
-      separatorTop = true,
-      separatorBottom = false,
-    },
-    ref,
-  ) => {
-    return (
-      <>
-        {separatorTop && <SelectSeparator className="mt-1" />}
-        <Group ref={ref} className={cn('mt-1', className)}>
-          {label && (
-            <LabelPrimitive className="text-overline4 text-whop-dark-gray mt-3 ml-3 mb-1 uppercase">
-              {label}
-            </LabelPrimitive>
-          )}
-          {children}
-        </Group>
-        {separatorBottom && <SelectSeparator className="my-1" />}
-      </>
-    );
-  },
-);
-
-// TODO: Move this to a separate file for barrel imports
-const SelectSeparator = forwardRef<
-  React.ElementRef<typeof Separator>,
-  Radix.ComponentPropsWithoutRef<typeof Separator> & { className?: string }
->(({ className }, ref) => {
-  return (
-    <Separator ref={ref} className={cn('bg-whop-stroke h-px', className)} />
-  );
-});
 
 export type SelectProps = {
   label?: LabelProps;
@@ -320,6 +231,3 @@ export const Select = forwardRef<
 );
 
 Select.displayName = 'Select';
-SelectGroup.displayName = 'SelectGroup';
-SelectItem.displayName = 'SelectItem';
-SelectSeparator.displayName = 'SelectSeparator';

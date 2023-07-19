@@ -1,4 +1,4 @@
-import { faTruckFast } from '@fortawesome/free-solid-svg-icons';
+import { faTShirt, faTruckFast } from '@fortawesome/free-solid-svg-icons';
 import type { Meta, StoryObj } from '@storybook/react';
 import * as React from 'react';
 import { Button } from '../Button';
@@ -6,6 +6,7 @@ import { Checkbox } from '../Checkbox';
 import { ModalBody } from '../ModalBody';
 import { ModalFooter } from '../ModalFooter';
 import { ModalHeader } from '../ModalHeader';
+import { Select } from '../Select';
 import { Modal } from './Modal';
 
 const meta: Meta<typeof Modal> = {
@@ -146,8 +147,7 @@ export const CustomizedProps: Story = {
     body: {
       children: (
         <form className="space-y-4">
-          {/* TODO: add back when the select component is ready */}
-          {/* <Select
+          <Select
             leftIcon={faTShirt}
             label={{
               children: 'What is your size?',
@@ -159,7 +159,7 @@ export const CustomizedProps: Story = {
               { value: 'large', textValue: 'Large' },
             ]}
             size="md"
-          /> */}
+          />
           <Checkbox label="Send it to me, pronto!" />
         </form>
       ),
