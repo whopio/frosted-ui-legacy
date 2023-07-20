@@ -70,3 +70,7 @@ export * from "./components/SelectSeparator";
 export * from "./components/Avatar";
 export * from "./components/Toaster";
 export * from "./components/Toast";
+export * from "./components/Table";
+export * from "./components/Table";
+export * from "./components/TableLoading";
+export * from "./components/TablePagination";
