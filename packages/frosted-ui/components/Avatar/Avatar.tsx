@@ -78,7 +78,7 @@ export const Avatar = forwardRef(function Avatar<C extends ElementType = 'img'>(
 ) {
   const Component: ElementType = as || 'img';
 
-  const { onError, alt, style, ...rest } = props;
+  const { onError, onLoad, alt, style, ...rest } = props;
 
   const imageSource =
     src ||
@@ -86,17 +86,22 @@ export const Avatar = forwardRef(function Avatar<C extends ElementType = 'img'>(
   const [showFallback, setShowFallback] = useState(_showFallback);
 
   useEffect(() => {
-    if (!src) setShowFallback(true);
+    if (!src) {
+      setShowFallback(true);
+    } else if (!_showFallback) {
+      setShowFallback(false);
+    }
   }, [src]);
 
   const handleLoadingComplete = useCallback((result: HTMLImageElement) => {
+    onLoad?.(result);
     if (result.naturalWidth === 0) {
       // In the case of a broken image
       setShowFallback(true);
     }
   }, []);
   const handleOnError = useCallback(() => {
-    onError();
+    onError && onError();
     setShowFallback(true);
   }, []);
 
@@ -162,7 +167,7 @@ export const Avatar = forwardRef(function Avatar<C extends ElementType = 'img'>(
       ref={ref}
       className={imageClasses}
       src={imageSource}
-      onLoadingComplete={handleLoadingComplete}
+      onLoad={handleLoadingComplete}
       onError={handleOnError}
       alt={alt || username || 'Avatar'}
       width={size}

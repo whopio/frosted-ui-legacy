@@ -14,7 +14,7 @@ type Story = StoryObj<typeof Avatar>;
 
 export const Default: Story = {};
 
-export const Fallback: Story = {
+export const ManualFallback: Story = {
   argTypes: {
     showFallback: {
       control: false,
@@ -22,6 +22,12 @@ export const Fallback: Story = {
   },
   args: {
     showFallback: true,
+  },
+};
+
+export const AutomaticFallback: Story = {
+  args: {
+    src: 'https://pbs.twimg.com/profile_images/1672077486082101251/oYuIjezD_400x400.jp',
   },
 };
 
