@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 'use client';
 
 import {
@@ -28,6 +29,7 @@ import { TableLoading } from '../TableLoading';
 
 /**This is a custom typing / context for our table based on these docs https://tanstack.com/table/v8/docs/api/core/table#meta */
 declare module '@tanstack/table-core' {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   interface TableMeta<TData extends RowData> {
     totalRowCount: number | undefined;
   }
