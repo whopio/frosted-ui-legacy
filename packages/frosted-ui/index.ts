@@ -67,3 +67,4 @@ export * from "./components/TextArea";
 export * from "./components/SelectItem";
 export * from "./components/SelectGroup";
 export * from "./components/SelectSeparator";
+export * from "./components/Avatar";
