@@ -5,8 +5,8 @@ const meta: Meta<typeof Avatar> = {
   title: 'General/Avatar',
   component: Avatar,
   args: {
-    username: 'Makenna Smutz',
-    src: 'https://pbs.twimg.com/profile_images/1672077486082101251/oYuIjezD_400x400.jpg',
+    username: 'Whop',
+    src: 'https://pbs.twimg.com/profile_images/1641784443072311298/VhfBDoAT_400x400.jpg',
   },
 };
 export default meta;
@@ -27,7 +27,7 @@ export const ManualFallback: Story = {
 
 export const AutomaticFallback: Story = {
   args: {
-    src: 'https://pbs.twimg.com/profile_images/1672077486082101251/oYuIjezD_400x400.jp',
+    src: 'https://pbs.twimg.com/profile_images/1641784443072311298/VhfBDoAT_400x400.jp',
   },
 };
 
