@@ -18,7 +18,7 @@ type PropsOf<C extends ElementType> = C extends React.ComponentType<infer P>
   ? P
   : C extends keyof JSX.IntrinsicElements
   ? JSX.IntrinsicElements[C]
-  : never;
+  : Record<string, never>;
 
 export type TextButtonVariant = 'underline' | 'arrow';
 export const TextButtonVariants: { [key: string]: TextButtonVariant } = {
@@ -46,16 +46,19 @@ export const TextButtonColorSchemes: { [key: string]: TextButtonColorScheme } =
     'Error Red': 'error-red',
   };
 
-export type TextButtonProps<C extends ElementType = 'button'> = PropsOf<C> &
-  Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'type' | 'disabled'> &
-  AsProp<C> & {
-    children: React.ReactNode;
-    variant?: TextButtonVariant;
-    size?: TextButtonSize;
-    colorScheme?: TextButtonColorScheme;
-    icon?: IconDefinition;
-    onClick?: React.MouseEventHandler<HTMLButtonElement> | undefined;
-  };
+export interface TextButtonDefaultProps
+  extends Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'type' | 'disabled'> {
+  children: React.ReactNode;
+  variant?: TextButtonVariant;
+  size?: TextButtonSize;
+  colorScheme?: TextButtonColorScheme;
+  icon?: IconDefinition;
+  onClick?: React.MouseEventHandler<HTMLButtonElement> | undefined;
+}
+
+export type TextButtonProps<C extends ElementType> = PropsOf<C> &
+  TextButtonDefaultProps &
+  AsProp<C>;
 
 export const TextButton = forwardRef(function TextButton<
   C extends ElementType = 'button',
@@ -70,7 +73,7 @@ export const TextButton = forwardRef(function TextButton<
     asComponent,
     ...props
   }: TextButtonProps<C>,
-  ref: ForwardedRef<HTMLButtonElement>,
+  ref: ForwardedRef<unknown>,
 ) {
   const Component: ElementType = asComponent || 'button';
   const { className, ...rest } = props;
@@ -140,5 +143,5 @@ export const TextButton = forwardRef(function TextButton<
     </Component>
   );
 }) as <C extends ElementType = 'button'>(
-  p: TextButtonProps<C> & { ref?: ForwardedRef<HTMLButtonElement> },
+  p: TextButtonProps<C> & { ref?: ForwardedRef<unknown> },
 ) => React.ReactElement | null;

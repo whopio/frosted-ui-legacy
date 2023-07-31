@@ -7,10 +7,11 @@ import {
   TooltipContentProps,
   Trigger,
 } from '@radix-ui/react-tooltip';
-import React, { ReactNode, forwardRef } from 'react';
+import React, { ElementType, ReactNode, forwardRef } from 'react';
 import { cn } from '../../lib/classnames';
 import { Icon } from '../Icon';
-import { TextButton, TextButtonProps } from '../TextButton';
+import type { TextButtonProps } from '../TextButton';
+import { TextButton } from '../TextButton';
 
 export type TooltipVariant = 'default' | 'compact';
 export const TooltipVariants: { [key: string]: TooltipVariant } = {
@@ -31,6 +32,20 @@ export type PlacementType =
   | 'left-start'
   | 'left-center'
   | 'left-end';
+export const TooltipPlacements: { [key: string]: PlacementType } = {
+  'Top Start': 'top-start',
+  'Top Center': 'top-center',
+  'Top End': 'top-end',
+  'Right Start': 'right-start',
+  'Right Center': 'right-center',
+  'Right End': 'right-end',
+  'Bottom Start': 'bottom-start',
+  'Bottom Center': 'bottom-center',
+  'Bottom End': 'bottom-end',
+  'Left Start': 'left-start',
+  'Left Center': 'left-center',
+  'Left End': 'left-end',
+};
 
 export interface TooltipProps extends RadixTooltipProps {
   /**The element hovered that triggers this tooltip, will default to the info icon */
@@ -41,7 +56,7 @@ export interface TooltipProps extends RadixTooltipProps {
   placement?: PlacementType;
   buttonClassName?: string;
   contentClassName?: string;
-  linkProps?: Omit<TextButtonProps, 'ref'>;
+  linkProps?: TextButtonProps<ElementType>;
 }
 
 export type SideAlign = {
