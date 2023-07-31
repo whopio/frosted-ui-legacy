@@ -36,13 +36,22 @@ export const TextButtonSizes: { [key: string]: TextButtonSize } = {
 
 export type TextButtonColorScheme = Extract<
   ColorScheme,
-  'dark-gray' | 'black' | 'purple' | 'error-red'
+  | 'dark-gray'
+  | 'black'
+  | 'purple'
+  | 'error-red'
+  | 'white'
+  | 'success-green'
+  | 'warning-yellow'
 >;
 export const TextButtonColorSchemes: { [key: string]: TextButtonColorScheme } =
   {
     Black: 'black',
     'Dark Gray': 'dark-gray',
     Purple: 'purple',
+    White: 'white',
+    'Success Green': 'success-green',
+    'Warning Yellow': 'warning-yellow',
     'Error Red': 'error-red',
   };
 
@@ -110,8 +119,14 @@ export const TextButton = forwardRef(function TextButton<
             'text-whop-black': colorScheme === 'black',
             'text-whop-field-highlight group-hover:field-highlight-hover':
               colorScheme === 'purple',
-            'text-whop-error-red group-hover:text-whop-tag-error':
+            'group-hover:text-whop-error-red text-whop-tag-error':
               colorScheme === 'error-red',
+            'group-hover:text-whop-success-green text-whop-tag-green':
+              colorScheme === 'success-green',
+            'group-hover:text-whop-warning-yellow text-whop-tag-warning':
+              colorScheme === 'warning-yellow',
+            'text-whop-fixed-white group-hover:text-whop-fixed-white':
+              colorScheme === 'white',
           },
         )}
       >
@@ -128,8 +143,14 @@ export const TextButton = forwardRef(function TextButton<
               'text-whop-black': colorScheme === 'black',
               'text-whop-field-highlight group-hover:field-highlight-hover':
                 colorScheme === 'purple',
-              'text-whop-error-red group-hover:text-whop-tag-error':
+              'group-hover:text-whop-error-red text-whop-tag-error':
                 colorScheme === 'error-red',
+              'group-hover:text-whop-success-green text-whop-tag-green':
+                colorScheme === 'success-green',
+              'group-hover:text-whop-warning-yellow text-whop-tag-warning':
+                colorScheme === 'warning-yellow',
+              'text-whop-fixed-white group-hover:text-whop-fixed-white':
+                colorScheme === 'white',
             },
             {
               'h-3 w-3': size === 'sm',
