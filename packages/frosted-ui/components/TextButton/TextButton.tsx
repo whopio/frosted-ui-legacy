@@ -1,9 +1,24 @@
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
-import React, { ButtonHTMLAttributes } from 'react';
+import React, {
+  ButtonHTMLAttributes,
+  ElementType,
+  ForwardedRef,
+  forwardRef,
+} from 'react';
 import { cn } from '../../lib/classnames';
 import { IconDefinition } from '../../lib/icon-types';
 import { ColorScheme, Size } from '../../lib/shared-component-types';
 import { Icon } from '../Icon';
+
+type AsProp<C extends ElementType> = {
+  asComponent?: C;
+};
+
+type PropsOf<C extends ElementType> = C extends React.ComponentType<infer P>
+  ? P
+  : C extends keyof JSX.IntrinsicElements
+  ? JSX.IntrinsicElements[C]
+  : never;
 
 export type TextButtonVariant = 'underline' | 'arrow';
 export const TextButtonVariants: { [key: string]: TextButtonVariant } = {
@@ -31,30 +46,41 @@ export const TextButtonColorSchemes: { [key: string]: TextButtonColorScheme } =
     'Error Red': 'error-red',
   };
 
-export interface TextButtonProps
-  extends ButtonHTMLAttributes<HTMLButtonElement> {
-  children: React.ReactNode;
-  variant?: TextButtonVariant;
-  size?: TextButtonSize;
-  colorScheme?: TextButtonColorScheme;
-  icon?: IconDefinition;
-  onClick?: React.MouseEventHandler<HTMLButtonElement> | undefined;
-}
+export type TextButtonProps<C extends ElementType = 'button'> = PropsOf<C> &
+  Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'type' | 'disabled'> &
+  AsProp<C> & {
+    children: React.ReactNode;
+    variant?: TextButtonVariant;
+    size?: TextButtonSize;
+    colorScheme?: TextButtonColorScheme;
+    icon?: IconDefinition;
+    onClick?: React.MouseEventHandler<HTMLButtonElement> | undefined;
+  };
 
-export const TextButton = ({
-  children,
-  variant = 'arrow',
-  size = 'md',
-  colorScheme = 'dark-gray',
-  icon = faArrowRight,
-  onClick,
-  ...props
-}: TextButtonProps) => {
+export const TextButton = forwardRef(function TextButton<
+  C extends ElementType = 'button',
+>(
+  {
+    children,
+    variant = 'arrow',
+    size = 'md',
+    colorScheme = 'dark-gray',
+    icon = faArrowRight,
+    onClick,
+    asComponent,
+    ...props
+  }: TextButtonProps<C>,
+  ref: ForwardedRef<unknown>,
+) {
+  const Component: ElementType = asComponent || 'button';
+  const { className, ...rest } = props;
+
   return (
-    <button
-      className="group inline-flex items-center"
+    <Component
+      className={cn('group inline-flex items-center', className)}
       onClick={onClick}
-      {...props}
+      ref={ref}
+      {...rest}
     >
       <span
         className={cn(
@@ -111,6 +137,8 @@ export const TextButton = ({
           )}
         />
       )}
-    </button>
+    </Component>
   );
-};
+}) as <C extends ElementType = 'button'>(
+  p: TextButtonProps<C> & { ref?: ForwardedRef<unknown> },
+) => React.ReactElement | null;
