@@ -10,7 +10,7 @@ import {
 import React, { ReactNode, forwardRef } from 'react';
 import { cn } from '../../lib/classnames';
 import { Icon } from '../Icon';
-import { TextButton } from '../TextButton';
+import { TextButton, TextButtonProps } from '../TextButton';
 
 export type TooltipVariant = 'default' | 'compact';
 export const TooltipVariants: { [key: string]: TooltipVariant } = {
@@ -37,11 +37,11 @@ export interface TooltipProps extends RadixTooltipProps {
   children?: ReactNode;
   title?: string;
   description: string | ReactNode;
-  linkText?: string;
   variant?: TooltipVariant;
   placement?: PlacementType;
   buttonClassName?: string;
   contentClassName?: string;
+  linkProps?: Omit<TextButtonProps, 'ref'>;
 }
 
 export type SideAlign = {
@@ -58,7 +58,6 @@ export const Tooltip = forwardRef<
       children,
       title,
       description,
-      linkText,
       variant = 'default',
       buttonClassName,
       contentClassName,
@@ -66,6 +65,7 @@ export const Tooltip = forwardRef<
       defaultOpen,
       onOpenChange,
       placement = 'bottom-start',
+      linkProps,
       ...props
     },
     ref,
@@ -114,11 +114,13 @@ export const Tooltip = forwardRef<
             >
               {description}
             </p>
-            {/* TODO: When this becomes polymorphic, allow for linkCtaProps to be passed through instead of just text */}
-            {variant === 'default' && linkText && (
-              <TextButton colorScheme="purple" size="sm" variant="arrow">
-                {linkText || 'Learn more'}
-              </TextButton>
+            {variant === 'default' && linkProps && (
+              <TextButton
+                colorScheme="purple"
+                size="sm"
+                variant="arrow"
+                {...linkProps}
+              />
             )}
           </>
         </Content>

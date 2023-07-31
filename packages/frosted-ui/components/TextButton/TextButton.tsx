@@ -70,7 +70,7 @@ export const TextButton = forwardRef(function TextButton<
     asComponent,
     ...props
   }: TextButtonProps<C>,
-  ref: ForwardedRef<unknown>,
+  ref: ForwardedRef<HTMLButtonElement>,
 ) {
   const Component: ElementType = asComponent || 'button';
   const { className, ...rest } = props;
@@ -140,5 +140,5 @@ export const TextButton = forwardRef(function TextButton<
     </Component>
   );
 }) as <C extends ElementType = 'button'>(
-  p: TextButtonProps<C> & { ref?: ForwardedRef<unknown> },
+  p: TextButtonProps<C> & { ref?: ForwardedRef<HTMLButtonElement> },
 ) => React.ReactElement | null;
