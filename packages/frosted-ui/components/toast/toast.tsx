@@ -24,6 +24,7 @@ export const CustomToastBar = ({ t }: { t: Toast }) => {
                 size="xs"
                 variant="secondary"
                 colorScheme="black"
+                className="!border-0"
                 onClick={() => toast.dismiss(t.id)}
               />
             )}
