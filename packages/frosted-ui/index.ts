@@ -55,6 +55,7 @@ export * from './components/RadioCardGroup';
 export * from './components/RadioCardItem';
 export * from './components/RadioGroup';
 export * from './components/RadioItem';
+export * from './components/RichTextEditor';
 export * from './components/Select';
 export * from './components/SelectGroup';
 export * from './components/SelectItem';
