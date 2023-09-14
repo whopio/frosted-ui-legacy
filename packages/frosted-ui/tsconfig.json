@@ -10,8 +10,9 @@
     "outDir": "dist"
   },
   "include": [
-    "src/**/*.tsx",
-    "src/**/*.ts"
+    "src/**/*",
   ],
-  "files": []
+  "exclude": [
+    "src/**/*.stories.tsx"
+  ]
 }
