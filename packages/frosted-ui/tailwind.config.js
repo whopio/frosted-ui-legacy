@@ -4,7 +4,7 @@ import { darkOne, darkTwo, light } from './src/preset/themes';
 /** @type {import('tailwindcss').Config} */
 export const presets = [
   preset({
-    content: ['./components/**/*.{ts,tsx}'],
+    content: ['.src/components/**/*.{ts,tsx}'],
     themes: [light, darkOne, darkTwo],
   }),
 ];
