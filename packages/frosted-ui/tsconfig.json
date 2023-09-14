@@ -11,10 +11,7 @@
   },
   "include": [
     "src/**/*.tsx",
-    "src/**/*.ts",
-    "turbo/**/*.ts",
-    "*.config.ts",
-    ".eslintrc.cjs"
+    "src/**/*.ts"
   ],
   "files": []
 }
