@@ -7,7 +7,7 @@
     "vite.config.ts",
     "turbo/generators/config.ts",
     "**/*.stories.tsx",
-    "src/components/Table/mock-data.ts"
+    "components/Table/mock-data.ts"
   ],
   "ignoreUnimported": ["next-env.d.ts", "gen.js"],
   "ignoreUnused": [
