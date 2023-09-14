@@ -1,5 +1,5 @@
 {
-  "entry": ["index.ts", "lib/**/*.ts", "preset/**/*.{ts,js}"],
+  "entry": ["src/index.ts", "src/lib/**/*.ts", "src/preset/**/*.{ts,js}"],
   "extensions": [".ts", ".tsx", ".d.ts"],
   "ignorePatterns": [
     "**/node_modules/**",
@@ -7,7 +7,7 @@
     "vite.config.ts",
     "turbo/generators/config.ts",
     "**/*.stories.tsx",
-    "components/Table/mock-data.ts"
+    "src/components/Table/mock-data.ts"
   ],
   "ignoreUnimported": ["next-env.d.ts", "gen.js"],
   "ignoreUnused": [

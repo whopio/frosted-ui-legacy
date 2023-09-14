@@ -1,5 +1,5 @@
-import preset from './preset/index';
-import { darkOne, darkTwo, light } from './preset/themes';
+import preset from './src/preset/index';
+import { darkOne, darkTwo, light } from './src/preset/themes';
 
 /** @type {import('tailwindcss').Config} */
 export const presets = [
