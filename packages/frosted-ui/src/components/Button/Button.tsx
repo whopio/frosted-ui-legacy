@@ -105,7 +105,7 @@ export interface ButtonProps
    * To bypass this behavior the overrideClassname prop can be used.
    * Use with caution.
    */
-  overrideClassName: string;
+  overrideClassName?: string;
   leftIconClassName?: string;
   rightIconClassName?: string;
 }
