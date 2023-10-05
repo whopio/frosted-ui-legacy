@@ -16,7 +16,7 @@ import {
   Size,
 } from '../../lib/shared-component-types';
 import { Icon } from '../Icon';
-import { Typography } from '../Typography';
+import { Text } from '../Text';
 
 export type ButtonSize = Size;
 export const ButtonSizes: { [key: string]: Size } = {
@@ -346,7 +346,7 @@ export const Button = forwardRef(function Button<
         })}
       />
 
-      <Typography
+      <Text
         as="div"
         variant={
           (
@@ -409,7 +409,7 @@ export const Button = forwardRef(function Button<
             )}
           />
         )}
-      </Typography>
+      </Text>
     </Component>
   );
 }) as <C extends ElementType = 'button'>(

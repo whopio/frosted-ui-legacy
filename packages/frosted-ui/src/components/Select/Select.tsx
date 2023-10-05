@@ -31,7 +31,7 @@ import { Size } from '../../lib/shared-component-types';
 import { Icon } from '../Icon';
 import { Label, LabelProps } from '../Label';
 import { SelectItem, SelectItemProps } from '../SelectItem';
-import { Typography } from '../Typography';
+import { Text } from '../Text';
 
 export type SelectSize = Extract<Size, 'sm' | 'md'>;
 export const SelectSizes: { [key: string]: SelectSize } = {
@@ -154,9 +154,9 @@ export const Select = forwardRef<
                 <Icon icon={leftIcon} />
               </IconPrimitive>
             )}
-            <Typography as="span" variant="body1" className="truncate">
+            <Text as="span" variant="body1" className="truncate">
               <Value placeholder={placeholder} aria-label={value} />
-            </Typography>
+            </Text>
             <IconPrimitive>
               <Icon
                 icon={faChevronDown}
@@ -225,9 +225,9 @@ export const Select = forwardRef<
                 className="mt-px h-3"
               />
             )}
-            <Typography as="div" variant="text5" className="flex-wrap">
+            <Text as="div" variant="text5" className="flex-wrap">
               {errorMessage || helpMessage}
-            </Typography>
+            </Text>
           </div>
         )}
       </div>

@@ -10,7 +10,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 import React, { useId } from 'react';
 import { cn } from '../../lib/classnames';
 import { ColorScheme } from '../../lib/shared-component-types';
-import { Typography } from '../Typography';
+import { Text } from '../Text';
 
 export type CheckboxColorScheme = Extract<ColorScheme, 'brand' | 'black'>;
 export const CheckboxColorSchemes: { [key: string]: CheckboxColorScheme } = {
@@ -91,7 +91,7 @@ export const Checkbox = ({
       </Root>
       {label && (
         <Label htmlFor={id || defaultId} asChild>
-          <Typography
+          <Text
             as="label"
             variant="body2"
             className={cn(
@@ -101,7 +101,7 @@ export const Checkbox = ({
             )}
           >
             {label}
-          </Typography>
+          </Text>
         </Label>
       )}
     </div>

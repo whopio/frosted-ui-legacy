@@ -6,7 +6,7 @@ import React, { ForwardedRef, TextareaHTMLAttributes, forwardRef } from 'react';
 import { cn } from '../../lib/classnames';
 import { Icon } from '../Icon';
 import { Label, LabelProps } from '../Label';
-import { Typography } from '../Typography';
+import { Text } from '../Text';
 
 export interface TextAreaProps
   extends Omit<
@@ -96,13 +96,13 @@ export const TextArea = forwardRef(
                   className="mt-px h-3 w-3"
                 />
               )}
-              <Typography as="div" variant="text5" className="ml-1 flex-wrap">
+              <Text as="div" variant="text5" className="ml-1 flex-wrap">
                 {errorMessage || helpMessage}
-              </Typography>
+              </Text>
             </div>
           )}
           {maxLength && (
-            <Typography
+            <Text
               as="span"
               variant="text5"
               className={cn('flex w-full justify-end', {
@@ -111,7 +111,7 @@ export const TextArea = forwardRef(
               })}
             >
               {value?.length || 0} / {maxLength}
-            </Typography>
+            </Text>
           )}
         </div>
       </div>

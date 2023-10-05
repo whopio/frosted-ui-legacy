@@ -7,7 +7,7 @@ import {
 import React, { forwardRef, useId } from 'react';
 import { cn } from '../../lib/classnames';
 import { RadioColorScheme } from '../RadioGroup';
-import { Typography } from '../Typography';
+import { Text } from '../Text';
 
 export type RadioItemProps = {
   label?: string;
@@ -49,7 +49,7 @@ export const RadioItem = forwardRef<
         >
           <Indicator className="after:bg-whop-background relative flex h-full w-full items-center justify-center after:block after:rounded-[50%] after:content-[''] after:h-1.5 after:w-1.5" />
         </Item>
-        <Typography
+        <Text
           as="label"
           variant="body2"
           className={cn(
@@ -59,7 +59,7 @@ export const RadioItem = forwardRef<
           htmlFor={defaultId}
         >
           {label}
-        </Typography>
+        </Text>
       </div>
     );
   },

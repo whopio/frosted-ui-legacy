@@ -21,21 +21,15 @@ export const typographyClassNames: {
   mono1: 'text-mono1 font-mono',
 };
 
-type TypographyProps<T extends keyof JSX.IntrinsicElements> = {
+type TextProps<T extends keyof JSX.IntrinsicElements> = {
   variant: keyof typeof typographyClassNames;
   as: T;
   children: React.ReactNode;
 } & JSX.IntrinsicElements[T];
 
-export const Typography = React.forwardRef(
+export const Text = React.forwardRef(
   <T extends keyof JSX.IntrinsicElements>(
-    {
-      variant,
-      as,
-      children,
-      className: classNameProp,
-      ...props
-    }: TypographyProps<T>,
+    { variant, as, children, className: classNameProp, ...props }: TextProps<T>,
     ref: React.Ref<HTMLElement>,
   ) => {
     const className = cn(typographyClassNames[variant], classNameProp);
@@ -43,5 +37,5 @@ export const Typography = React.forwardRef(
     return React.createElement(as, { className, ref, ...props }, children);
   },
 ) as <T extends keyof JSX.IntrinsicElements>(
-  props: TypographyProps<T> & { ref?: React.Ref<HTMLElement> },
+  props: TextProps<T> & { ref?: React.Ref<HTMLElement> },
 ) => React.ReactElement<T>;
