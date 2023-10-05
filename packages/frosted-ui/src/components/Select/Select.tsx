@@ -222,10 +222,10 @@ export const Select = forwardRef<
             {messageIcon && (
               <Icon
                 icon={helpMessage ? faInfoCircle : faExclamationCircle}
-                className="mt-px h-3"
+                className="mt-1 h-3"
               />
             )}
-            <Text as="div" variant="text5" className="flex-wrap">
+            <Text as="div" variant="body2" className="flex-wrap">
               {errorMessage || helpMessage}
             </Text>
           </div>

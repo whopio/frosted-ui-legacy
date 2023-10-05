@@ -164,7 +164,7 @@ export const TablePagination = ({
       <div className="flex items-center gap-x-[10px]">
         <Text
           as="p"
-          variant="text4"
+          variant="body2"
           className="text-whop-gray hidden whitespace-nowrap sm:block"
         >
           Showing {currentPageStart} - {currentPageEnd} of {totalRowCount}

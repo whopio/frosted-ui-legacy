@@ -93,10 +93,10 @@ export const TextArea = forwardRef(
               {messageIcon && (
                 <Icon
                   icon={helpMessage ? faInfoCircle : faExclamationCircle}
-                  className="mt-px h-3 w-3"
+                  className="mt-1 h-3 w-3"
                 />
               )}
-              <Text as="div" variant="text5" className="ml-1 flex-wrap">
+              <Text as="div" variant="body2" className="ml-1 flex-wrap">
                 {errorMessage || helpMessage}
               </Text>
             </div>
@@ -104,7 +104,7 @@ export const TextArea = forwardRef(
           {maxLength && (
             <Text
               as="span"
-              variant="text5"
+              variant="body2"
               className={cn('flex w-full justify-end', {
                 'text-whop-error-red': value?.length === maxLength,
                 'text-whop-dark-gray': (value?.length || 0) < maxLength,
