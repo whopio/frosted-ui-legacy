@@ -129,16 +129,13 @@ export const Tooltip = forwardRef<
               {title && variant === 'default' && (
                 <Typography
                   as="p"
-                  variant="subtitle3"
+                  variant="button2"
                   className="text-whop-black mb-2"
                 >
                   {title}
                 </Typography>
               )}
-              <Typography
-                as="p"
-                variant={variant === 'default' ? 'paragraph3' : 'subtitle5'}
-              >
+              <Typography as="p" variant="body2">
                 {description}
               </Typography>
               {variant === 'default' && linkProps && (

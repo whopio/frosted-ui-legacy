@@ -351,9 +351,9 @@ export const Button = forwardRef(function Button<
         variant={
           (
             {
-              xs: 'subtitle4',
-              sm: 'subtitle3',
-              md: 'button4',
+              xs: 'button3',
+              sm: 'button3',
+              md: 'button2',
               lg: 'button2',
               xl: 'button1',
             } as const

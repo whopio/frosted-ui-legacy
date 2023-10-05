@@ -110,7 +110,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(function Input(
           <label htmlFor={name}>
             <Typography
               as="span"
-              variant="text1"
+              variant="body1"
               className={cn(
                 'text-whop-dark-gray mr-1 select-none w-fit max-w-[128px] whitespace-nowrap overflow-x-auto flex flex-row-reverse',
               )}
@@ -134,7 +134,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(function Input(
           autoCorrect="off"
           className={cn(
             { [inputStyles]: !(!leftIcon && leftText) },
-            'placeholder:text-whop-dark-gray/[50%] text-whop-black text-text1 bg-whop-background outline-none',
+            'placeholder:text-whop-dark-gray/[50%] text-whop-black text-body1 bg-whop-background outline-none',
             {
               'h-8': size === 'sm',
               'h-10': size === 'md',

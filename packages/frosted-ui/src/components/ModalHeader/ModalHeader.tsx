@@ -30,7 +30,7 @@ export const ModalHeader = ({
       <Dialog.Title as="div">
         <Typography
           as="h2"
-          variant="header4"
+          variant="h3"
           className={cn('text-whop-black', {
             'text-center': centered,
           })}
@@ -54,7 +54,7 @@ export const ModalHeader = ({
         <Dialog.Description as="div">
           <Typography
             as="div"
-            variant="paragraph3"
+            variant="body2"
             className={cn('text-whop-dark-gray', {
               'text-center': centered,
             })}

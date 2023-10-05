@@ -40,7 +40,7 @@ export const Tag = ({
   return (
     <Typography
       as="div"
-      variant="subtitle4"
+      variant="button3"
       className={cn(
         'inline-flex w-auto items-center justify-center rounded px-1.5 h-[18px]',
         {

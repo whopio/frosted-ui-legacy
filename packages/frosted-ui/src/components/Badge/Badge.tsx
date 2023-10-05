@@ -110,7 +110,7 @@ export const Badge = ({
       )}
       {...props}
     >
-      <Typography as="span" variant="subtitle5">
+      <Typography as="span" variant="button3">
         {text}
       </Typography>
     </div>

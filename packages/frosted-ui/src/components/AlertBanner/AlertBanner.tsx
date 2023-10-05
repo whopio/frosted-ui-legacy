@@ -109,12 +109,12 @@ export const AlertBanner = ({
         <Icon icon={icon} className={cn('mr-2 h-[18px] w-[18px]', textColor)} />
         <div className="space-y-1">
           {title && (
-            <Typography as="h5" variant="subtitle2" className={cn(textColor)}>
+            <Typography as="h5" variant="h3" className={cn(textColor)}>
               {title}
             </Typography>
           )}
           {description && (
-            <Typography as="p" variant="paragraph3" className={cn(textColor)}>
+            <Typography as="p" variant="body2" className={cn(textColor)}>
               {description}
             </Typography>
           )}

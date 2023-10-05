@@ -154,7 +154,7 @@ export const Select = forwardRef<
                 <Icon icon={leftIcon} />
               </IconPrimitive>
             )}
-            <Typography as="span" variant="text1" className="truncate">
+            <Typography as="span" variant="body1" className="truncate">
               <Value placeholder={placeholder} aria-label={value} />
             </Typography>
             <IconPrimitive>

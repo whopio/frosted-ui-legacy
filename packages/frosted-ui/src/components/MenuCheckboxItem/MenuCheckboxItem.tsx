@@ -27,7 +27,7 @@ export const MenuCheckboxItem = forwardRef<
     >
       <Checkbox checked={props.checked} colorScheme="black" className="mr-3" />
 
-      <Typography as="span" variant="subtitle3">
+      <Typography as="span" variant="body2">
         {children}
       </Typography>
     </CheckboxItem>

@@ -66,9 +66,8 @@ export const RadioCardItem = forwardRef<
           variant={
             (
               {
-                sm: 'subtitle3',
-                md: 'subtitle1',
-                lg: 'button2',
+                sm: 'button2',
+                md: 'button1',
               } as const
             )[size]
           }
@@ -80,7 +79,7 @@ export const RadioCardItem = forwardRef<
         {description && (
           <Typography
             as="span"
-            variant={size === 'sm' ? 'paragraph4' : 'paragraph3'}
+            variant={size === 'sm' ? 'body2' : 'body1'}
             className="text-whop-dark-gray block w-full"
           >
             {description}

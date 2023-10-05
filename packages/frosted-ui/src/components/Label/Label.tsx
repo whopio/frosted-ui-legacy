@@ -30,7 +30,7 @@ export const Label = ({
   return (
     <Typography
       as="div"
-      variant={variant === 'default' ? 'text3' : 'subtitle3'}
+      variant={variant === 'default' ? 'body2' : 'button2'}
       className={cn('flex items-center', wrapperClassName)}
     >
       <Root

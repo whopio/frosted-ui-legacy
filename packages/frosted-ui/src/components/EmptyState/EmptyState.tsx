@@ -35,12 +35,12 @@ export const EmptyState = ({
           <Icon icon={icon} className={'text-whop-gray h-6 w-6'} />
         </div>
         <div>
-          <Typography as="p" variant="header4" className="text-whop-off-black">
+          <Typography as="p" variant="h3" className="text-whop-off-black">
             {title}
           </Typography>
           <Typography
             as="p"
-            variant="paragraph3"
+            variant="body2"
             className="text-whop-dark-gray mt-1"
           >
             {description}

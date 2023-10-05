@@ -17,7 +17,7 @@ export const CustomToastBar = ({ t }: { t: Toast }) => {
           <div className="flex items-start justify-between gap-2 w-full bg-whop-background border border-whop-stroke rounded-md min-w-[250px] p-2 text-whop-black shadow-md">
             <div className="flex items-baseline gap-1">
               {icon}
-              <Typography as="p" variant="text2">
+              <Typography as="p" variant="body1">
                 {message}
               </Typography>
             </div>

@@ -103,16 +103,16 @@ export const TextButton = forwardRef(function TextButton<
         variant={
           {
             underline: {
-              sm: 'text4',
-              md: 'text3',
-              lg: 'text2',
-              xl: 'text1',
+              sm: 'button3',
+              md: 'button2',
+              lg: 'button1',
+              xl: 'h3',
             } as const,
             arrow: {
-              sm: 'button5',
-              md: 'button4',
-              lg: 'button3',
-              xl: 'button2',
+              sm: 'button3',
+              md: 'button2',
+              lg: 'button1',
+              xl: 'h3',
             } as const,
           }[variant as TextButtonVariant][size as TextButtonSize]
         }

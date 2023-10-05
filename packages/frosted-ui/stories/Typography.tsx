@@ -36,11 +36,10 @@ const Typography = () => {
         </thead>
         <tbody>
           {Object.entries(fontSize).map(([key, value]) => {
-            const styleSupported = typographyClassNames[key];
-            if (styleSupported) {
+            const typographyClassName = typographyClassNames[key];
+            if (typographyClassName) {
               const [fontSize, { fontWeight, lineHeight, letterSpacing }] =
                 value;
-              const className = 'text-' + key;
               return (
                 <tr key={key}>
                   <Td>
@@ -51,7 +50,7 @@ const Typography = () => {
                       {key}
                     </T>
                   </Td>
-                  <Td>{className}</Td>
+                  <Td>{typographyClassName}</Td>
                   <Td>{Math.floor(remToPx(fontSize))}px</Td>
                   <Td>{fontWeight}</Td>
                   <Td>{Math.floor(remToPx(lineHeight))}px</Td>

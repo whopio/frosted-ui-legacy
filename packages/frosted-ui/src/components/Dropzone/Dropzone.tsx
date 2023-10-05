@@ -104,7 +104,7 @@ export const Dropzone = ({
 
       <Typography
         as="p"
-        variant="subtitle1"
+        variant="h3"
         className="text-whop-black text-center sm:text-left"
       >
         {title}
@@ -112,7 +112,7 @@ export const Dropzone = ({
 
       <Typography
         as="p"
-        variant="paragraph4"
+        variant="body2"
         className={cn(
           'text-whop-dark-gray mt-2 text-center sm:text-left',
           { 'opacity-0': Boolean(loading) },

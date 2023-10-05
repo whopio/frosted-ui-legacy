@@ -13,7 +13,7 @@ export const MenuLabel = forwardRef<
       className="text-whop-dark-gray mb-1 ml-3 mt-3 uppercase"
       {...props}
     >
-      <Typography as="span" variant="overline4" className="block">
+      <Typography as="span" variant="overline1" className="block">
         {children}
       </Typography>
     </Label>

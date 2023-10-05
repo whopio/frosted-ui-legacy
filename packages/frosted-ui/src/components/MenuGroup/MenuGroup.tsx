@@ -34,7 +34,7 @@ export const MenuGroup = forwardRef<
           {label && (
             <Typography
               as="label"
-              variant="overline4"
+              variant="overline1"
               className="block text-whop-dark-gray mb-1 ml-3 mt-3 uppercase"
             >
               {label}

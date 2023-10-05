@@ -77,7 +77,7 @@ export const Drawer = ({
                     <Dialog.Title>
                       <Typography
                         as="h2"
-                        variant="header3"
+                        variant="h3"
                         className="text-whop-black"
                       >
                         {title}
@@ -97,7 +97,7 @@ export const Drawer = ({
                       <Dialog.Description>
                         <Typography
                           as="p"
-                          variant="paragraph3"
+                          variant="body2"
                           className="text-whop-dark-gray mt-1.5"
                         >
                           {description}

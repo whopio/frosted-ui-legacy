@@ -42,13 +42,13 @@ export const PillTabListItem = ({
           {badge && (
             <div className="bg-whop-primary z-[2] mr-2 h-2 w-2 rounded-full" />
           )}
-          <Typography as="span" variant="subtitle3" className="z-[2]">
+          <Typography as="span" variant="button2" className="z-[2]">
             {children}
           </Typography>
           {label && (
             <Typography
               as="div"
-              variant="text5"
+              variant="body2"
               className="text-whop-dark-gray z-[2] ml-2"
             >
               {label}

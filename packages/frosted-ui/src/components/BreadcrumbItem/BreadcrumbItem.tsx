@@ -17,8 +17,8 @@ export const BreadcrumbItem = ({
     return (
       <Typography
         as="div"
-        variant="overline3"
-        className="text-whop-dark-gray flex h-6 items-center justify-center px-[7px] uppercase"
+        variant="overline1"
+        className="flex text-whop-dark-gray h-6 items-center justify-center px-[7px] uppercase leading-none"
       >
         {children}
       </Typography>
@@ -34,8 +34,8 @@ export const BreadcrumbItem = ({
     >
       <Typography
         as="span"
-        variant="overline3"
-        className="!text-whop-gray uppercase"
+        variant="overline1"
+        className="block !text-whop-gray uppercase leading-none"
       >
         {children}
       </Typography>

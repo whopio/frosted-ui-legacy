@@ -58,7 +58,7 @@ export const Banner = ({
         onClick={onClick}
       >
         {showIcon && <Icon icon={icon} className="text-white" />}
-        <Typography as="p" variant="subtitle2" className="text-white">
+        <Typography as="p" variant="body1" className="text-white">
           {title}
         </Typography>
         <Button

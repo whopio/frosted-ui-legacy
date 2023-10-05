@@ -26,7 +26,7 @@ export const MenuRadioItem = forwardRef<
           <Icon icon={faCheck} />
         </ItemIndicator>
       </span>
-      <Typography as="span" variant="subtitle3">
+      <Typography as="span" variant="body2">
         {children}
       </Typography>
     </RadioItem>

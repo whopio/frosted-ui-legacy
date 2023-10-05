@@ -35,7 +35,7 @@ export const SelectItem = forwardRef<
       <ItemIndicator className="absolute left-3 text-sm">
         <Icon icon={faCheck} />
       </ItemIndicator>
-      <Typography as="span" variant="subtitle3" className="truncate">
+      <Typography as="span" variant="body2" className="truncate">
         <ItemText>{textValue || children}</ItemText>
       </Typography>
     </Item>

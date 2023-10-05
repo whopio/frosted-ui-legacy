@@ -44,7 +44,7 @@ export const AccordionTrigger = React.forwardRef<
 >(({ className, children, open = false, ...props }, ref) => {
   return (
     <Header>
-      <Typography as="div" variant="header4" className="flex">
+      <Typography as="div" variant="h3" className="flex">
         <Trigger
           ref={ref}
           className={cn(

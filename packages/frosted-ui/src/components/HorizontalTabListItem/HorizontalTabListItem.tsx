@@ -68,9 +68,8 @@ export const HorizontalTabListItem = ({
               variant={
                 (
                   {
-                    sm: 'subtitle3',
-                    md: 'button3',
-                    lg: 'button2',
+                    sm: 'button3',
+                    md: 'button2',
                   } as const
                 )[size]
               }
