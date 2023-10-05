@@ -10,7 +10,7 @@ const meta: Meta<typeof Text> = {
   component: Text,
   args: {
     children: 'Hello world!',
-    variant: 'body1',
+    variant: 'h1',
     as: 'div',
   },
 };
