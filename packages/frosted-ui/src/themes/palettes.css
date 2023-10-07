@@ -1,0 +1,77 @@
+:root {
+  --gray-50: #f5f8f8;
+  --gray-100: #ecf2f3;
+  --gray-200: #dce6e9;
+  --gray-300: #c7d4da;
+  --gray-400: #afc0ca;
+  --gray-500: #9aabba;
+  --gray-600: #8191a5;
+  --gray-700: #717f91;
+  --gray-800: #5d6976;
+  --gray-900: #4e5761;
+  --gray-950: #2e3338;
+
+  --outrageous-orange-50: #fff3f1;
+  --outrageous-orange-100: #ffe4df;
+  --outrageous-orange-200: #ffcfc5;
+  --outrageous-orange-300: #ffad9d;
+  --outrageous-orange-400: #ff7e64;
+  --outrageous-orange-500: #ff6243;
+  --outrageous-orange-600: #ed3915;
+  --outrageous-orange-700: #c82c0d;
+  --outrageous-orange-800: #a5280f;
+  --outrageous-orange-900: #882714;
+  --outrageous-orange-950: #4b1004;
+
+  /* success green */
+  --apple-50: #effce9;
+  --apple-100: #dcf8cf;
+  --apple-200: #bcf1a5;
+  --apple-300: #93e571;
+  --apple-400: #6dd645;
+  --apple-500: #4ab325;
+  --apple-600: #39951b;
+  --apple-700: #2d7219;
+  --apple-800: #275b19;
+  --apple-900: #244d1a;
+  --apple-950: #0f2a09;
+
+  /* warning yellow */
+  --galliano-50: #fffee7;
+  --galliano-100: #fffdc1;
+  --galliano-200: #fff686;
+  --galliano-300: #ffe941;
+  --galliano-400: #ffd70d;
+  --galliano-500: #e2b100;
+  --galliano-600: #d19200;
+  --galliano-700: #a66702;
+  --galliano-800: #89500a;
+  --galliano-900: #74420f;
+  --galliano-950: #442204;
+
+  /* error red */
+  --red-orange-50: #fff1f1;
+  --red-orange-100: #ffdfdf;
+  --red-orange-200: #ffc5c5;
+  --red-orange-300: #ff9d9d;
+  --red-orange-400: #ff6464;
+  --red-orange-500: #ff3333;
+  --red-orange-600: #ed1515;
+  --red-orange-700: #c80d0d;
+  --red-orange-800: #a50f0f;
+  --red-orange-900: #881414;
+  --red-orange-950: #4b0404;
+
+  /* purple accent */
+  --electric-violet-50: #fbf6fe;
+  --electric-violet-100: #f6eafd;
+  --electric-violet-200: #eed9fb;
+  --electric-violet-300: #e1bbf7;
+  --electric-violet-400: #cf90f0;
+  --electric-violet-500: #bc65e7;
+  --electric-violet-600: #a33ad5;
+  --electric-violet-700: #9233bd;
+  --electric-violet-800: #7a2f9a;
+  --electric-violet-900: #64277c;
+  --electric-violet-950: #45105b;
+}

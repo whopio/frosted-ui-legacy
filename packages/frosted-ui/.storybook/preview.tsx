@@ -9,8 +9,18 @@ const preview: Preview = {
   decorators: [
     (Story) => (
       <TooltipProvider>
-        <Story />
-        <Toaster />
+        {/* <style>
+          {`body, html {
+            background: var(--gray-50);
+          }`}
+        </style> */}
+        <div
+          data-theme="light"
+          //  style={{ background: 'var(--gray-50)' }}
+        >
+          <Story />
+          <Toaster />
+        </div>
       </TooltipProvider>
     ),
   ],
