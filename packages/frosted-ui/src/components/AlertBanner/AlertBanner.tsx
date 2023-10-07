@@ -55,81 +55,33 @@ export const AlertBanner = ({
   closeButtonProps,
   ctaButtonProps,
 }: AlertBannerProps) => {
-  const textColor = {
-    'text-whop-background': variant === 'default',
-    'text-whop-tag-gray': colorScheme === 'gray' && variant === 'light-anchor',
-    'dark-gray border-whop-stroke':
-      colorScheme === 'light-gray' && variant === 'light-anchor',
-    'text-whop-field-highlight':
-      colorScheme === 'purple' && variant === 'light-anchor',
-    'text-whop-tag-green':
-      colorScheme === 'success-green' && variant === 'light-anchor',
-    'text-whop-tag-warning':
-      colorScheme === 'warning-yellow' && variant === 'light-anchor',
-    'text-whop-tag-error':
-      colorScheme === 'error-red' && variant === 'light-anchor',
-  };
-
   return (
     <div
       role="alert"
       aria-live="polite"
-      className={cn(
-        'relative flex items-start justify-between rounded-md border border-transparent py-3 pl-3.5 pr-[46px]',
-        {
-          // Default variants
-          'bg-whop-gray text-whop-background':
-            colorScheme === 'gray' && variant === 'default',
-          'bg-whop-field-highlight text-whop-background':
-            colorScheme === 'purple' && variant === 'default',
-          'bg-whop-success-green text-whop-background':
-            colorScheme === 'success-green' && variant === 'default',
-          'bg-whop-warning-yellow text-whop-background':
-            colorScheme === 'warning-yellow' && variant === 'default',
-          'bg-whop-error-red text-whop-background':
-            colorScheme === 'error-red' && variant === 'default',
-
-          // Light-anchor variants
-          'bg-whop-tag-gray-background border-whop-tag-gray':
-            colorScheme === 'gray' && variant === 'light-anchor',
-          'bg-whop-hover-50 border-whop-stroke':
-            colorScheme === 'light-gray' && variant === 'light-anchor',
-          'bg-whop-field-highlight/[10%] border-whop-field-highlight':
-            colorScheme === 'purple' && variant === 'light-anchor',
-          'bg-whop-tag-green-background border-whop-tag-green':
-            colorScheme === 'success-green' && variant === 'light-anchor',
-          'bg-whop-tag-warning-background border-whop-tag-warning':
-            colorScheme === 'warning-yellow' && variant === 'light-anchor',
-          'bg-whop-tag-error-background border-whop-tag-error':
-            colorScheme === 'error-red' && variant === 'light-anchor',
-        },
-      )}
+      data-accent={colorScheme}
+      className={cn('fui-AlertBanner', {
+        //  Variants
+        'fui-AlertBanner_variant--default': variant === 'default',
+        'fui-AlertBanner_variant--light-anchor': variant === 'light-anchor',
+      })}
     >
-      <div className="flex items-start">
-        <Icon icon={icon} className={cn('mr-2 h-[18px] w-[18px]', textColor)} />
-        <div className="space-y-1">
+      <div className="fui-AlertBanner-content">
+        <Icon icon={icon} className="fui-AlertBanner-icon" />
+        <div>
           {title && (
-            <Text as="h5" variant="h3" className={cn(textColor)}>
+            <Text as="h5" variant="h3" className="fui-AlertBanner-title">
               {title}
             </Text>
           )}
           {description && (
-            <Text as="p" variant="body2" className={cn(textColor)}>
+            <Text
+              as="p"
+              variant="body2"
+              className="fui-AlertBanner-description"
+            >
               {description}
             </Text>
-          )}
-          {showCta && ctaButtonProps && (
-            <TextButton
-              {...ctaButtonProps}
-              colorScheme={
-                variant === 'default'
-                  ? 'white'
-                  : colorScheme === 'gray'
-                  ? 'dark-gray'
-                  : colorScheme
-              }
-              className={cn('min-[400px]:hidden mt-2')}
-            />
           )}
         </div>
       </div>
@@ -145,7 +97,7 @@ export const AlertBanner = ({
                 ? 'dark-gray'
                 : colorScheme
             }
-            className={cn('max-[399px]:hidden absolute top-3 right-3.5')}
+            className="fui-AlertBanner-TextButton"
           />
         ) : (
           <IconButton
@@ -163,11 +115,7 @@ export const AlertBanner = ({
             }
             {...closeButtonProps}
             className={cn(
-              'absolute right-1.5 top-1.5',
-              {
-                'text-whop-tag-error':
-                  colorScheme === 'error-red' && variant === 'light-anchor',
-              },
+              'fui-AlertBanner-IconButton',
               closeButtonProps?.className,
             )}
           />
