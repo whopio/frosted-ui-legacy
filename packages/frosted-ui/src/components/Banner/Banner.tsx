@@ -43,44 +43,36 @@ export const Banner = ({
   const handleDismiss = useCallback(() => setShow(false), []);
 
   return (
-    <span className="relative">
-      <div
-        className={cn(
-          'flex h-12 w-full cursor-pointer items-center justify-center gap-2',
-          {
-            'bg-whop-field-highlight': colorScheme === 'purple',
-            'bg-whop-success-green': colorScheme === 'success-green',
-            'bg-whop-warning-yellow': colorScheme === 'warning-yellow',
-            'bg-whop-error-red': colorScheme === 'error-red',
-          },
-          { hidden: !show },
-        )}
-        onClick={onClick}
+    <div
+      className={cn('fui-Banner', { 'fui-Banner--hidden': !show })}
+      data-accent={colorScheme}
+      onClick={onClick}
+    >
+      {showIcon && <Icon icon={icon} className="fui-Banner-icon" />}
+      <Text as="p" variant="body1">
+        {title}
+      </Text>
+      <Button
+        colorScheme="black"
+        variant="elevated"
+        className="!bg-white !text-black"
+        size="xs"
       >
-        {showIcon && <Icon icon={icon} className="text-white" />}
-        <Text as="p" variant="body1" className="text-white">
-          {title}
-        </Text>
-        <Button
-          colorScheme="black"
-          variant="elevated"
-          className="hidden !bg-white !text-black sm:block"
-          size="xs"
-        >
-          {ctaText}
-        </Button>
-      </div>
-
+        {ctaText}
+      </Button>
       {allowDismiss && (
-        <IconButton
-          colorScheme="white"
-          variant="blank"
-          size="xs"
-          icon={faXmark}
-          className="absolute right-3 top-3 !text-white"
-          onClick={handleDismiss}
-        />
+        // TODO: remove this div wrapper after IconButton is migrated from Tailwind to Vanilla CSS
+        <div className="fui-Banner-dismiss-button">
+          <IconButton
+            colorScheme="white"
+            variant="blank"
+            size="xs"
+            icon={faXmark}
+            className="!text-white"
+            onClick={handleDismiss}
+          />
+        </div>
       )}
-    </span>
+    </div>
   );
 };

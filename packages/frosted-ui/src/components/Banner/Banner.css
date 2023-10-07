@@ -1,0 +1,27 @@
+.fui-Banner {
+  position: relative;
+  height: 3rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+
+  background-color: var(--accent-500);
+  color: white;
+
+  cursor: pointer;
+}
+.fui-Banner--hidden {
+  display: none;
+}
+.fui-Banner-icon {
+  color: white;
+}
+.fui-Banner-dismiss-button {
+  position: absolute;
+  right: 0.75rem;
+  top: 0.75rem;
+
+  color: white;
+}

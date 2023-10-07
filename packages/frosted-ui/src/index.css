@@ -5,6 +5,7 @@
 @import './components/AlertBanner/AlertBanner.css';
 @import './components/Avatar/Avatar.css';
 @import './components/Badge/Badge.css';
+@import './components/Banner/Banner.css';
 
 @tailwind base;
 @tailwind components;
