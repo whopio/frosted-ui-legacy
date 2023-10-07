@@ -8,6 +8,6 @@ export const BreadcrumbSeparator = () => (
   <Icon
     icon={faChevronRight}
     fontawesomeSize="sm"
-    className="text-whop-gray h-2.5 !w-2.5"
+    className="fui-BreadcrumbSeparator"
   />
 );

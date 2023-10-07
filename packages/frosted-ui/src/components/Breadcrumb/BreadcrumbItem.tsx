@@ -18,24 +18,21 @@ export const BreadcrumbItem = ({
       <Text
         as="div"
         variant="overline1"
-        className="flex text-whop-dark-gray h-6 items-center justify-center px-[7px] uppercase leading-none"
+        className={cn(
+          'fui-BreadcrumbItem fui-BreadcrumbItem--last',
+          props?.className,
+        )}
       >
         {children}
       </Text>
     );
   }
   return (
-    <Button
-      variant="blank"
-      colorScheme="dark-gray"
-      size="xs"
-      className={cn(props?.className)}
-      {...props}
-    >
+    <Button variant="blank" colorScheme="dark-gray" size="xs" {...props}>
       <Text
         as="span"
         variant="overline1"
-        className="block !text-whop-gray uppercase leading-none"
+        className={cn('fui-BreadcrumbItem', props?.className)}
       >
         {children}
       </Text>

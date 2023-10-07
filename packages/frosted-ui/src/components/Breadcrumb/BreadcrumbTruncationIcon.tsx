@@ -8,6 +8,6 @@ export const BreadcrumbTruncationIcon = () => (
   <Icon
     icon={faEllipsis}
     fontawesomeSize="sm"
-    className="text-whop-gray mx-1 h-2.5 !w-2.5"
+    className="fui-BreadcrumbTruncationIcon"
   />
 );

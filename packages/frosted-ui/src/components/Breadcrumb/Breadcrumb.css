@@ -1,0 +1,42 @@
+.fui-Breadcrumb {
+}
+.fui-Breadcrumb-list {
+  display: flex;
+  gap: 1px; /* Equivalent to gap-px in Tailwind */
+  overflow-x: auto;
+  white-space: nowrap;
+}
+.fui-Breadcrumb-list-item {
+  display: flex;
+  align-items: center;
+}
+.fui-Breadcrumb-list-item--hidden {
+  display: none;
+}
+
+.fui-BreadcrumbItem {
+  display: flex;
+  color: var(--gray-600);
+  height: 1.5rem;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  line-height: 1;
+}
+.fui-BreadcrumbItem--last {
+  color: var(--gray-950);
+  padding-left: 7px;
+}
+
+.fui-BreadcrumbSeparator {
+  width: 0.625rem !important;
+  height: 0.625rem !important;
+  color: var(--gray-600);
+}
+
+.fui-BreadcrumbTruncationIcon {
+  width: 0.625rem !important;
+  height: 0.625rem !important;
+  color: var(--gray-600);
+  margin: 0 0.25rem;
+}
