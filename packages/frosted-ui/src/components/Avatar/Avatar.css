@@ -1,0 +1,63 @@
+.fui-Avatar {
+  width: var(--fui-avatar-size);
+  height: var(--fui-avatar-size);
+  overflow: hidden;
+  background: var(--gray-100);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0.5px solid var(--gray-300);
+}
+/* TODO: pulse animation */
+.fui-Avatar--loading {
+  animation: var(--fui-pulse-animation);
+}
+
+/* Shape */
+.fui-Avatar_shape--circle {
+  border-radius: 50%;
+}
+.fui-Avatar_shape--square {
+  border-radius: var(--fui-avatar-border-radius, 0.25rem);
+}
+/* Sizes */
+.fui-Avatar_size--16 {
+  --fui-avatar-size: 1rem;
+  --fui-avatar-border-radius: 0.25rem;
+}
+.fui-Avatar_size--24 {
+  --fui-avatar-size: 1.5rem;
+  --fui-avatar-border-radius: 0.375rem;
+}
+.fui-Avatar_size--32 {
+  --fui-avatar-size: 2rem;
+  --fui-avatar-border-radius: 0.5rem;
+}
+.fui-Avatar_size--40 {
+  --fui-avatar-size: 2.5rem;
+  --fui-avatar-border-radius: 0.625rem;
+}
+.fui-Avatar_size--48 {
+  --fui-avatar-size: 3rem;
+  --fui-avatar-border-radius: 0.75rem;
+}
+.fui-Avatar_size--56 {
+  --fui-avatar-size: 3.5rem;
+  --fui-avatar-border-radius: 0.875rem;
+}
+.fui-Avatar_size--64 {
+  --fui-avatar-size: 4rem;
+  --fui-avatar-border-radius: 1rem;
+}
+.fui-Avatar_size--72 {
+  --fui-avatar-size: 4.5rem;
+  --fui-avatar-border-radius: 1.125rem;
+}
+.fui-Avatar_size--80 {
+  --fui-avatar-size: 5rem;
+  --fui-avatar-border-radius: 1.25rem;
+}
+.fui-Avatar_size--128 {
+  --fui-avatar-size: 8rem;
+  --fui-avatar-border-radius: 2rem;
+}

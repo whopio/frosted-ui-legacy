@@ -71,7 +71,7 @@ export const Avatar = forwardRef(function Avatar<C extends ElementType = 'img'>(
     size = 32,
     showFallback: _showFallback = false,
     isLoading = false,
-    className,
+    className: classNameProp,
     as,
     ...props
   }: AvatarComponentProps<C>,
@@ -105,59 +105,20 @@ export const Avatar = forwardRef(function Avatar<C extends ElementType = 'img'>(
     onError && onError();
     setShowFallback(true);
   }, []);
-
-  const imageClasses = cn(
-    'border-whop-stroke border-[0.5px]',
-    {
-      'rounded-full': shape === 'circle',
-      rounded: shape === 'square' && size === 16,
-      'rounded-md': shape === 'square' && size === 24,
-      'rounded-lg': shape === 'square' && size === 32,
-      'rounded-[10px]': shape === 'square' && size === 40,
-      'rounded-xl': shape === 'square' && size === 48,
-      'rounded-[14px]': shape === 'square' && size === 56,
-      'rounded-2xl': shape === 'square' && size === 64,
-      'rounded-[18px]': shape === 'square' && size === 72,
-      'rounded-[20px]': shape === 'square' && size === 80,
-      'rounded-[32px]': shape === 'square' && size === 128,
-    },
-    className,
+  const className = cn(
+    { 'fui-Avatar--loading': isLoading },
+    'fui-Avatar',
+    `fui-Avatar_size--${size}`,
+    `fui-Avatar_shape--${shape}`,
+    classNameProp,
   );
 
-  const imageSize = cn({
-    'w-4 h-4': size === 16,
-    'w-6 h-6': size === 24,
-    'w-8 h-8': size === 32,
-    'w-10 h-10': size === 40,
-    'w-12 h-12': size === 48,
-    'w-14 h-14': size === 56,
-    'w-16 h-16': size === 64,
-    'w-[72px] h-[72px]': size === 72,
-    'w-20 h-20': size === 80,
-    'w-[128px] h-[128px]': size === 128,
-  });
-
   if (isLoading) {
-    return (
-      <div
-        className={cn(
-          'bg-whop-gray/10 animate-pulse overflow-hidden',
-          imageSize,
-          imageClasses,
-        )}
-      />
-    );
+    return <div className={className} />;
   }
-
   if (showFallback) {
     return (
-      <div
-        className={cn(
-          'bg-whop-background flex w-fit items-center justify-center overflow-hidden',
-          imageSize,
-          imageClasses,
-        )}
-      >
+      <div className={className}>
         <AvatarFallback size={size} />
       </div>
     );
@@ -166,18 +127,14 @@ export const Avatar = forwardRef(function Avatar<C extends ElementType = 'img'>(
   return (
     <Component
       ref={ref}
-      className={imageClasses}
+      className={className}
       src={imageSource}
       onLoad={handleLoadingComplete}
       onError={handleOnError}
       alt={alt || username || 'Avatar'}
       width={size}
       height={size}
-      style={{
-        width: size,
-        height: size,
-        style,
-      }}
+      style={style}
       {...rest}
     />
   );
