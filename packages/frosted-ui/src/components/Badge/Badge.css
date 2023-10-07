@@ -1,0 +1,36 @@
+.fui-Badge {
+  display: inline-flex;
+  width: auto;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: transparent;
+  font-weight: 500;
+}
+.fui-Badge_size--sm {
+  height: 1.25rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  font-size: 12px;
+}
+.fui-Badge_size--md {
+  height: 1.5rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  font-size: 12px;
+}
+.fui-Badge_variant--default {
+  background-color: var(--accent-500);
+  color: var(--accent-50);
+}
+.fui-Badge_variant--light {
+  background-color: var(--accent-100);
+  color: var(--accent-700);
+}
+.fui-Badge_variant--light-anchor {
+  background-color: var(--accent-100);
+  color: var(--accent-700);
+  border-color: var(--accent-200);
+}

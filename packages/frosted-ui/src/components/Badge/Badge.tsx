@@ -53,59 +53,19 @@ export const Badge = ({
 }: BadgeProps) => {
   return (
     <div
+      data-accent={colorScheme}
       className={cn(
-        'text-whop-background inline-flex w-auto items-center justify-center rounded-full border border-transparent',
-        className,
+        'fui-Badge',
+        // Sizes
         {
-          'h-[18px] px-1.5': size === 'sm',
-          'h-6 px-2': size === 'md',
+          'fui-Badge_size--sm': size === 'sm',
+          'fui-Badge_size--md': size === 'md',
         },
         {
-          // Default variants
-          'bg-whop-field-highlight':
-            colorScheme === 'purple' && variant === 'default',
-          'bg-whop-primary': colorScheme === 'brand' && variant === 'default',
-          'bg-whop-success-green':
-            colorScheme === 'success-green' && variant === 'default',
-          'bg-whop-warning-yellow':
-            colorScheme === 'warning-yellow' && variant === 'default',
-          'bg-whop-error-red':
-            colorScheme === 'error-red' && variant === 'default',
-          'bg-whop-dark-gray':
-            colorScheme === 'dark-gray' && variant === 'default',
-          'bg-whop-black': colorScheme === 'black' && variant === 'default',
-
-          // Light variant
-          'bg-whop-field-highlight/10 text-whop-field-highlight':
-            colorScheme === 'purple' && variant === 'light',
-          'bg-whop-primary/10 text-whop-primary':
-            colorScheme === 'brand' && variant === 'light',
-          'bg-whop-tag-green-background text-whop-tag-green':
-            colorScheme === 'success-green' && variant === 'light',
-          'bg-whop-tag-warning-background text-whop-tag-warning':
-            colorScheme === 'warning-yellow' && variant === 'light',
-          'bg-whop-tag-error-background text-whop-tag-error':
-            colorScheme === 'error-red' && variant === 'light',
-          'bg-whop-dark-gray/10 text-whop-dark-gray':
-            colorScheme === 'dark-gray' && variant === 'light',
-          'bg-whop-black/10 text-whop-black':
-            colorScheme === 'black' && variant === 'light',
-
-          // Light anchor variant
-          'bg-whop-field-highlight/10 text-whop-field-highlight border-whop-field-highlight/[14%]':
-            colorScheme === 'purple' && variant === 'light-anchor',
-          'bg-whop-primary/10 text-whop-primary border-whop-primary/[14%]':
-            colorScheme === 'brand' && variant === 'light-anchor',
-          'bg-whop-tag-green-background text-whop-tag-green border-whop-tag-green/[14%]':
-            colorScheme === 'success-green' && variant === 'light-anchor',
-          'bg-whop-tag-warning-background text-whop-tag-warning border-whop-tag-warning/[14%]':
-            colorScheme === 'warning-yellow' && variant === 'light-anchor',
-          'bg-whop-tag-error-background text-whop-tag-error border-whop-tag-error/[14%]':
-            colorScheme === 'error-red' && variant === 'light-anchor',
-          'bg-whop-dark-gray/10 text-whop-dark-gray border-whop-dark-gray/[14%]':
-            colorScheme === 'dark-gray' && variant === 'light-anchor',
-          'bg-whop-black/10 text-whop-black border-whop-black/[14%]':
-            colorScheme === 'black' && variant === 'light-anchor',
+          //  Variants
+          'fui-Badge_variant--default': variant === 'default',
+          'fui-Badge_variant--light': variant === 'light',
+          'fui-Badge_variant--light-anchor': variant === 'light-anchor',
         },
       )}
       {...props}

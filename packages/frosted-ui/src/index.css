@@ -2,6 +2,7 @@
 @import './themes/light.css';
 @import './components/Accordion/Accordion.css';
 @import './components/AlertBanner/AlertBanner.css';
+@import './components/Badge/Badge.css';
 
 @tailwind base;
 @tailwind components;
