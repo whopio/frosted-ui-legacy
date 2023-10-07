@@ -19,7 +19,7 @@ const PlusIcon = ({ open }: { open: boolean }) => {
       viewBox="0 0 448 448"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className="shrink-0"
+      style={{ flexShrink: 0 }}
     >
       <motion.path
         d="M224 16C237.3 16 248 26.7 248 40L248 408C248 421.3 237.3 432 224 432C210.7 432 200 421.3 200 408L200 40C200 26.7 210.7 16 224 16Z"
@@ -44,19 +44,16 @@ export const AccordionTrigger = React.forwardRef<
 >(({ className, children, open = false, ...props }, ref) => {
   return (
     <Header>
-      <Text as="div" variant="h3" className="flex">
-        <Trigger
-          ref={ref}
-          className={cn(
-            'flex flex-1 cursor-pointer items-center justify-between py-4 text-left font-medium outline-none transition-all focus:outline-none',
-            className,
-          )}
-          {...props}
+      <Trigger ref={ref} asChild {...props}>
+        <Text
+          as="div"
+          variant="h3"
+          className={cn('fui-AccordionTrigger', className)}
         >
           <div>{children}</div>
           <PlusIcon open={open} />
-        </Trigger>
-      </Text>
+        </Text>
+      </Trigger>
     </Header>
   );
 });

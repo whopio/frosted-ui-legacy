@@ -1,0 +1,31 @@
+/* AccordionContent */
+.fui-AccordionContent {
+  overflow: hidden;
+}
+.fui-AccordionContent[data-state='open'] {
+}
+.fui-AccordionContent[data-state='closed'] {
+}
+.fui-AccordionContent-inner {
+  padding-top: 0rem;
+  padding-bottom: 1rem;
+}
+/* AccordionItem */
+.fui-AccordionItem {
+  border-top: 1px solid var(--gray-200);
+}
+/* AccordionTrigger */
+.fui-AccordionTrigger {
+  display: flex;
+  flex: 1;
+  cursor: pointer;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1rem; /* Equivalent to 16px */
+  padding-bottom: 1rem; /* Equivalent to 16px */
+  text-align: left;
+  font-weight: 500;
+  outline: none;
+  transition-property: all;
+  transition-duration: 0.3s; /* You can adjust the duration as needed */
+}

@@ -1,6 +1,7 @@
 import { Content } from '@radix-ui/react-accordion';
 import React from 'react';
 import { cn } from '../../lib/classnames';
+import { Text } from '../Text';
 
 export const AccordionContent = React.forwardRef<
   React.ElementRef<typeof Content>,
@@ -11,13 +12,12 @@ export const AccordionContent = React.forwardRef<
   return (
     <Content
       ref={ref}
-      className={cn(
-        'data-[state=open]:animate-slide-from-top data-[state=closed]:animate-slide-to-top overflow-hidden text-body2',
-        className,
-      )}
+      className={cn('fui-AccordionContent', className)}
       {...props}
     >
-      <div className="pb-4 pt-0">{children}</div>
+      <Text as="div" variant="body2" className="fui-AccordionContent-inner">
+        {children}
+      </Text>
     </Content>
   );
 });

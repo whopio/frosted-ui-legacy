@@ -1,5 +1,6 @@
 @import './themes/palettes.css';
 @import './themes/light.css';
+@import './components/Accordion/Accordion.css';
 
 @tailwind base;
 @tailwind components;

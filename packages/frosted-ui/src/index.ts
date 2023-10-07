@@ -1,7 +1,4 @@
 export * from './components/Accordion';
-export * from './components/AccordionContent';
-export * from './components/AccordionItem';
-export * from './components/AccordionTrigger';
 export * from './components/AlertBanner';
 export * from './components/Avatar';
 export * from './components/Badge';

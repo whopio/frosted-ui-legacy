@@ -6,9 +6,9 @@ import {
   Root,
 } from '@radix-ui/react-accordion';
 import React from 'react';
-import { AccordionContent } from '../AccordionContent';
-import { AccordionItem } from '../AccordionItem';
-import { AccordionTrigger } from '../AccordionTrigger';
+import { AccordionContent } from './AccordionContent';
+import { AccordionItem } from './AccordionItem';
+import { AccordionTrigger } from './AccordionTrigger';
 
 export type AccordionItemProps = {
   value: string;
