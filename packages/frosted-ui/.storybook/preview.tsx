@@ -4,6 +4,7 @@ import * as React from 'react';
 import { Toaster } from '../src/components/Toaster';
 import { TooltipProvider } from '../src/components/TooltipProvider';
 import '../src/index.css';
+import '../src/themes/index.css';
 
 const preview: Preview = {
   decorators: [

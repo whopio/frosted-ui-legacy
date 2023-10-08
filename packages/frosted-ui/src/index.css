@@ -1,13 +1,3 @@
-@import './themes/palettes.css';
-@import './themes/utils/animations.css';
-@import './themes/light.css';
-@import './components/Accordion/Accordion.css';
-@import './components/AlertBanner/AlertBanner.css';
-@import './components/Avatar/Avatar.css';
-@import './components/Badge/Badge.css';
-@import './components/Banner/Banner.css';
-@import './components/Breadcrumb/Breadcrumb.css';
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
