@@ -59,7 +59,7 @@ export const Checkbox = ({
     shouldShow: checked === true || defaultChecked === true,
   });
   return (
-    <div className={cn('flex items-center', wrapperClassName)}>
+    <div className={cn('fui-Checkbox', wrapperClassName)}>
       <Root
         defaultChecked={defaultChecked}
         checked={checked}
@@ -68,21 +68,11 @@ export const Checkbox = ({
         required={isRequired}
         name={name}
         value={value}
-        className={cn(
-          'text-whop-background flex appearance-none items-center justify-center border-2 outline-none',
-          'disabled:cursor-not-allowed disabled:opacity-40 h-4 w-4 rounded-[2.25px]',
-
-          {
-            'data-[state=checked]:bg-whop-primary data-[state=indeterminate]:bg-whop-primary data-[state=checked]:border-whop-primary data-[state=indeterminate]:border-whop-primary':
-              colorScheme === 'brand',
-            'data-[state=checked]:bg-whop-black data-[state=indeterminate]:bg-whop-black data-[state=checked]:border-whop-black data-[state=indeterminate]:border-whop-black':
-              colorScheme === 'black',
-          },
-          className,
-        )}
+        data-accent={colorScheme}
+        className={cn('fui-Checkbox-root', className)}
         id={id || defaultId}
       >
-        <Indicator className={cn('text-whop-background', iconClassName)}>
+        <Indicator className={cn('fui-Checkbox-indicator', iconClassName)}>
           {(checked === 'indeterminate' ||
             defaultChecked === 'indeterminate') && <IndeterminateIcon />}
           {checked !== 'indeterminate' &&
@@ -94,11 +84,7 @@ export const Checkbox = ({
           <Text
             as="label"
             variant="body2"
-            className={cn(
-              'ml-3 cursor-pointer text-whop-black',
-              { 'cursor-not-allowed opacity-40': isDisabled },
-              labelClassName,
-            )}
+            className={cn('fui-Checkbox-label', labelClassName)}
           >
             {label}
           </Text>
@@ -111,7 +97,7 @@ export const Checkbox = ({
 const CheckIcon = ({ className }: { className?: string }) => {
   return (
     <svg
-      className={cn('h-4 w-4', className)}
+      className={cn('fui-Checkbox-icon', className)}
       viewBox="0 0 16 16"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -130,7 +116,7 @@ const CheckIcon = ({ className }: { className?: string }) => {
 const IndeterminateIcon = ({ className }: { className?: string }) => {
   return (
     <svg
-      className={cn('h-4 w-4', className)}
+      className={cn('fui-Checkbox-icon', className)}
       viewBox="0 0 16 16"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -148,7 +134,7 @@ const MotionCheckIcon = ({ className }: { className?: string }) => {
   return (
     <AnimatePresence>
       <svg
-        className={cn('h-4 w-4', className)}
+        className={cn('fui-Checkbox-icon', className)}
         viewBox="0 0 16 16"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"

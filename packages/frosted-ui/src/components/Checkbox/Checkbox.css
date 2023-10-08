@@ -1,0 +1,41 @@
+.fui-Checkbox {
+  display: flex;
+  align-items: center;
+}
+
+.fui-Checkbox-root {
+  color: var(--gray-950);
+  display: flex;
+  appearance: none;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--gray-200);
+  outline: none;
+  height: 1rem;
+  width: 1rem;
+  border-radius: 2.25px;
+}
+.fui-Checkbox-root[data-state='checked'],
+.fui-Checkbox-root[data-state='indeterminate'] {
+  background-color: var(--accent-500);
+  border-color: var(--accent-500);
+}
+
+.fui-Checkbox-root:disabled {
+  cursor: not-allowed;
+  opacity: 0.4; /* Equivalent to disabled:opacity-40 in Tailwind */
+}
+
+.fui-Checkbox-indicator {
+  color: white;
+}
+
+.fui-Checkbox-label {
+  margin-left: 0.75rem;
+  cursor: pointer;
+  color: black;
+}
+.fui-Checkbox-icon {
+  height: 1rem;
+  width: 1rem;
+}
