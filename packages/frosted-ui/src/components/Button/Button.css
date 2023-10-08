@@ -1,0 +1,117 @@
+.fui-Button {
+  position: relative;
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 0.375rem; /* Equivalent to rounded-md in Tailwind */
+  transition: all 0.3s; /* Equivalent to transition in Tailwind */
+  width: fit-content;
+  outline: none;
+  border-width: 1px;
+  border-style: solid;
+  border-color: transparent;
+}
+.fui-Button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+.fui-Button[data-loading] {
+  cursor: not-allowed;
+}
+.fui-Button[data-loading] *:not(.fui-Button-spinner) {
+  color: transparent;
+}
+/* TODO: discord, paypal, twitter, telegram, tradingview, stripe-purple */
+
+/* TODO: elevated variant doesn't make sense. it should be a bool prop */
+/* Variants */
+.fui-Button_variant--primary {
+  background-color: var(--accent-500);
+  color: white;
+}
+.fui-Button_variant--primary:hover {
+  background-color: var(--accent-600);
+}
+.fui-Button_variant--primary:active {
+  background-color: var(--accent-700);
+}
+.fui-Button_variant--secondary {
+  background-color: var(--accent-50);
+  color: black;
+}
+.fui-Button_variant--outline,
+.fui-Button_variant--elevated {
+  background-color: white;
+  color: var(--accent-500);
+  border-color: var(--gray500);
+}
+.fui-Button_variant--elevated {
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.08);
+}
+.fui-Button_variant--blank {
+  background-color: white;
+  color: var(--accent-500);
+}
+.fui-Button_variant--secondary:hover,
+.fui-Button_variant--outline:hover,
+.fui-Button_variant--elevated:hover,
+.fui-Button_variant--blank:hover {
+  background-color: var(--gray-50);
+}
+.fui-Button_variant--secondary:active,
+.fui-Button_variant--outline:active,
+.fui-Button_variant--elevated:active,
+.fui-Button_variant--blank:active {
+  background-color: var(--gray-100);
+}
+
+/* Sizes */
+.fui-Button_size--xs {
+  height: 1.5rem;
+  padding: 0 7px;
+  --icon-size: 12px;
+  --icon-margin: 5px;
+}
+.fui-Button_size--sm {
+  height: 2rem;
+  padding: 0 11px;
+  --icon-size: 14px;
+  --icon-margin: 6px;
+}
+.fui-Button_size--md {
+  height: 2.5rem;
+  padding: 0 15px;
+  --icon-size: 16px;
+  --icon-margin: 7px;
+}
+.fui-Button_size--lg {
+  height: 3rem;
+  padding: 0 19px;
+  --icon-size: 17px;
+  --icon-margin: 8px;
+}
+.fui-Button_size--xl {
+  height: 3.5rem;
+  padding: 0 23px;
+  --icon-size: 18px;
+  --icon-margin: 9px;
+}
+
+.fui-Button-spinner {
+  position: absolute;
+  /* TODO: spin animation */
+}
+
+/* icons */
+.fui-Button-icon-left,
+.fui-Button-icon-right {
+  font-size: var(--icon-size);
+}
+.fui-Button-icon-left {
+  margin-right: var(--icon-margin);
+}
+.fui-Button-icon-right {
+  margin-left: var(--icon-margin);
+}

@@ -149,153 +149,14 @@ export const Button = forwardRef(function Button<
       onReset={onReset}
       disabled={isDisabled || isLoading}
       type={type}
+      data-accent={colorScheme}
+      // TODO: check if this doesn't collide with Radix UI props
+      data-loading={isLoading ? true : undefined}
       className={cn(
-        'group/button relative flex shrink-0 items-center justify-center overflow-hidden rounded-md transition w-fit',
-        'focus-visible:border-whop-field-highlight focus-visible:ring-whop-field-highlight/30 outline-none transition focus:outline-none focus-visible:border focus-visible:ring',
+        'fui-Button',
+        `fui-Button_variant--${variant}`,
+        `fui-Button_size--${size}`,
         className,
-        {
-          // Primary variants
-          'bg-whop-primary text-whop-fixed-white':
-            variant === 'primary' && colorScheme === 'brand',
-          'bg-whop-field-highlight text-whop-fixed-white':
-            variant === 'primary' && colorScheme === 'purple',
-          'bg-whop-black text-whop-background':
-            variant === 'primary' && colorScheme === 'black',
-          'bg-whop-dark-gray text-whop-fixed-white':
-            variant === 'primary' && colorScheme === 'dark-gray',
-          'bg-whop-brands-discord text-whop-fixed-white':
-            variant === 'primary' && colorScheme === 'discord-purple',
-          'bg-whop-brands-twitter text-whop-fixed-white':
-            variant === 'primary' && colorScheme === 'twitter-blue',
-          'bg-whop-brands-paypal text-whop-fixed-white':
-            variant === 'primary' && colorScheme === 'paypal-blue',
-          'bg-whop-brands-telegram text-whop-fixed-white':
-            variant === 'primary' && colorScheme === 'telegram-blue',
-          'bg-whop-brands-tradingview text-whop-fixed-white':
-            variant === 'primary' && colorScheme === 'tradingview-blue',
-          'bg-whop-brands-stripe text-whop-fixed-white':
-            variant === 'primary' && colorScheme === 'stripe-purple',
-          'bg-whop-background text-whop-black':
-            variant === 'primary' && colorScheme === 'white',
-          'bg-whop-error-red text-whop-fixed-white':
-            variant === 'primary' && colorScheme == 'error-red',
-          'bg-whop-warning-yellow text-whop-fixed-white':
-            variant === 'primary' && colorScheme == 'warning-yellow',
-          'bg-whop-success-green text-whop-fixed-white':
-            variant === 'primary' && colorScheme === 'success-green',
-          'text-whop-fixed-white bg-gold-gradient':
-            variant === 'primary' && colorScheme === 'gold-gradient',
-
-          // Secondary variants
-          'bg-whop-hover text-whop-black':
-            variant === 'secondary' && colorScheme == 'black',
-          'bg-whop-background/[12%] text-whop-background':
-            variant === 'secondary' && colorScheme == 'white',
-
-          // Stroke variants
-          'bg-whop-background text-whop-primary border-whop-stroke border':
-            variant === 'outline' && colorScheme == 'brand',
-          'bg-whop-background text-whop-field-highlight border-whop-stroke border':
-            variant === 'outline' && colorScheme == 'purple',
-          'bg-whop-background text-whop-black border-whop-stroke border':
-            variant === 'outline' && colorScheme == 'black',
-          'bg-whop-background text-whop-dark-gray border-whop-stroke border':
-            variant === 'outline' && colorScheme == 'dark-gray',
-          'bg-whop-background text-whop-error-red border-whop-stroke border':
-            variant === 'outline' && colorScheme == 'error-red',
-          'bg-whop-background text-whop-warning-yellow border-whop-stroke border':
-            variant === 'outline' && colorScheme == 'warning-yellow',
-          'bg-whop-background text-whop-success-green border-whop-stroke border':
-            variant === 'outline' && colorScheme == 'success-green',
-          'bg-whop-background text-whop-brands-twitter border-whop-stroke border':
-            variant === 'outline' && colorScheme == 'twitter-blue',
-          'bg-whop-background text-whop-brands-telegram border-whop-stroke border':
-            variant === 'outline' && colorScheme == 'telegram-blue',
-          'bg-whop-background text-whop-brands-paypal border-whop-stroke border':
-            variant === 'outline' && colorScheme == 'paypal-blue',
-          'bg-whop-background text-whop-brands-tradingview border-whop-stroke border':
-            variant === 'outline' && colorScheme == 'tradingview-blue',
-          'bg-whop-background text-whop-brands-discord border-whop-stroke border':
-            variant === 'outline' && colorScheme == 'discord-purple',
-          'bg-whop-background text-whop-brands-stripe border-whop-stroke border':
-            variant === 'outline' && colorScheme == 'stripe-purple',
-          'bg-whop-transparent text-whop-background border-whop-stroke border':
-            variant === 'outline' && colorScheme == 'white',
-
-          // Elevated variants
-          'bg-whop-background text-whop-black border-whop-stroke-dark border':
-            variant === 'elevated' && colorScheme == 'black',
-          'bg-whop-background text-whop-dark-gray border-whop-stroke-dark border':
-            variant === 'elevated' && colorScheme == 'dark-gray',
-          'bg-whop-background text-whop-error-red border-whop-stroke-dark border':
-            variant === 'elevated' && colorScheme == 'error-red',
-          'bg-whop-background text-whop-warning-yellow border-whop-stroke-dark border':
-            variant === 'elevated' && colorScheme == 'warning-yellow',
-          'bg-whop-background text-whop-success-green border-whop-stroke-dark border':
-            variant === 'elevated' && colorScheme == 'success-green',
-          'bg-whop-background text-whop-field-highlight border-whop-stroke-dark border':
-            variant === 'elevated' && colorScheme == 'purple',
-          'bg-whop-background text-whop-primary border-whop-stroke-dark border':
-            variant === 'elevated' && colorScheme == 'brand',
-          'bg-whop-background text-whop-brands-twitter border-whop-stroke-dark border':
-            variant === 'elevated' && colorScheme == 'twitter-blue',
-          'bg-whop-background text-whop-brands-paypal border-whop-stroke-dark border':
-            variant === 'elevated' && colorScheme == 'paypal-blue',
-          'bg-whop-background text-whop-brands-telegram border-whop-stroke-dark border':
-            variant === 'elevated' && colorScheme == 'telegram-blue',
-          'bg-whop-background text-whop-brands-tradingview border-whop-stroke-dark border':
-            variant === 'elevated' && colorScheme == 'tradingview-blue',
-          'bg-whop-background text-whop-brands-discord border-whop-stroke-dark border':
-            variant === 'elevated' && colorScheme == 'discord-purple',
-          'bg-whop-background text-whop-brands-stripe border-whop-stroke-dark border':
-            variant === 'elevated' && colorScheme == 'stripe-purple',
-          'bg-whop-transparent text-whop-background border-whop-stroke-light border':
-            variant === 'elevated' && colorScheme == 'white',
-
-          // Blank variants
-          'bg-whop-white text-whop-black':
-            variant === 'blank' && colorScheme == 'black',
-          'bg-whop-white text-whop-dark-gray':
-            variant === 'blank' && colorScheme == 'dark-gray',
-          'bg-whop-white text-whop-primary':
-            variant === 'blank' && colorScheme == 'brand',
-          'bg-whop-white text-whop-field-highlight':
-            variant === 'blank' && colorScheme == 'purple',
-          'bg-whop-white text-whop-success-green':
-            variant === 'blank' && colorScheme == 'success-green',
-          'bg-whop-white text-whop-error-red':
-            variant === 'blank' && colorScheme == 'error-red',
-          'bg-whop-white text-whop-warning-yellow':
-            variant === 'blank' && colorScheme == 'warning-yellow',
-          'bg-whop-white text-whop-brands-twitter':
-            variant === 'blank' && colorScheme == 'twitter-blue',
-          'bg-whop-white text-whop-brands-paypal':
-            variant === 'blank' && colorScheme == 'paypal-blue',
-          'bg-whop-white text-whop-brands-telegram':
-            variant === 'blank' && colorScheme == 'telegram-blue',
-          'bg-whop-white text-whop-brands-tradingview':
-            variant === 'blank' && colorScheme == 'tradingview-blue',
-          'bg-whop-white text-whop-brands-discord':
-            variant === 'blank' && colorScheme == 'discord-purple',
-          'bg-whop-white text-whop-brands-stripe':
-            variant === 'blank' && colorScheme == 'stripe-purple',
-          'bg-whop-transparent text-whop-background':
-            variant === 'blank' && colorScheme == 'white',
-        },
-        {
-          'h-6 px-[7px]': size === 'xs',
-          'h-8 px-[11px]': size === 'sm',
-          'h-10 px-[15px]': size === 'md',
-          'h-12 px-[19px]': size === 'lg',
-          'h-14 px-[23px]': size === 'xl',
-        },
-        {
-          '!cursor-not-allowed': isDisabled || isLoading,
-          'opacity-40': isDisabled,
-          'shadow-sm': hasShadow(variant as string) && colorScheme !== 'white',
-          'shadow-sm shadow-white/[50%]':
-            hasShadow(variant as string) && colorScheme === 'white',
-        },
         overrideClassName,
       )}
       ref={ref}
@@ -362,24 +223,15 @@ export const Button = forwardRef(function Button<
         className="flex items-center justify-center"
       >
         {/* The loading icon is absolute positioned in the center of the box */}
-        {isLoading && <Icon className="fa-spin absolute" icon={faSpinner} />}
+        {isLoading && (
+          <Icon className="fa-spin fui-Button-spinner" icon={faSpinner} />
+        )}
 
         {/* The left icon is rendered to the left of the children with 2em of margin on the right if children are present */}
         {leftIcon && (
           <Icon
             icon={leftIcon}
-            className={cn(
-              {
-                '!text-transparent': isLoading,
-              },
-              // The size and spacing of a left icon based on the button size
-              { 'mr-[5px] text-[12px]': size === 'xs' },
-              { 'mr-[6px] text-[14px]': size === 'sm' },
-              { 'mr-[7px] text-[16px]': size === 'md' },
-              { 'mr-[8px] text-[17px]': size === 'lg' },
-              { 'mr-[9px] text-[18px]': size === 'xl' },
-              leftIconClassName,
-            )}
+            className={cn('fui-Button-icon-left', leftIconClassName)}
           />
         )}
 
@@ -394,19 +246,7 @@ export const Button = forwardRef(function Button<
         {rightIcon && (
           <Icon
             icon={rightIcon}
-            className={cn(
-              {
-                'ml-[7px]': !!children,
-                '!text-transparent': isLoading,
-              },
-              // The size and spacing of a right icon based on the button size
-              { 'ml-[5px] text-[10px]': size === 'xs' },
-              { 'ml-[6px] text-[11px]': size === 'sm' },
-              { 'ml-[7px] text-[12px]': size === 'md' },
-              { 'ml-[8px] text-[13px]': size === 'lg' },
-              { 'ml-[9px] text-[14px]': size === 'xl' },
-              rightIconClassName,
-            )}
+            className={cn('fui-Button-icon-right', rightIconClassName)}
           />
         )}
       </Text>
