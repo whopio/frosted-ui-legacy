@@ -4,7 +4,7 @@ import { Tab } from '@headlessui/react';
 import { AnimatePresence } from 'framer-motion';
 import React, { PropsWithChildren } from 'react';
 import { cn } from '../../lib/classnames';
-import { useHorizontalTabContext } from '../HorizontalTabGroupContext';
+import { useHorizontalTabContext } from './HorizontalTabGroupContext';
 
 export interface HorizontalTabPanelGroupProps extends PropsWithChildren {
   wrapperClassName?: string;

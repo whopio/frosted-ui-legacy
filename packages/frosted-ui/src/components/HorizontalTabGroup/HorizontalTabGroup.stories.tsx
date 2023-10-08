@@ -2,14 +2,14 @@ import { faFire, faStar, faTrophy } from '@fortawesome/free-solid-svg-icons';
 import type { Meta, StoryObj } from '@storybook/react';
 import React from 'react';
 import { Badge } from '../Badge';
-import { HorizontalTabList } from '../HorizontalTabList';
+import { HorizontalTabGroup, HorizontalTabSizes } from './HorizontalTabGroup';
+import { HorizontalTabList } from './HorizontalTabList';
 import {
   HorizontalTabListItem,
   HorizontalTabSize,
-} from '../HorizontalTabListItem';
-import { HorizontalTabPanel } from '../HorizontalTabPanel';
-import { HorizontalTabPanelGroup } from '../HorizontalTabPanelGroup';
-import { HorizontalTabGroup, HorizontalTabSizes } from './HorizontalTabGroup';
+} from './HorizontalTabListItem';
+import { HorizontalTabPanel } from './HorizontalTabPanel';
+import { HorizontalTabPanelGroup } from './HorizontalTabPanelGroup';
 
 const meta: Meta<typeof HorizontalTabGroup> = {
   title: 'General/HorizontalTabGroup',

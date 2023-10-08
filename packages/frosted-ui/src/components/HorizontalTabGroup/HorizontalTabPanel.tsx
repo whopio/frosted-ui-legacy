@@ -3,7 +3,7 @@
 import { Tab } from '@headlessui/react';
 import { motion } from 'framer-motion';
 import React, { PropsWithChildren } from 'react';
-import { useHorizontalTabContext } from '../HorizontalTabGroupContext';
+import { useHorizontalTabContext } from './HorizontalTabGroupContext';
 
 const variants = {
   enter: (direction: number) => {

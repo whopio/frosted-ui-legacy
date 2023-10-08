@@ -1,0 +1,92 @@
+/* HorizontalTabList */
+.fui-HorizontalTabList {
+  appearance: none;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  overflow-x: auto;
+
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: var(--gray-200);
+}
+
+/* HorizontalTabListItem */
+
+.fui-HorizontalTabListItem {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  outline: none;
+  --content-color: var(--gray-700);
+}
+.fui-HorizontalTabListItem[data-selected='true'] {
+  --content-color: var(--gray-950);
+}
+
+.fui-HorizontalTabListItem-button {
+  display: flex;
+  cursor: pointer;
+  appearance: none;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.375rem;
+  outline: none;
+  transition: all 0.3s;
+}
+.fui-HorizontalTabListItem-button_size--sm {
+  height: 2rem;
+  padding: 0 0.625rem;
+  margin-bottom: 0.25rem;
+  --icon-size: 0.875rem;
+  --icon-margin: 0.375rem;
+}
+.fui-HorizontalTabListItem-button_size--md {
+  height: 2.5rem;
+  padding: 0 0.75rem;
+  margin-bottom: 0.375rem;
+  --icon-size: 1rem;
+  --icon-margin: 0.5rem;
+}
+
+.fui-HorizontalTabListItem-button:hover {
+  background-color: var(--gray-100);
+}
+
+.fui-HorizontalTabListItem-icon {
+  width: var(--icon-size);
+  height: var(--icon-size);
+  color: var(--content-color);
+  margin-right: var(--icon-margin);
+  z-index: 2;
+}
+.fui-HorizontalTabListItem-label {
+  z-index: 2;
+  color: var(--content-color);
+}
+
+.fui-HorizontalTabListItem-right-element {
+  z-index: 2;
+  color: var(--content-color);
+  margin-left: var(--icon-margin);
+}
+
+.fui-HorizontalTabListItem-indicator {
+  /* TODO: remap to primary color */
+  background-color: var(--outrageous-orange-500);
+  position: absolute;
+  bottom: 0;
+  z-index: 2;
+  width: 100%;
+  border-top-right-radius: 9999px;
+  border-top-left-radius: 9999px;
+}
+
+.fui-HorizontalTabListItem-indicator_size--sm {
+  height: 2px;
+}
+.fui-HorizontalTabListItem-indicator_size--md {
+  height: 3px;
+}

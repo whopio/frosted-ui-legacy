@@ -3,13 +3,13 @@
 import { Tab } from '@headlessui/react';
 import React, { PropsWithChildren, useEffect, useRef } from 'react';
 import { cn } from '../../lib/classnames';
-import { HorizontalTabContext } from '../HorizontalTabGroupContext';
-import { HorizontalTabList } from '../HorizontalTabList';
+import { HorizontalTabContext } from './HorizontalTabGroupContext';
+import { HorizontalTabList } from './HorizontalTabList';
 import {
   HorizontalTabItemProps,
   HorizontalTabListItem,
   HorizontalTabSize,
-} from '../HorizontalTabListItem';
+} from './HorizontalTabListItem';
 
 export const HorizontalTabSizes: { [key: string]: HorizontalTabSize } = {
   Small: 'sm',

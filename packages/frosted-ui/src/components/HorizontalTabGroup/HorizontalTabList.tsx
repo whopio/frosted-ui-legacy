@@ -11,12 +11,7 @@ export const HorizontalTabList = ({
 }: PropsWithChildren & { className?: string }) => {
   const id = useId();
   return (
-    <Tab.List
-      className={cn(
-        'border-whop-stroke flex appearance-none items-center space-x-3 overflow-scroll border-b',
-        className,
-      )}
-    >
+    <Tab.List className={cn('fui-HorizontalTabList', className)}>
       <LayoutGroup id={id}>{children}</LayoutGroup>
     </Tab.List>
   );

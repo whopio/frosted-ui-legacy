@@ -30,38 +30,17 @@ export const HorizontalTabListItem = ({
     <Tab as={Fragment}>
       {({ selected }) => (
         <div
-          className={cn(
-            'relative flex items-center justify-center whitespace-nowrap outline-none',
-          )}
+          className={cn('fui-HorizontalTabListItem')}
+          data-selected={selected ? true : undefined}
         >
           <button
             className={cn(
-              'hover:bg-whop-hover group flex cursor-pointer appearance-none items-center justify-center rounded-md outline-none transition',
-
-              {
-                'mb-1': size === 'sm',
-                'mb-1.5': size === 'md',
-              },
-              {
-                'h-8 px-2.5': size === 'sm',
-                'h-10 px-3': size === 'md',
-              },
+              'fui-HorizontalTabListItem-button',
+              `fui-HorizontalTabListItem-button_size--${size}`,
             )}
           >
             {icon && (
-              <Icon
-                icon={icon}
-                className={cn(
-                  'text-whop-dark-gray z-[2]',
-                  {
-                    'text-whop-black': selected,
-                  },
-                  {
-                    'mr-1.5 h-3.5 w-3.5': size === 'sm',
-                    'mr-[7px] h-4 w-4': size === 'md',
-                  },
-                )}
-              />
+              <Icon icon={icon} className="fui-HorizontalTabListItem-icon" />
             )}
             <Text
               as="span"
@@ -73,20 +52,13 @@ export const HorizontalTabListItem = ({
                   } as const
                 )[size]
               }
-              className={cn('text-whop-dark-gray z-[2]', {
-                'text-whop-black': selected,
-              })}
+              className="fui-HorizontalTabListItem-label"
             >
               {children}
             </Text>
 
             {rightElement && (
-              <div
-                className={cn('z-[2]', {
-                  'ml-1.5': size === 'sm',
-                  'ml-[7px]': size === 'md',
-                })}
-              >
+              <div className="fui-HorizontalTabListItem-right-element">
                 {rightElement}
               </div>
             )}
@@ -95,11 +67,8 @@ export const HorizontalTabListItem = ({
           {selected && (
             <motion.div
               className={cn(
-                'bg-whop-primary absolute bottom-0 z-[2] w-full rounded-t-full',
-                {
-                  'h-0.5': size === 'sm',
-                  'h-[3px]': size === 'md',
-                },
+                'fui-HorizontalTabListItem-indicator',
+                `fui-HorizontalTabListItem-indicator_size--${size}`,
               )}
               layoutId="activeUnderline"
               transition={{
