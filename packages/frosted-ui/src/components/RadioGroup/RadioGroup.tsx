@@ -5,9 +5,8 @@ import {
   Root,
 } from '@radix-ui/react-radio-group';
 import React from 'react';
-import { cn } from '../../lib/classnames';
 import { ColorScheme } from '../../lib/shared-component-types';
-import { RadioItem, RadioItemProps } from '../RadioItem';
+import { RadioItem, RadioItemProps } from './RadioItem';
 
 export type RadioColorScheme = Extract<
   ColorScheme,
@@ -37,10 +36,7 @@ export const RadioGroup = ({
     <Root
       disabled={isDisabled}
       required={isRequired}
-      className={cn(
-        'space-y-2',
-        'disabled:cursor-not-allowed disabled:opacity-40',
-      )}
+      className="fui-RadioGroup"
       {...props}
     >
       {items.map((item) => (
