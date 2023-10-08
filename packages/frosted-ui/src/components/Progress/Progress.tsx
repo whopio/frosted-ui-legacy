@@ -12,19 +12,11 @@ export const Progress = React.forwardRef<
 >(({ className, value, isIndeterminate, ...props }, ref) => (
   <ProgressPrimitive.Root
     ref={ref}
-    className={cn(
-      'bg-whop-stroke relative h-1.5 w-full overflow-hidden rounded-full',
-      className,
-    )}
+    className={cn('fui-Progress', className)}
     {...props}
   >
     <ProgressPrimitive.Indicator
-      className={cn(
-        'bg-whop-field-highlight h-full w-full flex-1 transition-all',
-        {
-          'animate-pulse': isIndeterminate,
-        },
-      )}
+      className={cn('fui-Progress-indicator')}
       style={React.useMemo(
         () => ({
           transform: `translateX(-${
