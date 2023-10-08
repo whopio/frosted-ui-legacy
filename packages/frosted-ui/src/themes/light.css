@@ -13,7 +13,23 @@
     --accent-900: var(--outrageous-orange-900);
     --accent-950: var(--outrageous-orange-950);
   }
+  /* TODO: gray, light-gray, dark-gray, black accents. How to handle them? */
   [data-accent='light-gray'] {
+    --accent-50: var(--gray-50);
+    --accent-100: var(--gray-100);
+    --accent-200: var(--gray-200);
+    --accent-300: var(--gray-300);
+    --accent-400: var(--gray-400);
+    --accent-500: var(--gray-500);
+    --accent-600: var(--gray-600);
+    --accent-700: var(--gray-700);
+    --accent-800: var(--gray-800);
+    --accent-900: var(--gray-900);
+    --accent-950: var(--gray-950);
+  }
+
+  /* The same as light-gray */
+  [data-accent='gray'] {
     --accent-50: var(--gray-50);
     --accent-100: var(--gray-100);
     --accent-200: var(--gray-200);
@@ -92,6 +108,20 @@
     --accent-900: var(--electric-violet-900);
     --accent-950: var(--electric-violet-950);
   }
+  [data-accent='blue'] {
+    --accent-50: var(--cerulean-blue-50);
+    --accent-100: var(--cerulean-blue-100);
+    --accent-200: var(--cerulean-blue-200);
+    --accent-300: var(--cerulean-blue-300);
+    --accent-400: var(--cerulean-blue-400);
+    --accent-500: var(--cerulean-blue-500);
+    --accent-600: var(--cerulean-blue-600);
+    --accent-700: var(--cerulean-blue-700);
+    --accent-800: var(--cerulean-blue-800);
+    --accent-900: var(--cerulean-blue-900);
+    --accent-950: var(--cerulean-blue-950);
+  }
+
   [data-accent='black'] {
     --accent-50: var(--gray-950);
     --accent-100: var(--gray-900);

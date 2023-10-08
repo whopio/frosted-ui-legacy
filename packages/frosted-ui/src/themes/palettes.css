@@ -74,4 +74,17 @@
   --electric-violet-800: #7a2f9a;
   --electric-violet-900: #64277c;
   --electric-violet-950: #45105b;
+
+  /* tag blue */
+  --cerulean-blue-50: #f0f7fe;
+  --cerulean-blue-100: #ddedfc;
+  --cerulean-blue-200: #c2e0fb;
+  --cerulean-blue-300: #98cef8;
+  --cerulean-blue-400: #67b3f3;
+  --cerulean-blue-500: #4393ee;
+  --cerulean-blue-600: #2e76e2;
+  --cerulean-blue-700: #2561d0;
+  --cerulean-blue-800: #2857b9;
+  --cerulean-blue-900: #234585;
+  --cerulean-blue-950: #1a2b51;
 }

@@ -41,36 +41,20 @@ export const Tag = ({
     <Text
       as="div"
       variant="button3"
-      className={cn(
-        'inline-flex w-auto items-center justify-center rounded px-1.5 h-[18px]',
-        {
-          'bg-whop-field-highlight/[14%] text-whop-field-highlight':
-            colorScheme === 'purple',
-          'bg-whop-tag-blue-background text-whop-tag-blue':
-            colorScheme === 'blue',
-          'bg-whop-tag-gray-background text-whop-tag-gray':
-            colorScheme === 'gray',
-          'bg-whop-tag-green-background text-whop-tag-green':
-            colorScheme === 'success-green',
-          'bg-whop-tag-warning-background text-whop-tag-warning':
-            colorScheme === 'warning-yellow',
-          'bg-whop-tag-error-background text-whop-tag-error':
-            colorScheme === 'error-red',
-        },
-        className,
-      )}
+      data-accent={colorScheme}
+      className={cn('fui-Tag', className)}
     >
       {leftIcon && (
         <Icon
           icon={leftIcon}
-          className={cn('mr-1 text-[14px]', leftIconClassName)}
+          className={cn('fui-Tag-icon--left', leftIconClassName)}
         />
       )}
       {text}
       {rightIcon && (
         <Icon
           icon={rightIcon}
-          className={cn('ml-1 text-[14px]', rightIconClassName)}
+          className={cn('fui-Tag-icon--right', rightIconClassName)}
         />
       )}
     </Text>

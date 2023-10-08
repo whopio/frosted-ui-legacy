@@ -1,0 +1,21 @@
+.fui-Tag {
+  display: inline-flex;
+  width: auto;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.375rem;
+  padding: 0.375rem;
+  height: 18px;
+  background-color: var(--accent-100);
+  color: var(--accent-700);
+
+  font-size: 14px;
+}
+
+.fui-Tag-icon--left {
+  margin-right: 0.25rem;
+}
+
+.fui-Tag-icon--right {
+  margin-left: 0.25rem;
+}
