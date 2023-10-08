@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import * as React from 'react';
-import { PillTabList } from '../PillTabList';
-import { PillTabListItem } from '../PillTabListItem';
-import { PillTabPanel } from '../PillTabPanel';
-import { PillTabPanelGroup } from '../PillTabPanelGroup';
 import { PillTabGroup } from './PillTabGroup';
+import { PillTabList } from './PillTabList';
+import { PillTabListItem } from './PillTabListItem';
+import { PillTabPanel } from './PillTabPanel';
+import { PillTabPanelGroup } from './PillTabPanelGroup';
 
 const meta: Meta<typeof PillTabGroup> = {
   title: 'General/PillTabGroup',

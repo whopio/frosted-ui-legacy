@@ -2,8 +2,8 @@
 
 import { Tab } from '@headlessui/react';
 import React, { PropsWithChildren, ReactNode } from 'react';
-import { PillTabList } from '../PillTabList';
-import { PillTabListItem } from '../PillTabListItem';
+import { PillTabList } from './PillTabList';
+import { PillTabListItem } from './PillTabListItem';
 
 export interface PillTabProps extends PropsWithChildren {
   defaultTab?: number;

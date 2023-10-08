@@ -1,0 +1,85 @@
+/* PillTabList */
+.fui-PillTabList {
+  background-color: var(--gray-50);
+  display: inline-flex;
+  height: 2.5rem;
+  appearance: none;
+  align-items: center;
+  overflow-x: auto;
+  border-radius: 9999px;
+  padding: 0.25rem;
+}
+
+.fui-PillTabList--full-width {
+  width: 100%;
+}
+.fui-PillTabList--full-width .fui-PillTabListItem {
+  width: 100%;
+  flex: 1;
+}
+
+/* PillTabListItem */
+
+.fui-PillTabListItem {
+  position: relative;
+  display: flex;
+  height: 2rem;
+  min-width: 150px;
+  cursor: pointer;
+  appearance: none;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  flex-shrink: 0;
+  white-space: nowrap;
+  padding: 0 0.75rem;
+}
+
+.fui-PillTabListItem-indicator {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: white;
+
+  border-radius: 999px;
+  border-width: 0.5px;
+  border-style: solid;
+  border-color: var(--gray-200);
+}
+
+.fui-PillTabListItem-badge {
+  position: relative;
+  z-index: 2;
+  margin-right: 0.5rem;
+  height: 0.5rem;
+  width: 0.5rem;
+  border-radius: 50%;
+  background-color: var(--accent-500);
+  flex-shrink: 0;
+}
+
+.fui-PillTabListItem-text {
+  position: relative;
+  z-index: 2;
+  flex-shrink: 0;
+}
+
+.fui-PillTabListItem-label {
+  position: relative;
+  z-index: 2;
+  margin-left: 0.5rem;
+  color: var(--gray-700);
+  flex-shrink: 0;
+}
+
+/* PillTabPanel */
+.fui-PillTabPanel:focus {
+  outline: none;
+}
