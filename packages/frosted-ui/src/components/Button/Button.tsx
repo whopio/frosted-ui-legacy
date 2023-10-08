@@ -63,8 +63,6 @@ export const ButtonColorSchemes: { [key: string]: ButtonColorScheme } = {
   'Gold Gradient': 'gold-gradient',
 };
 
-const hasShadow = (variant: string) => variant === 'elevated';
-
 type AsProp<C extends ElementType> = {
   asComponent?: C;
 };
@@ -162,51 +160,6 @@ export const Button = forwardRef(function Button<
       ref={ref}
       {...props}
     >
-      {/* Hover and focus state overlay */}
-      <div
-        className={cn('absolute inset-0 transition', {
-          // White outline, White blank
-          'group-hover/button:bg-whop-background/[12%] group-active/button:bg-whop-background/[18%]':
-            colorScheme === 'white' && (variant === 'blank' || 'outline'),
-          // White secondary
-          'group-hover/button:bg-whop-background/[18%] group-active/button:bg-whop-background/[24%]':
-            colorScheme === 'white' && variant === 'secondary',
-          // White primary
-          'group-hover/button:bg-black/[16%] group-active/button:bg-black/[32%]':
-            variant === 'primary' && colorScheme === 'white',
-          // Primary
-          'group-hover/button:bg-black/[12%] group-active/button:bg-black/[18%]':
-            variant === 'primary' &&
-            colorScheme !== 'white' &&
-            !isDisabled &&
-            !isLoading,
-          // Black secondary
-          'group-hover/button:bg-whop-hover-press':
-            colorScheme === 'black' && variant === 'secondary',
-          // Outline, blank, elevated light | default theme
-          'group-hover/button:bg-black/[4%] group-active/button:bg-black/[8%]':
-            variant !== 'primary' &&
-            variant !== 'secondary' &&
-            colorScheme !== 'white' &&
-            !isDisabled &&
-            !isLoading,
-          // Outline, blank, elevated | biz-dark-1
-          'biz-dark-1:group-hover/button:bg-white/[8%] biz-dark-1:group-active/button:bg-white/[16%]':
-            variant !== 'primary' &&
-            variant !== 'secondary' &&
-            colorScheme !== 'white' &&
-            !isDisabled &&
-            !isLoading,
-          // Outline, blank, elevated biz-dark-2
-          'biz-dark-2:group-hover/button:bg-white/[8%] biz-dark-2:group-active/button:bg-white/[16%]':
-            variant !== 'primary' &&
-            variant !== 'secondary' &&
-            colorScheme !== 'white' &&
-            !isDisabled &&
-            !isLoading,
-        })}
-      />
-
       <Text
         as="div"
         variant={
@@ -220,29 +173,15 @@ export const Button = forwardRef(function Button<
             } as const
           )[size as ButtonSize]
         }
-        className="flex items-center justify-center"
+        className="fui-Button-content"
       >
-        {/* The loading icon is absolute positioned in the center of the box */}
-        {isLoading && (
-          <Icon className="fa-spin fui-Button-spinner" icon={faSpinner} />
-        )}
-
-        {/* The left icon is rendered to the left of the children with 2em of margin on the right if children are present */}
         {leftIcon && (
           <Icon
             icon={leftIcon}
             className={cn('fui-Button-icon-left', leftIconClassName)}
           />
         )}
-
-        {/* If children are present, render them as usual if not loading, and transparent if loading */}
-        {children && (
-          <div className={cn({ '!text-transparent': isLoading })}>
-            {children}
-          </div>
-        )}
-
-        {/* The right icon is rendered to the right of the children with 2em of margin on the left if children are present */}
+        {children}
         {rightIcon && (
           <Icon
             icon={rightIcon}
@@ -250,6 +189,9 @@ export const Button = forwardRef(function Button<
           />
         )}
       </Text>
+      {isLoading && (
+        <Icon className="fa-spin fui-Button-spinner" icon={faSpinner} />
+      )}
     </Component>
   );
 }) as <C extends ElementType = 'button'>(

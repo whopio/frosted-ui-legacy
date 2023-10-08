@@ -1,4 +1,5 @@
 .fui-Button {
+  all: unset;
   position: relative;
   display: flex;
   flex-shrink: 0;
@@ -20,7 +21,7 @@
 .fui-Button[data-loading] {
   cursor: not-allowed;
 }
-.fui-Button[data-loading] *:not(.fui-Button-spinner) {
+.fui-Button[data-loading] {
   color: transparent;
 }
 /* TODO: discord, paypal, twitter, telegram, tradingview, stripe-purple */
@@ -101,6 +102,7 @@
 
 .fui-Button-spinner {
   position: absolute;
+  color: white;
   /* TODO: spin animation */
 }
 
@@ -109,9 +111,10 @@
 .fui-Button-icon-right {
   font-size: var(--icon-size);
 }
-.fui-Button-icon-left {
-  margin-right: var(--icon-margin);
-}
-.fui-Button-icon-right {
-  margin-left: var(--icon-margin);
+
+.fui-Button-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--icon-margin);
 }
