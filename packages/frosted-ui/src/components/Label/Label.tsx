@@ -31,27 +31,19 @@ export const Label = ({
     <Text
       as="div"
       variant={variant === 'default' ? 'body2' : 'button2'}
-      className={cn('flex items-center', wrapperClassName)}
+      className={cn('fui-Label', wrapperClassName)}
     >
       <Root
         className={cn(
-          'mr-1.5',
-          {
-            'text-whop-dark-gray': variant === 'default',
-            'text-whop-black': variant === 'emphasized',
-          },
+          'fui-Label-root',
+          `fui-Label-root_variant--${variant}`,
           className,
         )}
         {...rest}
       >
         {children}
       </Root>
-      {tooltip && (
-        <Tooltip
-          {...tooltip}
-          buttonClassName="text-xs leading-[12px] text-whop-dark-gray"
-        />
-      )}
+      {tooltip && <Tooltip {...tooltip} />}
     </Text>
   );
 };
