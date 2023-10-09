@@ -16,18 +16,12 @@ export const AlertBannerVariants: { [key: string]: AlertBannerVariant } = {
 
 export type AlertBannerColorScheme = Extract<
   ColorScheme,
-  | 'gray'
-  | 'light-gray'
-  | 'purple'
-  | 'success-green'
-  | 'warning-yellow'
-  | 'error-red'
+  'gray' | 'purple' | 'success-green' | 'warning-yellow' | 'error-red'
 >;
 export const AlertBannerColorSchemes: {
   [key: string]: AlertBannerColorScheme;
 } = {
   Gray: 'gray',
-  'Light Gray': 'light-gray',
   Purple: 'purple',
   'Success Green': 'success-green',
   'Warning Yellow': 'warning-yellow',
@@ -44,6 +38,29 @@ export type AlertBannerProps = {
   variant?: AlertBannerVariant;
   colorScheme?: AlertBannerColorScheme;
 };
+// TODO: default light-gray is missing
+const styles: Record<
+  AlertBannerVariant,
+  Record<AlertBannerColorScheme, string>
+> = {
+  default: {
+    gray: 'bg-gray-500 text-white',
+    purple: 'bg-purple-500 text-white',
+    'success-green': 'bg-status-success-500 text-white',
+    'warning-yellow': 'bg-status-warning-500 text-white',
+    'error-red': 'bg-status-error-500 text-white',
+  },
+  'light-anchor': {
+    gray: 'bg-gray-50 border-gray-200 text-gray-600',
+    purple: 'bg-purple-100 border-purple-500 text-purple-700',
+    'success-green':
+      'bg-status-success-100 border-status-success-500 text-status-success-700',
+    'warning-yellow':
+      'bg-status-warning-100 border-status-warning-500 text-status-warning-700',
+    'error-red':
+      'bg-status-error-100 border-status-error-500 text-status-error-700',
+  },
+};
 
 export const AlertBanner = ({
   title,
@@ -55,66 +72,25 @@ export const AlertBanner = ({
   closeButtonProps,
   ctaButtonProps,
 }: AlertBannerProps) => {
-  const textColor = {
-    'text-whop-background': variant === 'default',
-    'text-whop-tag-gray': colorScheme === 'gray' && variant === 'light-anchor',
-    'dark-gray border-whop-stroke':
-      colorScheme === 'light-gray' && variant === 'light-anchor',
-    'text-whop-field-highlight':
-      colorScheme === 'purple' && variant === 'light-anchor',
-    'text-whop-tag-green':
-      colorScheme === 'success-green' && variant === 'light-anchor',
-    'text-whop-tag-warning':
-      colorScheme === 'warning-yellow' && variant === 'light-anchor',
-    'text-whop-tag-error':
-      colorScheme === 'error-red' && variant === 'light-anchor',
-  };
-
   return (
     <div
       role="alert"
       aria-live="polite"
       className={cn(
         'relative flex items-start justify-between rounded-md border border-transparent py-3 pl-3.5 pr-[46px]',
-        {
-          // Default variants
-          'bg-whop-gray text-whop-background':
-            colorScheme === 'gray' && variant === 'default',
-          'bg-whop-field-highlight text-whop-background':
-            colorScheme === 'purple' && variant === 'default',
-          'bg-whop-success-green text-whop-background':
-            colorScheme === 'success-green' && variant === 'default',
-          'bg-whop-warning-yellow text-whop-background':
-            colorScheme === 'warning-yellow' && variant === 'default',
-          'bg-whop-error-red text-whop-background':
-            colorScheme === 'error-red' && variant === 'default',
-
-          // Light-anchor variants
-          'bg-whop-tag-gray-background border-whop-tag-gray':
-            colorScheme === 'gray' && variant === 'light-anchor',
-          'bg-whop-hover-50 border-whop-stroke':
-            colorScheme === 'light-gray' && variant === 'light-anchor',
-          'bg-whop-field-highlight/[10%] border-whop-field-highlight':
-            colorScheme === 'purple' && variant === 'light-anchor',
-          'bg-whop-tag-green-background border-whop-tag-green':
-            colorScheme === 'success-green' && variant === 'light-anchor',
-          'bg-whop-tag-warning-background border-whop-tag-warning':
-            colorScheme === 'warning-yellow' && variant === 'light-anchor',
-          'bg-whop-tag-error-background border-whop-tag-error':
-            colorScheme === 'error-red' && variant === 'light-anchor',
-        },
+        styles[variant][colorScheme],
       )}
     >
       <div className="flex items-start">
-        <Icon icon={icon} className={cn('mr-2 h-[18px] w-[18px]', textColor)} />
+        <Icon icon={icon} className={cn('mr-2 h-[18px] w-[18px]')} />
         <div className="space-y-1">
           {title && (
-            <Text as="h5" variant="h3" className={cn(textColor)}>
+            <Text as="h5" variant="h3">
               {title}
             </Text>
           )}
           {description && (
-            <Text as="p" variant="body2" className={cn(textColor)}>
+            <Text as="p" variant="body2">
               {description}
             </Text>
           )}
@@ -165,7 +141,7 @@ export const AlertBanner = ({
             className={cn(
               'absolute right-1.5 top-1.5',
               {
-                'text-whop-tag-error':
+                'text-status-error-700':
                   colorScheme === 'error-red' && variant === 'light-anchor',
               },
               closeButtonProps?.className,

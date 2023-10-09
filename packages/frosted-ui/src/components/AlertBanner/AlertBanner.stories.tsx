@@ -34,13 +34,9 @@ export const Variants: Story = {
     const variants = Object.values(AlertBannerVariants);
     return (
       <div className="space-y-6">
-        {variants
-          .filter((variant) =>
-            variant === 'default' ? args.colorScheme !== 'light-gray' : variant,
-          )
-          .map((variant, i) => (
-            <AlertBanner key={i} {...args} variant={variant} />
-          ))}
+        {variants.map((variant, i) => (
+          <AlertBanner key={i} {...args} variant={variant} />
+        ))}
       </div>
     );
   },
@@ -56,13 +52,9 @@ export const ColorSchemes: Story = {
     const colorSchemes = Object.values(AlertBannerColorSchemes);
     return (
       <div className="space-y-6">
-        {colorSchemes
-          .filter((scheme) =>
-            args.variant === 'default' ? scheme !== 'light-gray' : scheme,
-          )
-          .map((colorScheme, i) => (
-            <AlertBanner key={i} {...args} colorScheme={colorScheme} />
-          ))}
+        {colorSchemes.map((colorScheme, i) => (
+          <AlertBanner key={i} {...args} colorScheme={colorScheme} />
+        ))}
       </div>
     );
   },
