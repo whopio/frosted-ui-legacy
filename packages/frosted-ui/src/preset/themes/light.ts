@@ -1,3 +1,4 @@
+import colors from 'tailwindcss/colors';
 import { Theme } from './types';
 
 export const light: Theme = {
@@ -5,6 +6,19 @@ export const light: Theme = {
   transparent: 'transparent',
   extend: {
     colors: {
+      // Palettes
+      primary: colors.orange,
+      secondary: colors.purple,
+      gray: colors.slate,
+      blue: colors.blue,
+      green: colors.green,
+      purple: colors.purple,
+      'status-success': colors.lime,
+      'status-warning': colors.yellow,
+      'status-error': colors.red,
+      // Single color tokens
+      'surface-background': '#FFFFFF', // whop.background
+      'surface-foreground': '#000000', // whop.black
       whop: {
         // Neutral colors
         black: '#0e0e0f',

@@ -8,7 +8,10 @@ import '../src/index.css';
 
 const globalDecorator = (Story) => (
   <TooltipProvider>
-    <div className="bg-whop-background" style={{ padding: 20 }}>
+    <div
+      className="bg-surface-background text-surface-foreground"
+      style={{ padding: 20 }}
+    >
       <Story />
       <Toaster />
     </div>

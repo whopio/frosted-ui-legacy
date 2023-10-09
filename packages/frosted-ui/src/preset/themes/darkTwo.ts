@@ -1,3 +1,4 @@
+import colors from 'tailwindcss/colors';
 import { Theme } from './types';
 
 export const darkTwo: Theme = {
@@ -5,6 +6,19 @@ export const darkTwo: Theme = {
   transparent: 'transparent',
   extend: {
     colors: {
+      // Palettes
+      primary: colors.orange,
+      secondary: colors.purple,
+      gray: colors.slate,
+      blue: colors.blue,
+      green: colors.green,
+      purple: colors.purple,
+      'status-success': colors.lime,
+      'status-warning': colors.yellow,
+      'status-error': colors.red,
+      // Single color tokens
+      'surface-background': '#2A2D3D', // whop.background
+      'surface-foreground': '#FFFFFF', // whop.black
       whop: {
         // Neutral colors
         black: '#FFFFFF',

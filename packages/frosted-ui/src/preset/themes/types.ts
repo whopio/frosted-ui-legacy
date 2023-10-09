@@ -1,10 +1,36 @@
 type Color = string;
 
+type ColorPalette = {
+  '50': Color;
+  '100': Color;
+  '200': Color;
+  '300': Color;
+  '400': Color;
+  '500': Color;
+  '600': Color;
+  '700': Color;
+  '800': Color;
+  '900': Color;
+  '950': Color;
+};
 export type Theme = {
   name: string;
   transparent: 'transparent';
   extend: {
     colors: {
+      // Palettes
+      gray: ColorPalette;
+      primary: ColorPalette;
+      secondary: ColorPalette;
+      blue: ColorPalette;
+      green: ColorPalette;
+      purple: ColorPalette;
+      'status-success': ColorPalette;
+      'status-warning': ColorPalette;
+      'status-error': ColorPalette;
+      // Single color tokens
+      'surface-background': Color;
+      'surface-foreground': Color;
       whop: {
         // Neutral colors
         black: Color;
