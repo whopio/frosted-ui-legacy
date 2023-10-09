@@ -8,7 +8,7 @@ export const AccordionItem = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <Item
     ref={ref}
-    className={cn('border-whop-stroke border-b', className)}
+    className={cn('border-gray-200 border-b', className)}
     {...props}
   />
 ));
