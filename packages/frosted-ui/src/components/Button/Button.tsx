@@ -151,135 +151,135 @@ export const Button = forwardRef(function Button<
       type={type}
       className={cn(
         'group/button relative flex shrink-0 items-center justify-center overflow-hidden rounded-md transition w-fit',
-        'focus-visible:border-whop-field-highlight focus-visible:ring-whop-field-highlight/30 outline-none transition focus:outline-none focus-visible:border focus-visible:ring',
+        'focus-visible:border-purple-500 focus-visible:ring-purple-200 outline-none transition focus:outline-none focus-visible:border focus-visible:ring',
         className,
         {
           // Primary variants
-          'bg-whop-primary text-whop-fixed-white':
+          'bg-primary-500 text-white':
             variant === 'primary' && colorScheme === 'brand',
-          'bg-whop-field-highlight text-whop-fixed-white':
+          'bg-purple-500 text-white':
             variant === 'primary' && colorScheme === 'purple',
-          'bg-whop-black text-whop-background':
+          'bg-black text-surface-background':
             variant === 'primary' && colorScheme === 'black',
-          'bg-whop-dark-gray text-whop-fixed-white':
+          'bg-gray-800 text-white':
             variant === 'primary' && colorScheme === 'dark-gray',
-          'bg-whop-brands-discord text-whop-fixed-white':
+          'bg-whop-brands-discord text-white':
             variant === 'primary' && colorScheme === 'discord-purple',
-          'bg-whop-brands-twitter text-whop-fixed-white':
+          'bg-whop-brands-twitter text-white':
             variant === 'primary' && colorScheme === 'twitter-blue',
-          'bg-whop-brands-paypal text-whop-fixed-white':
+          'bg-whop-brands-paypal text-white':
             variant === 'primary' && colorScheme === 'paypal-blue',
-          'bg-whop-brands-telegram text-whop-fixed-white':
+          'bg-whop-brands-telegram text-white':
             variant === 'primary' && colorScheme === 'telegram-blue',
-          'bg-whop-brands-tradingview text-whop-fixed-white':
+          'bg-whop-brands-tradingview text-white':
             variant === 'primary' && colorScheme === 'tradingview-blue',
-          'bg-whop-brands-stripe text-whop-fixed-white':
+          'bg-whop-brands-stripe text-white':
             variant === 'primary' && colorScheme === 'stripe-purple',
-          'bg-whop-background text-whop-black':
+          'bg-white text-black':
             variant === 'primary' && colorScheme === 'white',
-          'bg-whop-error-red text-whop-fixed-white':
+          'bg-status-error-500 text-white':
             variant === 'primary' && colorScheme == 'error-red',
-          'bg-whop-warning-yellow text-whop-fixed-white':
+          'bg-status-warning-500 text-white':
             variant === 'primary' && colorScheme == 'warning-yellow',
-          'bg-whop-success-green text-whop-fixed-white':
+          'bg-status-success-500 text-white':
             variant === 'primary' && colorScheme === 'success-green',
-          'text-whop-fixed-white bg-gold-gradient':
+          'text-white bg-gold-gradient':
             variant === 'primary' && colorScheme === 'gold-gradient',
 
           // Secondary variants
-          'bg-whop-hover text-whop-black':
+          'bg-gray-100 text-black':
             variant === 'secondary' && colorScheme == 'black',
-          'bg-whop-background/[12%] text-whop-background':
+          'bg-surface-background/[12%] text-surface-background':
             variant === 'secondary' && colorScheme == 'white',
 
           // Stroke variants
-          'bg-whop-background text-whop-primary border-whop-stroke border':
+          'bg-surface-background text-primary-500 border-gray-200 biz-dark-1:border-gray-700 border':
             variant === 'outline' && colorScheme == 'brand',
-          'bg-whop-background text-whop-field-highlight border-whop-stroke border':
+          'bg-surface-background text-purple-500 border-gray-200 biz-dark-1:border-gray-700 border':
             variant === 'outline' && colorScheme == 'purple',
-          'bg-whop-background text-whop-black border-whop-stroke border':
+          'bg-surface-background text-black border-gray-200 biz-dark-1:text-gray-200 biz-dark-1:border-gray-700 border':
             variant === 'outline' && colorScheme == 'black',
-          'bg-whop-background text-whop-dark-gray border-whop-stroke border':
+          'bg-surface-background text-gray-800 border-gray-200 biz-dark-1:text-gray-200 biz-dark-1:border-gray-700 border':
             variant === 'outline' && colorScheme == 'dark-gray',
-          'bg-whop-background text-whop-error-red border-whop-stroke border':
+          'bg-surface-background text-status-error-500 border-gray-200 biz-dark-1:border-gray-700 border':
             variant === 'outline' && colorScheme == 'error-red',
-          'bg-whop-background text-whop-warning-yellow border-whop-stroke border':
+          'bg-surface-background text-status-warning-500 border-gray-200 biz-dark-1:border-gray-700 border':
             variant === 'outline' && colorScheme == 'warning-yellow',
-          'bg-whop-background text-whop-success-green border-whop-stroke border':
+          'bg-surface-background text-status-success-500 border-gray-200 biz-dark-1:border-gray-700 border':
             variant === 'outline' && colorScheme == 'success-green',
-          'bg-whop-background text-whop-brands-twitter border-whop-stroke border':
+          'bg-surface-background text-whop-brands-twitter border-gray-200 biz-dark-1:border-gray-700 border':
             variant === 'outline' && colorScheme == 'twitter-blue',
-          'bg-whop-background text-whop-brands-telegram border-whop-stroke border':
+          'bg-surface-background text-whop-brands-telegram border-gray-200 biz-dark-1:border-gray-700 border':
             variant === 'outline' && colorScheme == 'telegram-blue',
-          'bg-whop-background text-whop-brands-paypal border-whop-stroke border':
+          'bg-surface-background text-whop-brands-paypal border-gray-200 biz-dark-1:border-gray-700 border':
             variant === 'outline' && colorScheme == 'paypal-blue',
-          'bg-whop-background text-whop-brands-tradingview border-whop-stroke border':
+          'bg-surface-background text-whop-brands-tradingview border-gray-200 biz-dark-1:border-gray-700 border':
             variant === 'outline' && colorScheme == 'tradingview-blue',
-          'bg-whop-background text-whop-brands-discord border-whop-stroke border':
+          'bg-surface-background text-whop-brands-discord border-gray-200 biz-dark-1:border-gray-700 border':
             variant === 'outline' && colorScheme == 'discord-purple',
-          'bg-whop-background text-whop-brands-stripe border-whop-stroke border':
+          'bg-surface-background text-whop-brands-stripe border-gray-200 biz-dark-1:border-gray-700 border':
             variant === 'outline' && colorScheme == 'stripe-purple',
-          'bg-whop-transparent text-whop-background border-whop-stroke border':
+          'bg-ransparent text-surface-background border-gray-200 biz-dark-1:border-gray-700 border':
             variant === 'outline' && colorScheme == 'white',
 
           // Elevated variants
-          'bg-whop-background text-whop-black border-whop-stroke-dark border':
+          'bg-surface-background text-black border-gray-300 biz-dark-1:border-gray-600 border':
             variant === 'elevated' && colorScheme == 'black',
-          'bg-whop-background text-whop-dark-gray border-whop-stroke-dark border':
+          'bg-surface-background text-gray-800 border-gray-300 biz-dark-1:border-gray-600 border':
             variant === 'elevated' && colorScheme == 'dark-gray',
-          'bg-whop-background text-whop-error-red border-whop-stroke-dark border':
+          'bg-surface-background text-status-error-500 border-gray-300 biz-dark-1:border-gray-600 border':
             variant === 'elevated' && colorScheme == 'error-red',
-          'bg-whop-background text-whop-warning-yellow border-whop-stroke-dark border':
+          'bg-surface-background text-status-warning-500 border-gray-300 biz-dark-1:border-gray-600 border':
             variant === 'elevated' && colorScheme == 'warning-yellow',
-          'bg-whop-background text-whop-success-green border-whop-stroke-dark border':
+          'bg-surface-background text-status-success-500 border-gray-300 biz-dark-1:border-gray-600 border':
             variant === 'elevated' && colorScheme == 'success-green',
-          'bg-whop-background text-whop-field-highlight border-whop-stroke-dark border':
+          'bg-surface-background text-purple-500 border-gray-300 biz-dark-1:border-gray-600 border':
             variant === 'elevated' && colorScheme == 'purple',
-          'bg-whop-background text-whop-primary border-whop-stroke-dark border':
+          'bg-surface-background text-primary-500 border-gray-300 biz-dark-1:border-gray-600 border':
             variant === 'elevated' && colorScheme == 'brand',
-          'bg-whop-background text-whop-brands-twitter border-whop-stroke-dark border':
+          'bg-surface-background text-whop-brands-twitter border-gray-300 biz-dark-1:border-gray-600 border':
             variant === 'elevated' && colorScheme == 'twitter-blue',
-          'bg-whop-background text-whop-brands-paypal border-whop-stroke-dark border':
+          'bg-surface-background text-whop-brands-paypal border-gray-300 biz-dark-1:border-gray-600 border':
             variant === 'elevated' && colorScheme == 'paypal-blue',
-          'bg-whop-background text-whop-brands-telegram border-whop-stroke-dark border':
+          'bg-surface-background text-whop-brands-telegram border-gray-300 biz-dark-1:border-gray-600 border':
             variant === 'elevated' && colorScheme == 'telegram-blue',
-          'bg-whop-background text-whop-brands-tradingview border-whop-stroke-dark border':
+          'bg-surface-background text-whop-brands-tradingview border-gray-300 biz-dark-1:border-gray-600 border':
             variant === 'elevated' && colorScheme == 'tradingview-blue',
-          'bg-whop-background text-whop-brands-discord border-whop-stroke-dark border':
+          'bg-surface-background text-whop-brands-discord border-gray-300 biz-dark-1:border-gray-600 border':
             variant === 'elevated' && colorScheme == 'discord-purple',
-          'bg-whop-background text-whop-brands-stripe border-whop-stroke-dark border':
+          'bg-surface-background text-whop-brands-stripe border-gray-300 biz-dark-1:border-gray-600 border':
             variant === 'elevated' && colorScheme == 'stripe-purple',
-          'bg-whop-transparent text-whop-background border-whop-stroke-light border':
+          'bg-transparent text-surface-background border-gray-300 biz-dark-1:border-gray-600 border':
             variant === 'elevated' && colorScheme == 'white',
 
           // Blank variants
-          'bg-whop-white text-whop-black':
+          'bg-transparent text-black biz-dark-1:text-white':
             variant === 'blank' && colorScheme == 'black',
-          'bg-whop-white text-whop-dark-gray':
+          'bg-transparent text-gray-800 biz-dark-1:text-gray-200':
             variant === 'blank' && colorScheme == 'dark-gray',
-          'bg-whop-white text-whop-primary':
+          'bg-transparent text-primary-500':
             variant === 'blank' && colorScheme == 'brand',
-          'bg-whop-white text-whop-field-highlight':
+          'bg-transparent text-purple-500':
             variant === 'blank' && colorScheme == 'purple',
-          'bg-whop-white text-whop-success-green':
+          'bg-transparent text-status-success-500':
             variant === 'blank' && colorScheme == 'success-green',
-          'bg-whop-white text-whop-error-red':
+          'bg-transparent text-status-error-500':
             variant === 'blank' && colorScheme == 'error-red',
-          'bg-whop-white text-whop-warning-yellow':
+          'bg-transparent text-status-warning-500':
             variant === 'blank' && colorScheme == 'warning-yellow',
-          'bg-whop-white text-whop-brands-twitter':
+          'bg-transparent text-whop-brands-twitter':
             variant === 'blank' && colorScheme == 'twitter-blue',
-          'bg-whop-white text-whop-brands-paypal':
+          'bg-transparent text-whop-brands-paypal':
             variant === 'blank' && colorScheme == 'paypal-blue',
-          'bg-whop-white text-whop-brands-telegram':
+          'bg-transparent text-whop-brands-telegram':
             variant === 'blank' && colorScheme == 'telegram-blue',
-          'bg-whop-white text-whop-brands-tradingview':
+          'bg-transparent text-whop-brands-tradingview':
             variant === 'blank' && colorScheme == 'tradingview-blue',
-          'bg-whop-white text-whop-brands-discord':
+          'bg-transparent text-whop-brands-discord':
             variant === 'blank' && colorScheme == 'discord-purple',
-          'bg-whop-white text-whop-brands-stripe':
+          'bg-transparent text-whop-brands-stripe':
             variant === 'blank' && colorScheme == 'stripe-purple',
-          'bg-whop-transparent text-whop-background':
+          'bg-transparent text-surface-background':
             variant === 'blank' && colorScheme == 'white',
         },
         {
@@ -305,22 +305,22 @@ export const Button = forwardRef(function Button<
       <div
         className={cn('absolute inset-0 transition', {
           // White outline, White blank
-          'group-hover/button:bg-whop-background/[12%] group-active/button:bg-whop-background/[18%]':
+          'group-hover/button:bg-black/[12%] group-active/button:bg-black/[18%]':
             colorScheme === 'white' && (variant === 'blank' || 'outline'),
           // White secondary
-          'group-hover/button:bg-whop-background/[18%] group-active/button:bg-whop-background/[24%]':
+          'group-hover/button:bg-black/[18%] group-active/button:bg-black/[24%]':
             colorScheme === 'white' && variant === 'secondary',
           // White primary
           'group-hover/button:bg-black/[16%] group-active/button:bg-black/[32%]':
             variant === 'primary' && colorScheme === 'white',
           // Primary
-          'group-hover/button:bg-black/[12%] group-active/button:bg-black/[18%]':
+          'group-hover/button:bg-black/[13%] group-active/button:bg-black/[18%]':
             variant === 'primary' &&
             colorScheme !== 'white' &&
             !isDisabled &&
             !isLoading,
           // Black secondary
-          'group-hover/button:bg-whop-hover-press':
+          'group-hover/button:bg-gray-200':
             colorScheme === 'black' && variant === 'secondary',
           // Outline, blank, elevated light | default theme
           'group-hover/button:bg-black/[4%] group-active/button:bg-black/[8%]':
