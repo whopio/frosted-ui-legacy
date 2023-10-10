@@ -107,7 +107,7 @@ export const Avatar = forwardRef(function Avatar<C extends ElementType = 'img'>(
   }, []);
 
   const imageClasses = cn(
-    'border-whop-stroke border-[0.5px]',
+    'border-gray-200 border-[0.5px]',
     {
       'rounded-full': shape === 'circle',
       rounded: shape === 'square' && size === 16,
@@ -141,7 +141,7 @@ export const Avatar = forwardRef(function Avatar<C extends ElementType = 'img'>(
     return (
       <div
         className={cn(
-          'bg-whop-gray/10 animate-pulse overflow-hidden',
+          'bg-gray-100 animate-pulse overflow-hidden',
           imageSize,
           imageClasses,
         )}
@@ -153,7 +153,7 @@ export const Avatar = forwardRef(function Avatar<C extends ElementType = 'img'>(
     return (
       <div
         className={cn(
-          'bg-whop-background flex w-fit items-center justify-center overflow-hidden',
+          'bg-surface-background flex w-fit items-center justify-center overflow-hidden',
           imageSize,
           imageClasses,
         )}
