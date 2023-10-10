@@ -48,10 +48,10 @@ export const Banner = ({
         className={cn(
           'flex h-12 w-full cursor-pointer items-center justify-center gap-2',
           {
-            'bg-whop-field-highlight': colorScheme === 'purple',
-            'bg-whop-success-green': colorScheme === 'success-green',
-            'bg-whop-warning-yellow': colorScheme === 'warning-yellow',
-            'bg-whop-error-red': colorScheme === 'error-red',
+            'bg-purple-500': colorScheme === 'purple',
+            'bg-status-success-500': colorScheme === 'success-green',
+            'bg-status-warning-500': colorScheme === 'warning-yellow',
+            'bg-status-error-500': colorScheme === 'error-red',
           },
           { hidden: !show },
         )}
