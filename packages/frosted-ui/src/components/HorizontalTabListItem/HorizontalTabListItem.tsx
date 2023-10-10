@@ -36,7 +36,7 @@ export const HorizontalTabListItem = ({
         >
           <button
             className={cn(
-              'hover:bg-whop-hover group flex cursor-pointer appearance-none items-center justify-center rounded-md outline-none transition',
+              'hover:bg-gray-100 biz-dark-1:hover:bg-gray-800 group flex cursor-pointer appearance-none items-center justify-center rounded-md outline-none transition',
 
               {
                 'mb-1': size === 'sm',
@@ -52,9 +52,9 @@ export const HorizontalTabListItem = ({
               <Icon
                 icon={icon}
                 className={cn(
-                  'text-whop-dark-gray z-[2]',
+                  'text-gray-500 biz-dark-1:text-gray-500 z-[2]',
                   {
-                    'text-whop-black': selected,
+                    'text-gray-950 biz-dark-1:text-gray-50': selected,
                   },
                   {
                     'mr-1.5 h-3.5 w-3.5': size === 'sm',
@@ -73,8 +73,8 @@ export const HorizontalTabListItem = ({
                   } as const
                 )[size]
               }
-              className={cn('text-whop-dark-gray z-[2]', {
-                'text-whop-black': selected,
+              className={cn('text-gray-500 biz-dark-1:text-gray-500 z-[2]', {
+                'text-gray-950 biz-dark-1:text-gray-50': selected,
               })}
             >
               {children}
@@ -95,7 +95,7 @@ export const HorizontalTabListItem = ({
           {selected && (
             <motion.div
               className={cn(
-                'bg-whop-primary absolute bottom-0 z-[2] w-full rounded-t-full',
+                'bg-primary-500 absolute bottom-0 z-[2] w-full rounded-t-full',
                 {
                   'h-0.5': size === 'sm',
                   'h-[3px]': size === 'md',
