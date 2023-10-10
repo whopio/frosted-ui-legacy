@@ -53,7 +53,7 @@ export const Drawer = ({
         >
           {/* The backdrop, rendered as a fixed sibling to the panel container */}
           <div
-            className="bg-whop-black biz-dark-1:bg-whop-fixed-black biz-dark-2:bg-whop-fixed-black biz-dark-1:bg-opacity-60 biz-dark-2:bg-opacity-60 fixed inset-0 bg-opacity-40 transition-opacity"
+            className="bg-black biz-dark-1:bg-black biz-dark-2:bg-black biz-dark-1:bg-opacity-60 biz-dark-2:bg-opacity-60 fixed inset-0 bg-opacity-40 transition-opacity"
             aria-hidden="true"
           />
         </Transition.Child>
@@ -72,10 +72,14 @@ export const Drawer = ({
               leaveTo="translate-x-full"
             >
               <Dialog.Panel className="pointer-events-auto w-screen max-w-[500px]">
-                <div className="bg-whop-background flex h-full flex-col overflow-y-scroll shadow-xl">
+                <div className="bg-surface-background flex h-full flex-col overflow-y-scroll shadow-xl">
                   <div className="ml-8 mr-[88px] mt-6">
                     <Dialog.Title>
-                      <Text as="h2" variant="h3" className="text-whop-black">
+                      <Text
+                        as="h2"
+                        variant="h3"
+                        className="text-surface-foreground biz-dark-1:text-surface-foreground"
+                      >
                         {title}
                       </Text>
                     </Dialog.Title>
@@ -94,7 +98,7 @@ export const Drawer = ({
                         <Text
                           as="p"
                           variant="body2"
-                          className="text-whop-dark-gray mt-1.5"
+                          className="text-surface-foreground mt-1.5"
                         >
                           {description}
                         </Text>
@@ -105,7 +109,7 @@ export const Drawer = ({
                   <div className="mx-8 my-10">{body}</div>
 
                   {footer && (
-                    <div className="border-whop-stroke bg-whop-background fixed bottom-0 w-full max-w-[500px] border-t px-6 pb-6 pt-4">
+                    <div className="border-gray-200 biz-dark-1:border-gray-700 bg-surface-background fixed bottom-0 w-full max-w-[500px] border-t px-6 pb-6 pt-4">
                       {isButtonFooter(footer) ? (
                         <Button
                           {...footer}
