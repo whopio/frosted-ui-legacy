@@ -54,7 +54,7 @@ export const Badge = ({
   return (
     <div
       className={cn(
-        'text-whop-background inline-flex w-auto items-center justify-center rounded-full border border-transparent',
+        'text-white inline-flex w-auto items-center justify-center rounded-full border border-transparent',
         className,
         {
           'h-[18px] px-1.5': size === 'sm',
@@ -62,49 +62,47 @@ export const Badge = ({
         },
         {
           // Default variants
-          'bg-whop-field-highlight':
-            colorScheme === 'purple' && variant === 'default',
-          'bg-whop-primary': colorScheme === 'brand' && variant === 'default',
-          'bg-whop-success-green':
+          'bg-purple-500': colorScheme === 'purple' && variant === 'default',
+          'bg-primary-500': colorScheme === 'brand' && variant === 'default',
+          'bg-status-success-500':
             colorScheme === 'success-green' && variant === 'default',
-          'bg-whop-warning-yellow':
+          'bg-status-warning-500':
             colorScheme === 'warning-yellow' && variant === 'default',
-          'bg-whop-error-red':
+          'bg-status-error-500':
             colorScheme === 'error-red' && variant === 'default',
-          'bg-whop-dark-gray':
-            colorScheme === 'dark-gray' && variant === 'default',
-          'bg-whop-black': colorScheme === 'black' && variant === 'default',
+          'bg-gray-500': colorScheme === 'dark-gray' && variant === 'default',
+          'bg-gray-950': colorScheme === 'black' && variant === 'default',
 
           // Light variant
-          'bg-whop-field-highlight/10 text-whop-field-highlight':
+          'bg-purple-100 text-purple-500':
             colorScheme === 'purple' && variant === 'light',
-          'bg-whop-primary/10 text-whop-primary':
+          'bg-primary-100 text-primary-500':
             colorScheme === 'brand' && variant === 'light',
-          'bg-whop-tag-green-background text-whop-tag-green':
+          'bg-green-100 text-green-500':
             colorScheme === 'success-green' && variant === 'light',
-          'bg-whop-tag-warning-background text-whop-tag-warning':
+          'bg-status-warning-100 text-status-warning-500':
             colorScheme === 'warning-yellow' && variant === 'light',
-          'bg-whop-tag-error-background text-whop-tag-error':
+          'bg-status-error-100 text-status-error-500':
             colorScheme === 'error-red' && variant === 'light',
-          'bg-whop-dark-gray/10 text-whop-dark-gray':
+          'bg-gray-100 text-gray-500':
             colorScheme === 'dark-gray' && variant === 'light',
-          'bg-whop-black/10 text-whop-black':
+          'bg-gray-200 text-gray-600':
             colorScheme === 'black' && variant === 'light',
 
           // Light anchor variant
-          'bg-whop-field-highlight/10 text-whop-field-highlight border-whop-field-highlight/[14%]':
+          'bg-purple-100 text-purple-500 border-purple-200':
             colorScheme === 'purple' && variant === 'light-anchor',
-          'bg-whop-primary/10 text-whop-primary border-whop-primary/[14%]':
+          'bg-primary-100 text-primary-500 border-primary-200':
             colorScheme === 'brand' && variant === 'light-anchor',
-          'bg-whop-tag-green-background text-whop-tag-green border-whop-tag-green/[14%]':
+          'bg-green-100 text-green-500 border-green-300':
             colorScheme === 'success-green' && variant === 'light-anchor',
-          'bg-whop-tag-warning-background text-whop-tag-warning border-whop-tag-warning/[14%]':
+          'bg-status-warning-100 text-status-warning-500 border-status-warning-300':
             colorScheme === 'warning-yellow' && variant === 'light-anchor',
-          'bg-whop-tag-error-background text-whop-tag-error border-whop-tag-error/[14%]':
+          'bg-status-error-100 text-status-error-500 border-status-error-200':
             colorScheme === 'error-red' && variant === 'light-anchor',
-          'bg-whop-dark-gray/10 text-whop-dark-gray border-whop-dark-gray/[14%]':
+          'bg-gray-100 text-gray-500 border-gray-200':
             colorScheme === 'dark-gray' && variant === 'light-anchor',
-          'bg-whop-black/10 text-whop-black border-whop-black/[14%]':
+          'bg-gray-200 text-gray-600 border-gray-300':
             colorScheme === 'black' && variant === 'light-anchor',
         },
       )}
