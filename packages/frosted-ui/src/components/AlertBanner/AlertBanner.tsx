@@ -51,14 +51,15 @@ const styles: Record<
     'error-red': 'bg-status-error-500 text-white',
   },
   'light-anchor': {
-    gray: 'bg-gray-50 border-gray-200 text-gray-600',
-    purple: 'bg-purple-100 border-purple-500 text-purple-700',
+    gray: 'bg-gray-50 border-gray-200 text-gray-600 biz-dark-1:bg-gray-800 biz-dark-1:border-gray-800 biz-dark-1:text-gray-500',
+    purple:
+      'bg-purple-100 border-purple-500 text-purple-700 biz-dark-1:bg-purple-950 biz-dark-1:border-purple-800 biz-dark-1:text-purple-500',
     'success-green':
-      'bg-status-success-100 border-status-success-500 text-status-success-700',
+      'bg-status-success-100 border-status-success-500 text-status-success-700 biz-dark-1:bg-status-success-950 biz-dark-1:border-status-success-800 biz-dark-1:text-status-success-500',
     'warning-yellow':
-      'bg-status-warning-100 border-status-warning-500 text-status-warning-700',
+      'bg-status-warning-100 border-status-warning-500 text-status-warning-700 biz-dark-1:bg-status-warning-950 biz-dark-1:border-status-warning-800 biz-dark-1:text-status-warning-500',
     'error-red':
-      'bg-status-error-100 border-status-error-500 text-status-error-700',
+      'bg-status-error-100 border-status-error-500 text-status-error-700 biz-dark-1:bg-status-error-950 biz-dark-1:border-status-error-800 biz-dark-1:text-status-error-500',
   },
 };
 
@@ -131,8 +132,6 @@ export const AlertBanner = ({
             colorScheme={
               variant === 'default'
                 ? 'white'
-                : colorScheme === 'light-gray'
-                ? 'dark-gray'
                 : colorScheme === 'gray'
                 ? 'dark-gray'
                 : colorScheme
