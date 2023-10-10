@@ -69,20 +69,20 @@ export const Checkbox = ({
         name={name}
         value={value}
         className={cn(
-          'text-whop-background flex appearance-none items-center justify-center border-2 outline-none',
+          'text-surface-background flex appearance-none items-center justify-center border-2 outline-none',
           'disabled:cursor-not-allowed disabled:opacity-40 h-4 w-4 rounded-[2.25px]',
 
           {
-            'data-[state=checked]:bg-whop-primary data-[state=indeterminate]:bg-whop-primary data-[state=checked]:border-whop-primary data-[state=indeterminate]:border-whop-primary':
+            'data-[state=checked]:bg-primary-500 data-[state=indeterminate]:bg-primary-500 data-[state=checked]:border-primary-500 data-[state=indeterminate]:border-primary-500':
               colorScheme === 'brand',
-            'data-[state=checked]:bg-whop-black data-[state=indeterminate]:bg-whop-black data-[state=checked]:border-whop-black data-[state=indeterminate]:border-whop-black':
+            'data-[state=checked]:bg-black data-[state=indeterminate]:bg-black data-[state=checked]:border-black data-[state=indeterminate]:border-black':
               colorScheme === 'black',
           },
           className,
         )}
         id={id || defaultId}
       >
-        <Indicator className={cn('text-whop-background', iconClassName)}>
+        <Indicator className={cn('text-white', iconClassName)}>
           {(checked === 'indeterminate' ||
             defaultChecked === 'indeterminate') && <IndeterminateIcon />}
           {checked !== 'indeterminate' &&
@@ -95,7 +95,7 @@ export const Checkbox = ({
             as="label"
             variant="body2"
             className={cn(
-              'ml-3 cursor-pointer text-whop-black',
+              'ml-3 cursor-pointer text-surface-foreground',
               { 'cursor-not-allowed opacity-40': isDisabled },
               labelClassName,
             )}
