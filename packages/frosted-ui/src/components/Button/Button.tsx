@@ -225,7 +225,7 @@ export const Button = forwardRef(function Button<
           // Elevated variants
           'bg-surface-background text-black border-gray-300 biz-dark-1:border-gray-600 border':
             variant === 'elevated' && colorScheme == 'black',
-          'bg-surface-background text-gray-800 border-gray-300 biz-dark-1:border-gray-600 border':
+          'bg-surface-background text-gray-800 biz-dark-1:text-gray-400 border-gray-300 biz-dark-1:border-gray-600 border':
             variant === 'elevated' && colorScheme == 'dark-gray',
           'bg-surface-background text-status-error-500 border-gray-300 biz-dark-1:border-gray-600 border':
             variant === 'elevated' && colorScheme == 'error-red',
