@@ -10,7 +10,7 @@ export const MenuLabel = forwardRef<
   return (
     <Label
       ref={forwardedRef}
-      className="text-whop-dark-gray mb-1 ml-3 mt-3 uppercase"
+      className="text-gray-700 biz-dark-1:text-gray-300 mb-1 ml-3 mt-3 uppercase"
       {...props}
     >
       <Text as="span" variant="overline1" className="block">

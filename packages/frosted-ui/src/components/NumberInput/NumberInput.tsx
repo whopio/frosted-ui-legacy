@@ -123,13 +123,13 @@ export const NumberInput = ({
             )}
           >
             <button
-              className="hover:bg-whop-hover active:bg-whop-hover-press flex h-[50%] items-end justify-center px-[7.5px] transition"
+              className="hover:bg-gray-100 biz-dark-1:hover:bg-gray-800 active:bg-whop-hover-press flex h-[50%] items-end justify-center px-[7.5px] transition"
               onClick={handleIncrement}
             >
               <Icon icon={faCaretUp} className="text-whop-dark-gray h-3 w-3" />
             </button>
             <button
-              className="hover:bg-whop-hover active:bg-whop-hover-press flex h-[50%] items-start justify-center px-[7.5px] transition"
+              className="hover:bg-gray-100 biz-dark-1:hover:bg-gray-800 active:bg-whop-hover-press flex h-[50%] items-start justify-center px-[7.5px] transition"
               onClick={handleDecrement}
             >
               <Icon

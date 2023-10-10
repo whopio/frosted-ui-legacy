@@ -12,7 +12,7 @@ export const MenuSeparator = forwardRef<
   return (
     <Separator
       ref={forwardedRef}
-      className={cn('bg-whop-stroke my-1 h-px', className)}
+      className={cn('bg-gray-200 biz-dark-1:bg-gray-700 my-1 h-px', className)}
       {...props}
     />
   );

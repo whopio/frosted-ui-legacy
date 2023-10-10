@@ -99,7 +99,7 @@ export const RadioCardItem = forwardRef<
           ref={forwardedRef}
           disabled={isDisabled}
           className={cn(
-            'bg-whop-background border-whop-stroke-dark hover:bg-whop-hover state-checked:border-2 state-checked:shadow-md group box-border flex w-full min-w-[250px] cursor-pointer items-start rounded-md border outline-none transition disabled:cursor-not-allowed disabled:opacity-40',
+            'bg-whop-background border-whop-stroke-dark hover:bg-gray-100 biz-dark-1:hover:bg-gray-800 state-checked:border-2 state-checked:shadow-md group box-border flex w-full min-w-[250px] cursor-pointer items-start rounded-md border outline-none transition disabled:cursor-not-allowed disabled:opacity-40',
             {
               'items-center': !description && !isReactNodeLabel(label),
             },
@@ -158,7 +158,7 @@ export const RadioCardItem = forwardRef<
         ref={forwardedRef}
         disabled={isDisabled}
         className={cn(
-          'bg-whop-background border-whop-stroke-dark hover:bg-whop-hover state-checked:border-2 state-checked:shadow-md group box-border flex w-full min-w-[250px] cursor-pointer items-start rounded-md border outline-none transition disabled:cursor-not-allowed disabled:opacity-40',
+          'bg-whop-background border-whop-stroke-dark hover:bg-gray-100 biz-dark-1:hover:bg-gray-800 state-checked:border-2 state-checked:shadow-md group box-border flex w-full min-w-[250px] cursor-pointer items-start rounded-md border outline-none transition disabled:cursor-not-allowed disabled:opacity-40',
           {
             'items-center': !description && !isReactNodeLabel(label),
           },

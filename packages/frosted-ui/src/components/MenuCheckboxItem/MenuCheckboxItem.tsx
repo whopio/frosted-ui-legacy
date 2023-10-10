@@ -19,7 +19,7 @@ export const MenuCheckboxItem = forwardRef<
       ref={forwardedRef}
       className={cn(
         'mx-1 flex items-center rounded pl-3 pr-2 transition h-8',
-        'focus:bg-whop-hover cursor-pointer select-none outline-none focus:outline-none',
+        'focus:bg-gray-100 biz-dark-1:focus:bg-gray-800 cursor-pointer select-none outline-none focus:outline-none',
         'data-[disabled]:cursor-not-allowed data-[disabled]:opacity-50',
         className,
       )}

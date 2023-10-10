@@ -23,7 +23,7 @@ const meta: Meta<typeof Menu> = {
       <IconButton
         size="sm"
         icon={faEllipsis}
-        colorScheme="black"
+        colorScheme="dark-gray"
         variant="outline"
       />
     ),

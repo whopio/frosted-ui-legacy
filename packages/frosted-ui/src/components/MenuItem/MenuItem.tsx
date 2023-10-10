@@ -29,8 +29,9 @@ export const MenuItem = forwardRef<
           'data-[disabled]:cursor-not-allowed data-[disabled]:opacity-50',
           'h-8',
           {
-            'focus:bg-whop-hover text-whop-black': colorScheme === 'black',
-            'focus:bg-whop-tag-error-background text-whop-tag-error':
+            'hover:bg-gray-100 biz-dark-1:hover:bg-gray-800 text-whop-black':
+              colorScheme === 'black',
+            'focus:bg-status-error-100  biz-dark-1:bg-status-error-800 text-status-error-500':
               colorScheme === 'error-red',
           },
           className,

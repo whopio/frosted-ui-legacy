@@ -28,7 +28,7 @@ const PaginationButton = ({
         'text-whop-black flex h-8 w-8 items-center justify-center rounded-md',
         // This is a manual replacement for subtitle3 as the native button styles override it
         'text-sm font-medium leading-[17px] tracking-[-0.01em]',
-        'hover:bg-whop-hover active:bg-whop-hover-press outline-none transition',
+        'hover:bg-gray-100 biz-dark-1:hover:bg-gray-800 active:bg-whop-hover-press outline-none transition',
         {
           'border-whop-black border-2': isActive,
           'cursor-not-allowed opacity-40': rest.disabled,
