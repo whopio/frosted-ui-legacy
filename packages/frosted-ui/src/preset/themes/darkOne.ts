@@ -9,7 +9,7 @@ export const darkOne: Theme = {
       // Palettes
       primary: colors.orange,
       secondary: colors.purple,
-      gray: colors.slate,
+      gray: colors.neutral,
       blue: colors.blue,
       green: colors.green,
       purple: colors.purple,
