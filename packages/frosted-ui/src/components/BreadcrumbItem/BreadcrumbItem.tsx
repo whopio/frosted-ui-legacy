@@ -18,7 +18,7 @@ export const BreadcrumbItem = ({
       <Text
         as="div"
         variant="overline1"
-        className="flex text-whop-dark-gray h-6 items-center justify-center px-[7px] uppercase leading-none"
+        className="flex text-gray-800 h-6 items-center justify-center px-[7px] uppercase leading-none"
       >
         {children}
       </Text>
@@ -35,7 +35,7 @@ export const BreadcrumbItem = ({
       <Text
         as="span"
         variant="overline1"
-        className="block !text-whop-gray uppercase leading-none"
+        className="block !text-gray-500 uppercase leading-none"
       >
         {children}
       </Text>
