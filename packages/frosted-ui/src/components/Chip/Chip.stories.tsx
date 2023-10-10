@@ -98,22 +98,11 @@ export const ColorSchemes: Story = {
     const colorSchemes = Object.values(ChipColorSchemes);
     return (
       <div className="space-y-6">
-        {colorSchemes
-          // Remove white colorScheme
-          .filter((scheme) => scheme !== 'white')
-          // remove all but purple colorScheme for light anchor variant
-          .filter((scheme) =>
-            args.variant === 'light-anchor' ? scheme === 'purple' : scheme,
-          )
-          // Only show the black colorScheme for the secondary variant
-          .filter((scheme) =>
-            args.variant === 'secondary' ? scheme === 'black' : scheme,
-          )
-          .map((colorScheme, i) => (
-            <Chip key={i} {...args} colorScheme={colorScheme} />
-          ))}
+        {colorSchemes.map((colorScheme, i) => (
+          <Chip key={i} {...args} colorScheme={colorScheme} />
+        ))}
         {args.variant !== 'elevated' && args.variant !== 'light-anchor' && (
-          <div className="bg-whop-black w-fit p-2">
+          <div className="bg-black w-fit p-2">
             <Chip {...args} colorScheme="white" />
           </div>
         )}
