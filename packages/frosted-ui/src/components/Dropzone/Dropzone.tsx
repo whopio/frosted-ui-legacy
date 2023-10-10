@@ -85,11 +85,11 @@ export const Dropzone = ({
     <div
       {...getRootProps({
         className: cn(
-          'bg-whop-hover transition flex flex-col items-center justify-center rounded-lg border-whop-stroke border p-8 focus-within:outline-none outline-none focus-within:ring focus-within:border-whop-field-highlight focus-within:ring-whop-field-highlight/30 cursor-pointer',
+          'bg-gray-50 biz-dark-1:bg-gray-900 border-gray-200 biz-dark-1:border-gray-700 border transition flex flex-col items-center justify-center rounded-lg p-8 focus-within:outline-none outline-none focus-within:ring focus-within:border-purple-500 focus-within:ring-purple-200 cursor-pointer',
           {
-            'focus-within:border-whop-field-highlight focus-within:ring-whop-field-highlight/30':
+            'focus-within:border-purple-500 focus-within:ring-purple-200':
               isFocused || isDragAccept,
-            '!border-whop-error-red focus-within:!ring-whop-error-red/30':
+            '!border-status-error-500 focus-within:!ring-status-error-200':
               isDragReject || hasFileRejections,
           },
           className,
@@ -99,13 +99,13 @@ export const Dropzone = ({
       <input {...getInputProps()} disabled={Boolean(loading)} />
       <Icon
         icon={inputIcon}
-        className="text-whop-gray mb-4 h-14 w-14 text-[56px]"
+        className="text-gray-400 biz-dark-1:text-gray-500 mb-4 h-14 w-14 text-[56px]"
       />
 
       <Text
         as="p"
         variant="h3"
-        className="text-whop-black text-center sm:text-left"
+        className="text-gray-950 biz-dark-1:text-gray-100 text-center sm:text-left"
       >
         {title}
       </Text>
@@ -114,9 +114,9 @@ export const Dropzone = ({
         as="p"
         variant="body2"
         className={cn(
-          'text-whop-dark-gray mt-2 text-center sm:text-left',
+          'text-gray-500 biz-dark-1:text-gray-400 mt-2 text-center sm:text-left',
           { 'opacity-0': Boolean(loading) },
-          { 'text-whop-error-red': isDragReject || hasFileRejections },
+          { 'text-status-error-500': isDragReject || hasFileRejections },
         )}
       >
         {errorMessage
@@ -137,7 +137,7 @@ export const Dropzone = ({
 
       {uploadButtonText && !loading && (
         <Button
-          colorScheme="black"
+          colorScheme="dark-gray"
           variant="elevated"
           size="sm"
           className="mt-4"
@@ -148,7 +148,7 @@ export const Dropzone = ({
       )}
       {Boolean(loading) && cancelButtonProps && (
         <Button
-          colorScheme="black"
+          colorScheme="dark-gray"
           variant="elevated"
           size="sm"
           className="mt-4"
