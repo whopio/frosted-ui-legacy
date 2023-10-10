@@ -26,27 +26,38 @@ export const EmptyState = ({
   return (
     <div
       className={cn(
-        'border-whop-stroke-dark bg-whop-background w-full rounded-[10px] px-10 py-6',
+        'border-gray-200 biz-dark-1:border-gray-700 bg-surface-background w-full rounded-[10px] px-10 py-6',
         { border: showBorder },
       )}
     >
       <div className="mx-auto flex max-w-[400px] flex-col gap-6 text-center">
-        <div className="border-whop-stroke-dark bg-whop-background mx-auto flex animate-pulse items-center justify-center border drop-shadow-lg h-12 w-12 rounded-2xl">
-          <Icon icon={icon} className={'text-whop-gray h-6 w-6'} />
+        <div className="border-gray-200 biz-dark-1:border-gray-700 bg-surface-background mx-auto flex animate-pulse items-center justify-center border drop-shadow-lg h-12 w-12 rounded-2xl">
+          <Icon
+            icon={icon}
+            className={'text-gray-400 biz-dark-1:text-gray-500 h-6 w-6'}
+          />
         </div>
         <div>
-          <Text as="p" variant="h3" className="text-whop-off-black">
+          <Text
+            as="p"
+            variant="h3"
+            className="text-gray-950 biz-dark-1:text-gray-100"
+          >
             {title}
           </Text>
-          <Text as="p" variant="body2" className="text-whop-dark-gray mt-1">
+          <Text
+            as="p"
+            variant="body2"
+            className="text-gray-500 biz-dark-1:text-gray-400 mt-1"
+          >
             {description}
           </Text>
         </div>
         <div className="mx-auto flex w-full flex-col-reverse gap-2 sm:flex-row sm:justify-center">
           {secondaryButton && (
             <Button
-              variant="outline"
-              colorScheme="black"
+              colorScheme="dark-gray"
+              variant="elevated"
               className="w-full sm:w-auto"
               {...secondaryButton}
             />
