@@ -67,6 +67,7 @@ export const Badge = ({
           'fui-Badge_variant--light': variant === 'light',
           'fui-Badge_variant--light-anchor': variant === 'light-anchor',
         },
+        className,
       )}
       {...props}
     >

@@ -12,7 +12,7 @@
 }
 /* AccordionItem */
 .fui-AccordionItem {
-  border-top: 1px solid var(--gray-200);
+  border-top: 1px solid var(--gray-7);
 }
 /* AccordionTrigger */
 .fui-AccordionTrigger {

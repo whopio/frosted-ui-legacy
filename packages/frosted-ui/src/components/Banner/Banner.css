@@ -7,8 +7,8 @@
   justify-content: center;
   gap: 0.5rem;
 
-  background-color: var(--accent-500);
-  color: white;
+  background-color: var(--accent-3);
+  color: var(--accent-12);
 
   cursor: pointer;
 }
@@ -16,12 +16,12 @@
   display: none;
 }
 .fui-Banner-icon {
-  color: white;
+  color: var(--accent-12);
 }
 .fui-Banner-dismiss-button {
   position: absolute;
   right: 0.75rem;
   top: 0.75rem;
 
-  color: white;
+  color: var(--accent-12);
 }

@@ -10,9 +10,8 @@
   transition: all 0.3s; /* Equivalent to transition in Tailwind */
   width: fit-content;
   outline: none;
-  border-width: 1px;
-  border-style: solid;
-  border-color: transparent;
+
+  --base-button-solid-active-filter: brightness(0.92) saturate(1.1);
 }
 .fui-Button:disabled {
   opacity: 0.4;
@@ -29,43 +28,41 @@
 /* TODO: elevated variant doesn't make sense. it should be a bool prop */
 /* Variants */
 .fui-Button_variant--primary {
-  background-color: var(--accent-500);
-  color: white;
+  background-color: var(--accent-9);
+  color: var(--accent-9-contrast);
 }
 .fui-Button_variant--primary:hover {
-  background-color: var(--accent-600);
+  background-color: var(--accent-10);
 }
 .fui-Button_variant--primary:active {
-  background-color: var(--accent-700);
+  background-color: var(--accent-10);
+  filter: var(--base-button-solid-active-filter);
 }
-.fui-Button_variant--secondary {
-  background-color: var(--accent-50);
-  color: black;
-}
+
 .fui-Button_variant--outline,
 .fui-Button_variant--elevated {
-  background-color: white;
-  color: var(--accent-500);
-  border-color: var(--gray-200);
+  box-shadow: inset 0 0 0 1px var(--gray-7);
+  color: var(--accent-10);
 }
 .fui-Button_variant--elevated {
-  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.08);
+  box-shadow:
+    inset 0 0 0 1px var(--gray-7),
+    0px 1px 4px rgba(0, 0, 0, 0.08);
 }
 .fui-Button_variant--blank {
-  background-color: white;
-  color: var(--accent-500);
+  color: var(--accent-10);
 }
 .fui-Button_variant--secondary:hover,
 .fui-Button_variant--outline:hover,
 .fui-Button_variant--elevated:hover,
 .fui-Button_variant--blank:hover {
-  background-color: var(--gray-50);
+  background-color: var(--gray-2);
 }
 .fui-Button_variant--secondary:active,
 .fui-Button_variant--outline:active,
 .fui-Button_variant--elevated:active,
 .fui-Button_variant--blank:active {
-  background-color: var(--gray-100);
+  background-color: var(--gray-3);
 }
 
 /* Sizes */
