@@ -98,6 +98,7 @@ export const Tooltip = forwardRef<
             'text-whop-gray focus:outline-none cursor-default',
             buttonClassName,
           )}
+          type="button"
         >
           {children || <Icon icon={faInfoCircle} className="h-3 w-3" />}
         </Trigger>
