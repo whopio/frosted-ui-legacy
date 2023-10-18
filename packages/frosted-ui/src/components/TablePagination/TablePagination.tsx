@@ -14,7 +14,7 @@ import React, {
 import { cn } from '../../lib/classnames';
 import { Icon } from '../Icon';
 import { useTableContext } from '../Table';
-import { Text } from '../Text';
+import { Typography } from '../Typography';
 
 const PaginationButton = ({
   children,
@@ -162,13 +162,13 @@ export const TablePagination = ({
       </div>
       {/* Pagination count and arrows group */}
       <div className="flex items-center gap-x-[10px]">
-        <Text
+        <Typography
           as="p"
-          variant="body2"
+          variant="text4"
           className="text-whop-gray hidden whitespace-nowrap sm:block"
         >
           Showing {currentPageStart} - {currentPageEnd} of {totalRowCount}
-        </Text>
+        </Typography>
 
         <div className="flex gap-x-2">
           <PaginationButton

@@ -6,7 +6,7 @@ import React, { ForwardedRef, TextareaHTMLAttributes, forwardRef } from 'react';
 import { cn } from '../../lib/classnames';
 import { Icon } from '../Icon';
 import { Label, LabelProps } from '../Label';
-import { Text } from '../Text';
+import { Typography } from '../Typography';
 
 export interface TextAreaProps
   extends Omit<
@@ -93,25 +93,25 @@ export const TextArea = forwardRef(
               {messageIcon && (
                 <Icon
                   icon={helpMessage ? faInfoCircle : faExclamationCircle}
-                  className="mt-1 h-3 w-3"
+                  className="mt-px h-3 w-3"
                 />
               )}
-              <Text as="div" variant="body2" className="ml-1 flex-wrap">
+              <Typography as="div" variant="text5" className="ml-1 flex-wrap">
                 {errorMessage || helpMessage}
-              </Text>
+              </Typography>
             </div>
           )}
           {maxLength && (
-            <Text
+            <Typography
               as="span"
-              variant="body2"
+              variant="text5"
               className={cn('flex w-full justify-end', {
                 'text-whop-error-red': value?.length === maxLength,
                 'text-whop-dark-gray': (value?.length || 0) < maxLength,
               })}
             >
               {value?.length || 0} / {maxLength}
-            </Text>
+            </Typography>
           )}
         </div>
       </div>

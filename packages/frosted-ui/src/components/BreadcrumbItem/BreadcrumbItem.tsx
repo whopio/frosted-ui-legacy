@@ -3,7 +3,7 @@
 import React from 'react';
 import { cn } from '../../lib/classnames';
 import { Button, ButtonProps } from '../Button';
-import { Text } from '../Text';
+import { Typography } from '../Typography';
 export interface BreadcrumbItemProps extends ButtonProps {
   isLastItem?: boolean;
 }
@@ -15,13 +15,13 @@ export const BreadcrumbItem = ({
 }: BreadcrumbItemProps) => {
   if (isLastItem) {
     return (
-      <Text
+      <Typography
         as="div"
-        variant="overline1"
-        className="flex text-whop-dark-gray h-6 items-center justify-center px-[7px] uppercase leading-none"
+        variant="overline3"
+        className="text-whop-dark-gray flex h-6 items-center justify-center px-[7px] uppercase"
       >
         {children}
-      </Text>
+      </Typography>
     );
   }
   return (
@@ -32,13 +32,13 @@ export const BreadcrumbItem = ({
       className={cn(props?.className)}
       {...props}
     >
-      <Text
+      <Typography
         as="span"
-        variant="overline1"
-        className="block !text-whop-gray uppercase leading-none"
+        variant="overline3"
+        className="!text-whop-gray uppercase"
       >
         {children}
-      </Text>
+      </Typography>
     </Button>
   );
 };

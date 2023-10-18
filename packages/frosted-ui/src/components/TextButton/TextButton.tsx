@@ -11,7 +11,7 @@ import { cn } from '../../lib/classnames';
 import { IconDefinition } from '../../lib/icon-types';
 import { ColorScheme, Size } from '../../lib/shared-component-types';
 import { Icon } from '../Icon';
-import { Text } from '../Text';
+import { Typography } from '../Typography';
 
 type AsProp<C extends ElementType> = {
   asComponent?: C;
@@ -98,21 +98,21 @@ export const TextButton = forwardRef(function TextButton<
       ref={ref}
       {...rest}
     >
-      <Text
+      <Typography
         as="span"
         variant={
           {
             underline: {
-              sm: 'button3',
-              md: 'button2',
-              lg: 'button1',
-              xl: 'h3',
+              sm: 'text4',
+              md: 'text3',
+              lg: 'text2',
+              xl: 'text1',
             } as const,
             arrow: {
-              sm: 'button3',
-              md: 'button2',
-              lg: 'button1',
-              xl: 'h3',
+              sm: 'button5',
+              md: 'button4',
+              lg: 'button3',
+              xl: 'button2',
             } as const,
           }[variant as TextButtonVariant][size as TextButtonSize]
         }
@@ -139,7 +139,7 @@ export const TextButton = forwardRef(function TextButton<
         )}
       >
         {children}
-      </Text>
+      </Typography>
       {variant === 'arrow' && (
         <Icon
           icon={icon}

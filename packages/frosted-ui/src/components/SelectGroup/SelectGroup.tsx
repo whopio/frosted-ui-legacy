@@ -7,7 +7,7 @@ import {
 import React, { forwardRef } from 'react';
 import { cn } from '../../lib/classnames';
 import { SelectSeparator } from '../SelectSeparator';
-import { Text } from '../Text';
+import { Typography } from '../Typography';
 
 export type SelectGroupProps = {
   label?: string;
@@ -36,9 +36,9 @@ export const SelectGroup = forwardRef<
         <Group ref={ref} className={cn('mt-1', className)}>
           {label && (
             <LabelPrimitive className="text-whop-dark-gray mt-3 ml-3 mb-1 uppercase">
-              <Text as="div" variant="overline1">
+              <Typography as="div" variant="overline4">
                 {label}
-              </Text>
+              </Typography>
             </LabelPrimitive>
           )}
           {children}

@@ -8,7 +8,7 @@ import { IconDefinition } from '../../lib/icon-types';
 import { Size } from '../../lib/shared-component-types';
 import { Icon } from '../Icon';
 import { Label, LabelProps } from '../Label';
-import { Text } from '../Text';
+import { Typography } from '../Typography';
 
 export type InputSize = Extract<Size, 'sm' | 'md'>;
 export const InputSizes: { [key: string]: InputSize } = {
@@ -108,15 +108,15 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(function Input(
         )}
         {leftText && !leftIcon && (
           <label htmlFor={name}>
-            <Text
+            <Typography
               as="span"
-              variant="body1"
+              variant="text1"
               className={cn(
                 'text-whop-dark-gray mr-1 select-none w-fit max-w-[128px] whitespace-nowrap overflow-x-auto flex flex-row-reverse',
               )}
             >
               {leftText}
-            </Text>
+            </Typography>
           </label>
         )}
         {rightElementSlot && rightElementSlot}
@@ -134,7 +134,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(function Input(
           autoCorrect="off"
           className={cn(
             { [inputStyles]: !(!leftIcon && leftText) },
-            'placeholder:text-whop-dark-gray/[50%] text-whop-black text-body1 bg-whop-background outline-none',
+            'placeholder:text-whop-dark-gray/[50%] text-whop-black text-text1 bg-whop-background outline-none',
             {
               'h-8': size === 'sm',
               'h-10': size === 'md',
@@ -170,12 +170,12 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(function Input(
           {messageIcon && (
             <Icon
               icon={helpMessage ? faInfoCircle : faExclamationCircle}
-              className="mt-1 h-3"
+              className="mt-px h-3"
             />
           )}
-          <Text as="div" variant="body2" className="flex-wrap">
+          <Typography as="div" variant="text5" className="flex-wrap">
             {errorMessage || helpMessage}
-          </Text>
+          </Typography>
         </div>
       )}
     </div>

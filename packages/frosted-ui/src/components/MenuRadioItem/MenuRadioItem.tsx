@@ -4,7 +4,7 @@ import type * as Radix from '@radix-ui/react-primitive';
 import React, { forwardRef } from 'react';
 import { cn } from '../../lib/classnames';
 import { Icon } from '../Icon';
-import { Text } from '../Text';
+import { Typography } from '../Typography';
 
 export const MenuRadioItem = forwardRef<
   React.ElementRef<typeof RadioItem>,
@@ -26,9 +26,9 @@ export const MenuRadioItem = forwardRef<
           <Icon icon={faCheck} />
         </ItemIndicator>
       </span>
-      <Text as="span" variant="body2">
+      <Typography as="span" variant="subtitle3">
         {children}
-      </Text>
+      </Typography>
     </RadioItem>
   );
 });

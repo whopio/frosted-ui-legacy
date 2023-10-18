@@ -9,7 +9,7 @@ import {
 import React, { forwardRef } from 'react';
 import { cn } from '../../lib/classnames';
 import { Icon } from '../Icon';
-import { Text } from '../Text';
+import { Typography } from '../Typography';
 
 export type SelectItemProps = {
   isDisabled?: boolean;
@@ -35,9 +35,9 @@ export const SelectItem = forwardRef<
       <ItemIndicator className="absolute left-3 text-sm">
         <Icon icon={faCheck} />
       </ItemIndicator>
-      <Text as="span" variant="body2" className="truncate">
+      <Typography as="span" variant="subtitle3" className="truncate">
         <ItemText>{textValue || children}</ItemText>
-      </Text>
+      </Typography>
     </Item>
   );
 });

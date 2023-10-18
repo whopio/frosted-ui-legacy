@@ -3,7 +3,7 @@ import { cn } from '../../lib/classnames';
 import type { IconDefinition } from '../../lib/icon-types';
 import type { ColorScheme } from '../../lib/shared-component-types';
 import { Icon } from '../Icon';
-import { Text } from '../Text';
+import { Typography } from '../Typography';
 
 export type TagColorScheme = Extract<
   ColorScheme,
@@ -38,9 +38,9 @@ export const Tag = ({
   rightIconClassName,
 }: TagProps) => {
   return (
-    <Text
+    <Typography
       as="div"
-      variant="button3"
+      variant="subtitle4"
       className={cn(
         'inline-flex w-auto items-center justify-center rounded px-1.5 h-[18px]',
         {
@@ -73,6 +73,6 @@ export const Tag = ({
           className={cn('ml-1 text-[14px]', rightIconClassName)}
         />
       )}
-    </Text>
+    </Typography>
   );
 };

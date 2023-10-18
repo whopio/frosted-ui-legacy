@@ -39,11 +39,6 @@ const preview: Preview = {
         date: /Date$/,
       },
     },
-    options: {
-      storySort: {
-        order: ['Design System', 'General', 'Forms'],
-      },
-    },
   },
 };
 

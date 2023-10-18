@@ -7,7 +7,7 @@ import { cn } from '../../lib/classnames';
 import { IconDefinition } from '../../lib/icon-types';
 import { Size } from '../../lib/shared-component-types';
 import { Icon } from '../Icon';
-import { Text } from '../Text';
+import { Typography } from '../Typography';
 
 export type HorizontalTabSize = Extract<Size, 'sm' | 'md'>;
 
@@ -63,13 +63,14 @@ export const HorizontalTabListItem = ({
                 )}
               />
             )}
-            <Text
+            <Typography
               as="span"
               variant={
                 (
                   {
-                    sm: 'button3',
-                    md: 'button2',
+                    sm: 'subtitle3',
+                    md: 'button3',
+                    lg: 'button2',
                   } as const
                 )[size]
               }
@@ -78,7 +79,7 @@ export const HorizontalTabListItem = ({
               })}
             >
               {children}
-            </Text>
+            </Typography>
 
             {rightElement && (
               <div

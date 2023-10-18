@@ -13,7 +13,7 @@ import {
   Size,
 } from '../../lib/shared-component-types';
 import { Icon } from '../Icon';
-import { Text } from '../Text';
+import { Typography } from '../Typography';
 
 export type ChipSize = Extract<Size, 'xs' | 'sm' | 'md'>;
 export const ChipSizes: { [key: string]: ChipSize } = {
@@ -252,14 +252,14 @@ export const Chip = ({
         })}
       />
 
-      <Text
+      <Typography
         as="div"
         variant={
           (
             {
-              xs: 'button3',
-              sm: 'button3',
-              md: 'button2',
+              xs: 'subtitle4',
+              sm: 'subtitle3',
+              md: 'button4',
             } as const
           )[size]
         }
@@ -308,7 +308,7 @@ export const Chip = ({
             )}
           />
         )}
-      </Text>
+      </Typography>
     </button>
   );
 };

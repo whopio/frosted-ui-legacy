@@ -6,7 +6,7 @@ import React, { ReactNode, useCallback } from 'react';
 import { cn } from '../../lib/classnames';
 import { IconButton } from '../IconButton';
 import { useModalContext } from '../ModalContext';
-import { Text } from '../Text';
+import { Typography } from '../Typography';
 
 export type ModalHeaderProps = {
   title: string | ReactNode;
@@ -28,15 +28,15 @@ export const ModalHeader = ({
   return (
     <div className="space-y-1.5 pb-6 pl-6 pr-12 pt-[18px]">
       <Dialog.Title as="div">
-        <Text
+        <Typography
           as="h2"
-          variant="h3"
+          variant="header4"
           className={cn('text-whop-black', {
             'text-center': centered,
           })}
         >
           {title}
-        </Text>
+        </Typography>
       </Dialog.Title>
 
       {closeButton && (
@@ -52,15 +52,15 @@ export const ModalHeader = ({
 
       {description && (
         <Dialog.Description as="div">
-          <Text
+          <Typography
             as="div"
-            variant="body2"
+            variant="paragraph3"
             className={cn('text-whop-dark-gray', {
               'text-center': centered,
             })}
           >
             {description}
-          </Text>
+          </Typography>
         </Dialog.Description>
       )}
     </div>
