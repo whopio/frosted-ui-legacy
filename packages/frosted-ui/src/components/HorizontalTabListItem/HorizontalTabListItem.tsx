@@ -7,7 +7,6 @@ import { cn } from '../../lib/classnames';
 import { IconDefinition } from '../../lib/icon-types';
 import { Size } from '../../lib/shared-component-types';
 import { Icon } from '../Icon';
-import { Typography } from '../Typography';
 
 export type HorizontalTabSize = Exclude<Size, 'xs' | 'xl'>;
 
@@ -64,24 +63,21 @@ export const HorizontalTabListItem = ({
                 )}
               />
             )}
-            <Typography
-              as="span"
-              variant={
-                (
-                  {
-                    sm: 'subtitle3',
-                    md: 'button3',
-                    lg: 'button2',
-                  } as const
-                )[size]
-              }
-              className={cn('text-whop-dark-gray z-[2]', {
-                'text-whop-black': selected,
-              })}
+            <span
+              className={cn(
+                'text-whop-dark-gray z-[2]',
+                {
+                  'text-whop-black': selected,
+                },
+                {
+                  'text-subtitle3': size === 'sm',
+                  'text-button3': size === 'md',
+                  'text-button2': size === 'lg',
+                },
+              )}
             >
               {children}
-            </Typography>
-
+            </span>
             {rightElement && (
               <div
                 className={cn('z-[2]', {

@@ -13,7 +13,6 @@ import {
   Size,
 } from '../../lib/shared-component-types';
 import { Icon } from '../Icon';
-import { Typography } from '../Typography';
 
 export type ChipSize = Size;
 export const ChipSizes: { [key: string]: ChipSize } = {
@@ -207,11 +206,11 @@ export const Chip = ({
             variant === 'blank' && colorScheme == 'white',
         },
         {
-          'h-6 px-[10px]': size === 'xs',
-          'h-8 px-[14px]': size === 'sm',
-          'h-10 px-[18px]': size === 'md',
-          'h-12 px-[22px]': size === 'lg',
-          'h-14 px-[26px]': size === 'xl',
+          'text-subtitle4 h-6 px-[10px]': size === 'xs',
+          'text-subtitle3 h-8 px-[14px]': size === 'sm',
+          'text-button4 h-10 px-[18px]': size === 'md',
+          'text-button2 h-12 px-[22px]': size === 'lg',
+          'text-button1 h-14 px-[26px]': size === 'xl',
         },
         {
           '!cursor-not-allowed': isDisabled || isLoading,
@@ -256,21 +255,8 @@ export const Chip = ({
         })}
       />
 
-      <Typography
-        as="div"
-        variant={
-          (
-            {
-              xs: 'subtitle4',
-              sm: 'subtitle3',
-              md: 'button4',
-              lg: 'button2',
-              xl: 'button1',
-            } as const
-          )[size]
-        }
-        className="flex items-center justify-center"
-      >
+      {/* Render children with a z-index of 10 so they are immune to the backdrop filter */}
+      <div className="z-10 flex items-center justify-center">
         {/* The loading icon is absolute positioned in the center of the box */}
         {isLoading && <Icon className="fa-spin absolute" icon={faSpinner} />}
 
@@ -318,7 +304,7 @@ export const Chip = ({
             )}
           />
         )}
-      </Typography>
+      </div>
     </button>
   );
 };

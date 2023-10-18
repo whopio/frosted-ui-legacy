@@ -5,7 +5,6 @@ import { motion } from 'framer-motion';
 import React, { Fragment } from 'react';
 import { cn } from '../../lib/classnames';
 import { PillTabItemProps } from '../PillTabGroup';
-import { Typography } from '../Typography';
 
 export const PillTabListItem = ({
   badge,
@@ -42,17 +41,11 @@ export const PillTabListItem = ({
           {badge && (
             <div className="bg-whop-primary z-[2] mr-2 h-2 w-2 rounded-full" />
           )}
-          <Typography as="span" variant="subtitle3" className="z-[2]">
-            {children}
-          </Typography>
+          <span className="text-subtitle3 z-[2]">{children}</span>
           {label && (
-            <Typography
-              as="div"
-              variant="text5"
-              className="text-whop-dark-gray z-[2] ml-2"
-            >
+            <div className="text-text5 text-whop-dark-gray z-[2] ml-2">
               {label}
-            </Typography>
+            </div>
           )}
         </div>
       )}

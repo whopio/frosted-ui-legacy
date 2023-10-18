@@ -8,7 +8,6 @@ import { ColorScheme } from '../../lib/shared-component-types';
 import { Button } from '../Button';
 import { Icon } from '../Icon';
 import { IconButton } from '../IconButton';
-import { Typography } from '../Typography';
 
 export type BannerColorScheme = Extract<
   ColorScheme,
@@ -58,9 +57,7 @@ export const Banner = ({
         onClick={onClick}
       >
         {showIcon && <Icon icon={icon} className="text-white" />}
-        <Typography as="p" variant="subtitle2" className="text-white">
-          {title}
-        </Typography>
+        <p className="text-subtitle2 text-white">{title}</p>
         <Button
           colorScheme="black"
           variant="elevated"

@@ -5,7 +5,6 @@ import { IconDefinition } from '../../lib/icon-types';
 import { Size } from '../../lib/shared-component-types';
 import { Button, ButtonProps } from '../Button';
 import { Icon } from '../Icon';
-import { Typography } from '../Typography';
 
 export type EmptyStateSize = Extract<Size, 'sm' | 'lg'>;
 export const EmptyStateSizes: { [key: string]: EmptyStateSize } = {
@@ -58,20 +57,22 @@ export const EmptyState = ({
           />
         </div>
         <div>
-          <Typography
-            as="p"
-            variant={size === 'sm' ? 'header4' : 'header3'}
-            className="text-whop-off-black"
+          <p
+            className={cn('text-whop-off-black', {
+              'text-header4': size === 'sm',
+              'text-header3': size === 'lg',
+            })}
           >
             {title}
-          </Typography>
-          <Typography
-            as="p"
-            variant={size === 'sm' ? 'paragraph3' : 'paragraph2'}
-            className="text-whop-dark-gray mt-1"
+          </p>
+          <p
+            className={cn('text-whop-dark-gray mt-1', {
+              'text-paragraph3': size === 'sm',
+              'text-paragraph2': size === 'lg',
+            })}
           >
             {description}
-          </Typography>
+          </p>
         </div>
         <div className="mx-auto flex w-full flex-col-reverse gap-2 sm:flex-row sm:justify-center">
           {secondaryButton && (

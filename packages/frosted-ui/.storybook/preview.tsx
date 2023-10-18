@@ -20,7 +20,7 @@ export const decorators = [
     themes: {
       light: 'light',
       darkOne: 'biz-dark-1',
-      darkTwo: 'biz-dark-2',
+      // darkTwo: 'biz-dark-2',
     },
     defaultTheme: 'light',
   }),

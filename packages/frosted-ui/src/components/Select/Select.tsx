@@ -31,7 +31,6 @@ import { Size } from '../../lib/shared-component-types';
 import { Icon } from '../Icon';
 import { Label, LabelProps } from '../Label';
 import { SelectItem, SelectItemProps } from '../SelectItem';
-import { Typography } from '../Typography';
 
 export type SelectSize = Extract<Size, 'sm' | 'md' | 'lg'>;
 export const SelectSizes: { [key: string]: SelectSize } = {
@@ -124,7 +123,7 @@ export const Select = forwardRef<
         >
           <Trigger
             className={cn(
-              'data-[placeholder]:text-whop-dark-gray/[50%] bg-whop-background text-whop-black inline-flex w-full min-w-[244px] select-none items-center justify-between rounded-md pl-3 shadow-sm',
+              'data-[placeholder]:text-whop-dark-gray/[50%] bg-whop-background text-whop-black text-text1 inline-flex w-full min-w-[244px] select-none items-center justify-between rounded-md pl-3 shadow-sm',
               'border-whop-stroke-dark focus:border-whop-field-highlight focus:ring-whop-field-highlight/30 border outline-none transition focus:outline-none focus:ring',
               'data-[disabled]:bg-whop-hover data-[disabled]:cursor-not-allowed data-[disabled]:opacity-75',
               className,
@@ -156,9 +155,9 @@ export const Select = forwardRef<
                 <Icon icon={leftIcon} />
               </IconPrimitive>
             )}
-            <Typography as="span" variant="text1" className="truncate">
+            <span className="truncate">
               <Value placeholder={placeholder} aria-label={value} />
-            </Typography>
+            </span>
             <IconPrimitive>
               <Icon
                 icon={faChevronDown}
@@ -227,9 +226,9 @@ export const Select = forwardRef<
                 className="mt-px h-3"
               />
             )}
-            <Typography as="div" variant="text5" className="flex-wrap">
+            <div className="text-text5 flex-wrap">
               {errorMessage || helpMessage}
-            </Typography>
+            </div>
           </div>
         )}
       </div>

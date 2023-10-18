@@ -3,7 +3,6 @@ import { cn } from '../../lib/classnames';
 import type { IconDefinition } from '../../lib/icon-types';
 import type { ColorScheme, Size } from '../../lib/shared-component-types';
 import { Icon } from '../Icon';
-import { Typography } from '../Typography';
 
 export type TagSize = Extract<Size, 'sm' | 'md'>;
 export const TagSizes: { [key: string]: TagSize } = {
@@ -46,14 +45,12 @@ export const Tag = ({
   rightIconClassName,
 }: TagProps) => {
   return (
-    <Typography
-      as="div"
-      variant={size === 'sm' ? 'subtitle4' : 'subtitle3'}
+    <div
       className={cn(
         'inline-flex w-auto items-center justify-center rounded px-1.5',
         {
-          'h-[18px]': size === 'sm',
-          'h-6': size === 'md',
+          'text-subtitle4 h-[18px]': size === 'sm',
+          'text-subtitle3 h-6': size === 'md',
         },
         {
           'bg-whop-field-highlight/[14%] text-whop-field-highlight':
@@ -85,6 +82,6 @@ export const Tag = ({
           className={cn('ml-1 text-[14px]', rightIconClassName)}
         />
       )}
-    </Typography>
+    </div>
   );
 };
