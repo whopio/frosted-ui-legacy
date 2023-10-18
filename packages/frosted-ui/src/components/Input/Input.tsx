@@ -10,10 +10,11 @@ import { Icon } from '../Icon';
 import { Label, LabelProps } from '../Label';
 import { Typography } from '../Typography';
 
-export type InputSize = Extract<Size, 'sm' | 'md'>;
+export type InputSize = Extract<Size, 'sm' | 'md' | 'lg'>;
 export const InputSizes: { [key: string]: InputSize } = {
   Small: 'sm',
   Medium: 'md',
+  Large: 'lg',
 };
 
 export interface InputProps
@@ -98,7 +99,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(function Input(
                   'text-whop-dark-gray/[75%] absolute top-1/2 h-4 -translate-y-1/2',
                   {
                     'h-[15px] w-[15px]': size === 'sm',
-                    'h-[16px] w-[16px]': size === 'md',
+                    'h-[16px] w-[16px]': size === 'md' || size === 'lg',
                   },
                   leftIconClassName,
                 )}
@@ -138,6 +139,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(function Input(
             {
               'h-8': size === 'sm',
               'h-10': size === 'md',
+              'h-12': size === 'lg',
             },
             { 'rounded-md': !className?.includes('rounded') },
             { 'w-full': !className?.includes('w-') },

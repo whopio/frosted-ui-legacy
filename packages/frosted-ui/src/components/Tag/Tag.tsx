@@ -1,9 +1,15 @@
 import React from 'react';
 import { cn } from '../../lib/classnames';
 import type { IconDefinition } from '../../lib/icon-types';
-import type { ColorScheme } from '../../lib/shared-component-types';
+import type { ColorScheme, Size } from '../../lib/shared-component-types';
 import { Icon } from '../Icon';
 import { Typography } from '../Typography';
+
+export type TagSize = Extract<Size, 'sm' | 'md'>;
+export const TagSizes: { [key: string]: TagSize } = {
+  Small: 'sm',
+  Medium: 'md',
+};
 
 export type TagColorScheme = Extract<
   ColorScheme,
@@ -21,6 +27,7 @@ export const TagColorSchemes: { [key: string]: TagColorScheme } = {
 export interface TagProps {
   text: string;
   colorScheme?: TagColorScheme;
+  size?: TagSize;
   rightIcon?: IconDefinition;
   leftIcon?: IconDefinition;
   className?: string;
@@ -31,6 +38,7 @@ export interface TagProps {
 export const Tag = ({
   text,
   colorScheme = 'purple',
+  size = 'sm',
   rightIcon,
   leftIcon,
   className,
@@ -40,9 +48,13 @@ export const Tag = ({
   return (
     <Typography
       as="div"
-      variant="subtitle4"
+      variant={size === 'sm' ? 'subtitle4' : 'subtitle3'}
       className={cn(
-        'inline-flex w-auto items-center justify-center rounded px-1.5 h-[18px]',
+        'inline-flex w-auto items-center justify-center rounded px-1.5',
+        {
+          'h-[18px]': size === 'sm',
+          'h-6': size === 'md',
+        },
         {
           'bg-whop-field-highlight/[14%] text-whop-field-highlight':
             colorScheme === 'purple',

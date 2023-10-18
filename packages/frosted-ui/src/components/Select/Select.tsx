@@ -33,10 +33,11 @@ import { Label, LabelProps } from '../Label';
 import { SelectItem, SelectItemProps } from '../SelectItem';
 import { Typography } from '../Typography';
 
-export type SelectSize = Extract<Size, 'sm' | 'md'>;
+export type SelectSize = Extract<Size, 'sm' | 'md' | 'lg'>;
 export const SelectSizes: { [key: string]: SelectSize } = {
   Small: 'sm',
   Medium: 'md',
+  Large: 'lg',
 };
 
 export type SelectProps = {
@@ -130,6 +131,7 @@ export const Select = forwardRef<
               {
                 'h-8': size === 'sm',
                 'h-10': size === 'md',
+                'h-12': size === 'lg',
               },
               {
                 'pl-[38px]': !!leftIcon,
@@ -147,7 +149,7 @@ export const Select = forwardRef<
                   'text-whop-dark-gray/[75%] pointer-events-none absolute left-3',
                   {
                     'text-[15px]': size === 'sm',
-                    'text-base': size === 'md',
+                    'text-base': size === 'md' || size === 'lg',
                   },
                 )}
               >

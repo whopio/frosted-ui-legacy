@@ -108,11 +108,13 @@ export const RadioCardItem = forwardRef<
             {
               'p-3': size === 'sm',
               'p-4': size === 'md',
+              'p-6': size === 'lg',
             },
             // Selected padding to prevent the content jump
             {
               'state-checked:p-[11px]': size === 'sm',
               'state-checked:p-[15px]': size === 'md',
+              'state-checked:p-[23px]': size === 'lg',
             },
             {
               'state-checked:border-whop-primary': colorScheme === 'brand',
@@ -137,6 +139,7 @@ export const RadioCardItem = forwardRef<
                 {
                   'h-4 w-4': size === 'sm',
                   'h-[18px] w-[18px]': size === 'md',
+                  'h-5 w-5': size === 'lg',
                 },
               )}
             >
@@ -146,6 +149,7 @@ export const RadioCardItem = forwardRef<
                   {
                     'after:h-1.5 after:w-1.5': size === 'sm',
                     'after:h-[6.75px] after:w-[6.75px]': size === 'md',
+                    'after:h-[7.5px] after:w-[7.5px]': size === 'lg',
                   },
                 )}
               />
@@ -167,11 +171,13 @@ export const RadioCardItem = forwardRef<
           {
             'p-3': size === 'sm',
             'p-4': size === 'md',
+            'p-6': size === 'lg',
           },
           // Selected padding to prevent the content jump
           {
             'state-checked:p-[11px]': size === 'sm',
             'state-checked:p-[15px]': size === 'md',
+            'state-checked:p-[23px]': size === 'lg',
           },
           {
             'state-checked:border-whop-primary': colorScheme === 'brand',
@@ -196,6 +202,7 @@ export const RadioCardItem = forwardRef<
               {
                 'h-4 w-4': size === 'sm',
                 'h-[18px] w-[18px]': size === 'md',
+                'h-5 w-5': size === 'lg',
               },
             )}
           >
@@ -205,6 +212,7 @@ export const RadioCardItem = forwardRef<
                 {
                   'after:h-1.5 after:w-1.5': size === 'sm',
                   'after:h-[6.75px] after:w-[6.75px]': size === 'md',
+                  'after:h-[7.5px] after:w-[7.5px]': size === 'lg',
                 },
               )}
             />
