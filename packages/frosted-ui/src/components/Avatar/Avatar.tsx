@@ -125,13 +125,13 @@ export const Avatar = forwardRef(function Avatar<C extends ElementType = 'img'>(
   );
 
   const imageSize = cn({
-    'w-4 h-4': size === 16,
-    'w-6 h-6': size === 24,
-    'w-8 h-8': size === 32,
+    'w-[16px] h-[16px]': size === 16,
+    'w-[24px] h-[24px]': size === 24,
+    'w-[32px] h-[32px]': size === 32,
     'w-[40px] h-[40px]': size === 40,
-    'w-12 h-12': size === 48,
-    'w-14 h-14': size === 56,
-    'w-16 h-16': size === 64,
+    'w-[48px] h-[48px]': size === 48,
+    'w-[56px] h-[56px]': size === 56,
+    'w-[64px] h-[64px]': size === 64,
     'w-[72px] h-[72px]': size === 72,
     'w-[80px] h-[80px]': size === 80,
     'w-[128px] h-[128px]': size === 128,
