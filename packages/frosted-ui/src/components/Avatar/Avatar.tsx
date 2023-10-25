@@ -128,12 +128,12 @@ export const Avatar = forwardRef(function Avatar<C extends ElementType = 'img'>(
     'w-4 h-4': size === 16,
     'w-6 h-6': size === 24,
     'w-8 h-8': size === 32,
-    'w-10 h-10': size === 40,
+    'w-[40px] h-[40px]': size === 40,
     'w-12 h-12': size === 48,
     'w-14 h-14': size === 56,
     'w-16 h-16': size === 64,
     'w-[72px] h-[72px]': size === 72,
-    'w-20 h-20': size === 80,
+    'w-[80px] h-[80px]': size === 80,
     'w-[128px] h-[128px]': size === 128,
   });
 
