@@ -54,6 +54,7 @@
 @import '../components/text-area.css';
 @import '../components/text-field.css';
 @import '../components/text.css';
+@import '../components/lab/toast.css';
 @import '../components/tooltip.css';
 
 @import './utilities/align-items.css';

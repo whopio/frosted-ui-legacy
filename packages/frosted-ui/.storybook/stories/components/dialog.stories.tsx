@@ -9,6 +9,7 @@ import {
   Table,
   Text,
   TextField,
+  toast,
 } from '../../../src/components';
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
@@ -65,12 +66,16 @@ export const Default: Story = {
 
         <Flex gap="3" mt="4" justify="end">
           <Dialog.Close>
-            <Button variant="soft" color="gray" onClick={() => alert('Cancel')}>
+            <Button
+              variant="soft"
+              color="gray"
+              onClick={() => toast.neutral('Cancel')}
+            >
               Cancel
             </Button>
           </Dialog.Close>
           <Dialog.Close>
-            <Button onClick={() => alert('Save')}>Save</Button>
+            <Button onClick={() => toast.success('Save')}>Save</Button>
           </Dialog.Close>
         </Flex>
       </Dialog.Content>

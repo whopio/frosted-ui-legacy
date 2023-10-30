@@ -41,6 +41,7 @@ export * from './progress.props';
 export { RadioGroup, RadioGroupItem, RadioGroupRoot } from './radio-group';
 export * from './radio-group.props';
 // export * from './radio-card-group';
+export { Toaster, toast } from './lab/toast';
 export {
   Select,
   SelectContent,
@@ -65,7 +66,6 @@ export {
   TextFieldSlot,
 } from './text-field';
 export * from './text-field.props';
-
 // OVERLAYS
 //------------------------------------------------------------------------------
 export {

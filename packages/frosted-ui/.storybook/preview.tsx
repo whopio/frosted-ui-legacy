@@ -1,6 +1,6 @@
 import type { Decorator, Preview } from '@storybook/react';
 import React from 'react';
-import { Theme } from '../src/theme';
+import { Theme, Toaster } from '../src';
 import '../styles.css';
 
 export const withTheme: Decorator = (Story, context) => {
@@ -22,6 +22,7 @@ export const withTheme: Decorator = (Story, context) => {
       scaling="100%"
     >
       <Story />
+      <Toaster />
       {/* <ThemePanel /> */}
     </Theme>
   );
