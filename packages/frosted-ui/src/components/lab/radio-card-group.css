@@ -1,0 +1,145 @@
+.rt-RadioCardGroupItem {
+  display: inline-block;
+}
+
+.rt-RadioCardGroupButton {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: var(--radio-card-padding);
+  border-radius: var(--radio-card-border-radius);
+  cursor: var(--cursor-radio);
+
+  &:where(:focus-visible) {
+    outline: 2px solid var(--color-focus-root);
+    outline-offset: 2px;
+  }
+}
+
+/***************************************************************************************************
+ *                                                                                                 *
+ * SIZES                                                                                           *
+ *                                                                                                 *
+ ***************************************************************************************************/
+
+@breakpoints {
+  .rt-RadioCardGroupRoot {
+    &:where(.rt-r-size-1) {
+      --radio-card-padding: var(--space-3);
+      --radio-card-border-radius: var(--radius-4);
+    }
+    &:where(.rt-r-size-2) {
+      --radio-card-padding: var(--space-4);
+      --radio-card-border-radius: var(--radius-4);
+    }
+    &:where(.rt-r-size-3) {
+      --radio-card-padding: var(--space-5);
+      --radio-card-border-radius: var(--radius-5);
+    }
+    &:where(.rt-r-size-4) {
+      --radio-card-padding: var(--space-6);
+      --radio-card-border-radius: var(--radius-5);
+    }
+    &:where(.rt-r-size-5) {
+      --radio-card-padding: var(--space-8);
+      --radio-card-border-radius: var(--radius-6);
+    }
+  }
+}
+
+/***************************************************************************************************
+ *                                                                                                 *
+ * VARIANTS                                                                                        *
+ *                                                                                                 *
+ ***************************************************************************************************/
+
+/* surface */
+
+.rt-RadioCardGroupRoot:where(.rt-variant-surface) {
+  --card-border-width: 1px;
+
+  :where(.rt-RadioCardGroupButton[data-state='unchecked']) {
+    background-color: var(--color-page-background);
+    --outline-color: var(--gray-a7);
+    box-shadow: inset 0 0 0 1px var(--outline-color);
+  }
+  :where(.rt-RadioCardGroupButton[data-state='checked']) {
+    background-color: var(--accent-3);
+    box-shadow: inset 0 0 0 1px var(--outline-color);
+    /* background-color: var(--accent-9);
+    color: var(--accent-9-contrast); */
+    --outline-color: var(--accent-a10);
+    color: var(--accent-12);
+  }
+  &:where(.rt-high-contrast)
+    :where(.rt-RadioCardGroupButton[data-state='checked']) {
+    --outline-color: var(--accent-a12);
+    /* color: var(--accent-1); */
+  }
+  & :where(.rt-RadioCardGroupButton[data-disabled]) {
+    /* box-shadow: inset 0 0 0 1px var(--gray-a6);
+    background-color: var(--gray-a3);
+    cursor: var(--cursor-disabled);
+    color: var(--gray-a8); */
+  }
+}
+
+/* classic */
+
+.rt-RadioCardGroupRoot:where(.rt-variant-classic) {
+  :where(.rt-RadioCardGroupButton[data-state='unchecked']) {
+    background-color: var(--color-panel);
+    box-shadow:
+      inset 0 0 0 1px var(--gray-7),
+      var(--shadow-1);
+  }
+  :where(.rt-RadioCardGroupButton[data-state='checked']) {
+    background-color: var(--accent-9);
+    background-image: linear-gradient(
+      to bottom,
+      var(--white-a3),
+      transparent,
+      var(--black-a3)
+    );
+    box-shadow:
+      inset 0 0.5px 0.5px var(--white-a4),
+      inset 0 -0.5px 0.5px var(--black-a4);
+    color: var(--accent-9-contrast);
+  }
+  &:where(.rt-high-contrast)
+    :where(.rt-RadioCardGroupButton[data-state='checked']) {
+    background-color: var(--accent-12);
+    color: var(--accent-1);
+  }
+  & :where(.rt-RadioCardGroupButton[data-disabled]) {
+    box-shadow: var(--shadow-1);
+    background-color: var(--gray-a3);
+    background-image: none;
+    cursor: var(--cursor-disabled);
+    color: var(--gray-a8);
+  }
+}
+
+/* soft */
+
+.rt-RadioCardGroupRoot:where(.rt-variant-soft) {
+  :where(.rt-RadioCardGroupButton) {
+    background-color: var(--accent-a5);
+  }
+  :where(.rt-RadioCardGroupButton[data-state='checked']) {
+    color: var(--accent-11);
+  }
+  &:where(.rt-high-contrast)
+    :where(.rt-RadioCardGroupButton[data-state='checked']) {
+    color: var(--accent-12);
+  }
+  & :where(.rt-RadioCardGroupButton:focus-visible) {
+    /* Use gray outline when component color is gray */
+    outline-color: var(--accent-a8);
+  }
+  & :where(.rt-RadioCardGroupButton[data-disabled]) {
+    background-color: var(--gray-a3);
+    cursor: var(--cursor-disabled);
+    color: var(--gray-a8);
+  }
+}
