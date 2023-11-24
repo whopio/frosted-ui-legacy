@@ -36,6 +36,14 @@ const usePrevious = (value: number) => {
   return ref.current;
 };
 
+export const HorizontalTabLayoutIdContext = React.createContext<
+  string | undefined
+>(undefined);
+
+export const useHorizontalTabLayoutId = () => {
+  return React.useContext(HorizontalTabLayoutIdContext);
+};
+
 /** Pass `defaultTab` as the index of the tab you want to open by default. */
 export const HorizontalTabGroup = ({
   children,
@@ -46,6 +54,7 @@ export const HorizontalTabGroup = ({
   size = 'md',
   wrapperClassName,
 }: HorizontalTabProps) => {
+  const layoutId = React.useId();
   const previousIndex = usePrevious(selectedIndex);
 
   return (
@@ -55,18 +64,20 @@ export const HorizontalTabGroup = ({
         selectedIndex={selectedIndex}
         onChange={setSelectedIndex}
       >
-        {items && (
-          <HorizontalTabList className={cn(wrapperClassName)}>
-            {items.map((item, index) => (
-              <HorizontalTabListItem
-                key={item?.label || index}
-                size={size}
-                {...item}
-              />
-            ))}
-          </HorizontalTabList>
-        )}
-        {children}
+        <HorizontalTabLayoutIdContext.Provider value={layoutId}>
+          {items && (
+            <HorizontalTabList className={cn(wrapperClassName)}>
+              {items.map((item, index) => (
+                <HorizontalTabListItem
+                  key={item?.label || index}
+                  size={size}
+                  {...item}
+                />
+              ))}
+            </HorizontalTabList>
+          )}
+          {children}
+        </HorizontalTabLayoutIdContext.Provider>
       </Tab.Group>
     </HorizontalTabContext.Provider>
   );

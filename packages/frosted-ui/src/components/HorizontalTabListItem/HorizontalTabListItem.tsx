@@ -6,6 +6,7 @@ import React, { Fragment, ReactNode } from 'react';
 import { cn } from '../../lib/classnames';
 import { IconDefinition } from '../../lib/icon-types';
 import { Size } from '../../lib/shared-component-types';
+import { useHorizontalTabLayoutId } from '../HorizontalTabGroup';
 import { Icon } from '../Icon';
 
 export type HorizontalTabSize = Exclude<Size, 'xs' | 'xl'>;
@@ -25,6 +26,8 @@ export const HorizontalTabListItem = ({
   children,
   size = 'md',
 }: HorizontalTabItemProps) => {
+  const layoutId = useHorizontalTabLayoutId();
+
   return (
     <Tab as={Fragment}>
       {({ selected }) => (
@@ -99,7 +102,7 @@ export const HorizontalTabListItem = ({
                   'h-[3px]': size === 'md' || size === 'lg',
                 },
               )}
-              layoutId="activeUnderline"
+              layoutId={layoutId}
               transition={{
                 duration: 0.15,
               }}
