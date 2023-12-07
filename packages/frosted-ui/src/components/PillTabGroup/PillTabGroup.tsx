@@ -23,6 +23,14 @@ export interface PillTabItemProps {
   fullWidth?: boolean;
 }
 
+export const PillTabLayoutIdContext = React.createContext<string | undefined>(
+  undefined,
+);
+
+export const usePillTabLayoutId = () => {
+  return React.useContext(PillTabLayoutIdContext);
+};
+
 /** Pass `tab` as the index of the tab you want to open by default. */
 export const PillTabGroup = ({
   children,
@@ -32,24 +40,27 @@ export const PillTabGroup = ({
   selectedIndex,
   setSelectedIndex,
 }: PillTabProps) => {
+  const layoutId = React.useId();
   return (
     <Tab.Group
       defaultIndex={defaultTab}
       selectedIndex={selectedIndex}
       onChange={setSelectedIndex}
     >
-      {items && (
-        <PillTabList fullWidth={fullWidth}>
-          {items.map((item, index) => (
-            <PillTabListItem
-              key={item?.label || index}
-              fullWidth={fullWidth}
-              {...item}
-            />
-          ))}
-        </PillTabList>
-      )}
-      {children}
+      <PillTabLayoutIdContext.Provider value={layoutId}>
+        {items && (
+          <PillTabList fullWidth={fullWidth}>
+            {items.map((item, index) => (
+              <PillTabListItem
+                key={item?.label || index}
+                fullWidth={fullWidth}
+                {...item}
+              />
+            ))}
+          </PillTabList>
+        )}
+        {children}
+      </PillTabLayoutIdContext.Provider>
     </Tab.Group>
   );
 };

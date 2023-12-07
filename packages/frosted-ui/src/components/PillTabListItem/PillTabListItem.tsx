@@ -4,7 +4,7 @@ import { Tab } from '@headlessui/react';
 import { motion } from 'framer-motion';
 import React, { Fragment } from 'react';
 import { cn } from '../../lib/classnames';
-import { PillTabItemProps } from '../PillTabGroup';
+import { PillTabItemProps, usePillTabLayoutId } from '../PillTabGroup';
 
 export const PillTabListItem = ({
   badge,
@@ -14,6 +14,8 @@ export const PillTabListItem = ({
   selectedClassName,
   fullWidth = false,
 }: PillTabItemProps) => {
+  const layoutId = usePillTabLayoutId();
+
   return (
     <Tab as={Fragment}>
       {({ selected }) => (
@@ -32,7 +34,7 @@ export const PillTabListItem = ({
                 'border-whop-stroke bg-whop-background absolute inset-0 z-[1] flex items-center justify-center rounded-full border-[0.5px]',
                 selectedClassName,
               )}
-              layoutId="active"
+              layoutId={layoutId}
               transition={{
                 duration: 0.15,
               }}
