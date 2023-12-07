@@ -1,6 +1,6 @@
 # Welcome to Frosted UI
 
-Frosted is the design system used and and built by [Whop](https://whop.com). 
+Frosted is the design system used and and built by [Whop](https://whop.com).
 
 ## Getting Started
 
@@ -13,6 +13,7 @@ Frosted is the design system used and and built by [Whop](https://whop.com).
 ### Installation
 
 Install package:
+
 ```zsh
 npm i @whop/frosted-ui
 ```
@@ -47,4 +48,4 @@ export default function App({ Component, pageProps }: AppProps) {
 }
 ```
 
-That's it! You're ready to use Frosted UI. Checkout the [documentation](https://storybook.whop.com) for more information about the components.
+That's it! You're ready to use Frosted UI. Checkout the [documentation](https://storybook-legacy.whop.com) for more information about the components.
