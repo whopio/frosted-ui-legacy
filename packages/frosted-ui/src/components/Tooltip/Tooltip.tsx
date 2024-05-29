@@ -2,12 +2,12 @@
 
 import { faInfoCircle } from '@fortawesome/free-solid-svg-icons';
 import {
-  Content,
-  Portal,
-  TooltipProps as RadixTooltipProps,
-  Root,
-  TooltipContentProps,
-  Trigger,
+    Content,
+    Portal,
+    TooltipProps as RadixTooltipProps,
+    Root,
+    TooltipContentProps,
+    Trigger,
 } from '@radix-ui/react-tooltip';
 import React, { ElementType, ReactNode, forwardRef } from 'react';
 import { cn } from '../../lib/classnames';
@@ -98,6 +98,7 @@ export const Tooltip = forwardRef<
             'text-whop-gray focus:outline-none cursor-default inline-block',
             buttonClassName,
           )}
+          onClick={() => onOpenChange(!open)}
           asChild
         >
           <div>
