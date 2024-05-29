@@ -98,7 +98,7 @@ export const Tooltip = forwardRef<
             'text-whop-gray focus:outline-none cursor-default inline-block',
             buttonClassName,
           )}
-          onClick={() => onOpenChange(!open)}
+          onClick={() => onOpenChange?.(!open)}
           asChild
         >
           <div>
