@@ -45,9 +45,6 @@ importers:
 
   packages/frosted-ui:
     dependencies:
-      '@fortawesome/fontawesome-common-types':
-        specifier: ^6.5.2
-        version: 6.5.2
       '@fortawesome/free-solid-svg-icons':
         specifier: ^6.4.0
         version: 6.4.0
@@ -2103,12 +2100,6 @@ packages:
 
   /@fortawesome/fontawesome-common-types@6.4.0:
     resolution: {integrity: sha512-HNii132xfomg5QVZw0HwXXpN22s7VBHQBv9CeOu9tfJnhsWQNd2lmTNi8CSrnw5B+5YOmzu1UoPAyxaXsJ6RgQ==}
-    engines: {node: '>=6'}
-    requiresBuild: true
-    dev: false
-
-  /@fortawesome/fontawesome-common-types@6.5.2:
-    resolution: {integrity: sha512-gBxPg3aVO6J0kpfHNILc+NMhXnqHumFxOmjYCFfOiLZfwhnnfhtsdA2hfJlDnj+8PjAs6kKQPenOTKj3Rf7zHw==}
     engines: {node: '>=6'}
     requiresBuild: true
     dev: false
