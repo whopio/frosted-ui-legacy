@@ -1,11 +1,10 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 'use client';
 
-import {
-  faCaretDown,
-  faCaretUp,
-  faSort,
-} from '@fortawesome/free-solid-svg-icons';
+import { faCaretDown } from '@fortawesome/free-solid-svg-icons/faCaretDown';
+import { faCaretUp } from '@fortawesome/free-solid-svg-icons/faCaretUp';
+import { faSort } from '@fortawesome/free-solid-svg-icons/faSort';
+
 import {
   ColumnDef,
   PaginationState,
@@ -178,7 +177,7 @@ export const Table = <Data extends object>({
                                 className: cn(
                                   'flex items-center text-whop-black',
                                   header.column.getCanSort() &&
-                                    'cursor-pointer select-none',
+                                  'cursor-pointer select-none',
                                   (
                                     header.column.columnDef.meta as any
                                   )?.classNames.join(' '),
@@ -257,9 +256,9 @@ export const Table = <Data extends object>({
                         {header.isPlaceholder
                           ? null
                           : flexRender(
-                              header.column.columnDef.footer,
-                              header.getContext(),
-                            )}
+                            header.column.columnDef.footer,
+                            header.getContext(),
+                          )}
                       </th>
                     ))}
                   </tr>

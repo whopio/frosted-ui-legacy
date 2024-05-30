@@ -1,10 +1,8 @@
 'use client';
 
-import {
-  faChevronLeft,
-  faChevronRight,
-  faEllipsis,
-} from '@fortawesome/free-solid-svg-icons';
+import { faChevronLeft } from '@fortawesome/free-solid-svg-icons/faChevronLeft';
+import { faChevronRight } from '@fortawesome/free-solid-svg-icons/faChevronRight';
+import { faEllipsis } from '@fortawesome/free-solid-svg-icons/faEllipsis';
 import React, {
   ButtonHTMLAttributes,
   useCallback,

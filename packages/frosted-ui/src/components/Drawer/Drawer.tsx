@@ -1,6 +1,6 @@
 'use client';
 
-import { faXmark } from '@fortawesome/free-solid-svg-icons';
+import { faXmark } from '@fortawesome/free-solid-svg-icons/faXmark';
 import { Dialog, Transition } from '@headlessui/react';
 import React, { Fragment, ReactNode, useCallback } from 'react';
 import { cn } from '../../lib/classnames';

@@ -1,9 +1,7 @@
-import {
-  faEllipsis,
-  faPencil,
-  faStar,
-  faTrash,
-} from '@fortawesome/free-solid-svg-icons';
+import { faEllipsis } from '@fortawesome/free-solid-svg-icons/faEllipsis';
+import { faPencil } from '@fortawesome/free-solid-svg-icons/faPencil';
+import { faStar } from '@fortawesome/free-solid-svg-icons/faStar';
+import { faTrash } from '@fortawesome/free-solid-svg-icons/faTrash';
 import type { Meta, StoryObj } from '@storybook/react';
 import * as React from 'react';
 import { IconButton } from '../IconButton';

@@ -1,4 +1,5 @@
-import { faTShirt, faTruckFast } from '@fortawesome/free-solid-svg-icons';
+import { faTshirt } from '@fortawesome/free-solid-svg-icons/faTShirt';
+import { faTruckFast } from '@fortawesome/free-solid-svg-icons/faTruckFast';
 import type { Meta, StoryObj } from '@storybook/react';
 import * as React from 'react';
 import { Button } from '../Button';
@@ -148,7 +149,7 @@ export const CustomizedProps: Story = {
       children: (
         <form className="space-y-4">
           <Select
-            leftIcon={faTShirt}
+            leftIcon={faTshirt}
             label={{
               children: 'What is your size?',
               tooltip: { description: 'We carry unisex sizes.' },

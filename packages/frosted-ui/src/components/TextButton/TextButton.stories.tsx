@@ -1,4 +1,4 @@
-import { faHandPointRight } from '@fortawesome/free-solid-svg-icons';
+import { faHandPointRight } from '@fortawesome/free-solid-svg-icons/faHandPointRight';
 import type { Meta, StoryObj } from '@storybook/react';
 import React from 'react';
 import { cn } from '../../lib/classnames';

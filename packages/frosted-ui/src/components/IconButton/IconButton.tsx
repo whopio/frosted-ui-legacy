@@ -1,4 +1,4 @@
-import { faSpinner } from '@fortawesome/free-solid-svg-icons';
+import { faSpinner } from '@fortawesome/free-solid-svg-icons/faSpinner';
 import React, {
   ButtonHTMLAttributes,
   FormEventHandler,
@@ -49,18 +49,18 @@ type IconButtonColorScheme = Exclude<
   'blue' | 'gray' | 'light-gray' | 'off-black' | 'gold-gradient'
 >;
 export const IconButtonColorSchemes: { [key: string]: IconButtonColorScheme } =
-  {
-    Brand: 'brand',
-    Black: 'black',
-    White: 'white',
-    'Dark Gray': 'dark-gray',
-    Purple: 'purple',
-    'Success Green': 'success-green',
-    'Warning Yellow': 'warning-yellow',
-    'Error Red': 'error-red',
-    'Discord Purple': 'discord-purple',
-    'Twitter Blue': 'twitter-blue',
-  };
+{
+  Brand: 'brand',
+  Black: 'black',
+  White: 'white',
+  'Dark Gray': 'dark-gray',
+  Purple: 'purple',
+  'Success Green': 'success-green',
+  'Warning Yellow': 'warning-yellow',
+  'Error Red': 'error-red',
+  'Discord Purple': 'discord-purple',
+  'Twitter Blue': 'twitter-blue',
+};
 
 const hasShadow = (variant: string) => variant === 'elevated';
 

@@ -1,4 +1,4 @@
-import { faPlus } from '@fortawesome/free-solid-svg-icons';
+import { faPlus } from '@fortawesome/free-solid-svg-icons/faPlus';
 import type { Meta, StoryObj } from '@storybook/react';
 import React from 'react';
 import { EmptyState, EmptyStateSizes } from './EmptyState';

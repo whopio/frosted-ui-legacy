@@ -1,4 +1,6 @@
-import { faFire, faStar, faTrophy } from '@fortawesome/free-solid-svg-icons';
+import { faFire } from '@fortawesome/free-solid-svg-icons/faFire';
+import { faStar } from '@fortawesome/free-solid-svg-icons/faStar';
+import { faTrophy } from '@fortawesome/free-solid-svg-icons/faTrophy';
 import type { Meta, StoryObj } from '@storybook/react';
 import React from 'react';
 import { Badge } from '../Badge';

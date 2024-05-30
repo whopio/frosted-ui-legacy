@@ -1,11 +1,9 @@
 'use client';
 
-import {
-  faChevronDown,
-  faChevronUp,
-  faExclamationCircle,
-  faInfoCircle,
-} from '@fortawesome/free-solid-svg-icons';
+import { faChevronDown } from '@fortawesome/free-solid-svg-icons/faChevronDown';
+import { faChevronUp } from '@fortawesome/free-solid-svg-icons/faChevronUp';
+import { faExclamationCircle } from '@fortawesome/free-solid-svg-icons/faExclamationCircle';
+import { faInfoCircle } from '@fortawesome/free-solid-svg-icons/faInfoCircle';
 import type * as Radix from '@radix-ui/react-primitive';
 import {
   Content,
@@ -196,8 +194,8 @@ export const Select = forwardRef<
               <Viewport>
                 {items
                   ? items.map((item) => (
-                      <SelectItem key={item.value} {...item} />
-                    ))
+                    <SelectItem key={item.value} {...item} />
+                  ))
                   : children}
               </Viewport>
               <ScrollDownButton className="flex justify-center">

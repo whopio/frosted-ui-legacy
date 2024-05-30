@@ -1,13 +1,13 @@
 'use client';
 
-import { faInfoCircle } from '@fortawesome/free-solid-svg-icons';
+import { faInfoCircle } from '@fortawesome/free-solid-svg-icons/faInfoCircle';
 import {
-    Content,
-    Portal,
-    TooltipProps as RadixTooltipProps,
-    Root,
-    TooltipContentProps,
-    Trigger,
+  Content,
+  Portal,
+  TooltipProps as RadixTooltipProps,
+  Root,
+  TooltipContentProps,
+  Trigger,
 } from '@radix-ui/react-tooltip';
 import React, { ElementType, ReactNode, forwardRef } from 'react';
 import { cn } from '../../lib/classnames';

@@ -1,4 +1,4 @@
-import { faFileArrowUp } from '@fortawesome/free-solid-svg-icons';
+import { faFileArrowUp } from '@fortawesome/free-solid-svg-icons/faFileArrowUp';
 import type { Meta, StoryObj } from '@storybook/react';
 import { Dropzone } from './Dropzone';
 

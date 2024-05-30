@@ -1,4 +1,5 @@
-import { faLightbulb, faXmark } from '@fortawesome/free-solid-svg-icons';
+import { faLightbulb } from '@fortawesome/free-solid-svg-icons/faLightbulb';
+import { faXmark } from '@fortawesome/free-solid-svg-icons/faXmark';
 import React, { ElementType, ReactNode } from 'react';
 import { cn } from '../../lib/classnames';
 import { IconDefinition } from '../../lib/icon-types';
@@ -118,8 +119,8 @@ export const AlertBanner = ({
                 variant === 'default'
                   ? 'white'
                   : colorScheme === 'gray'
-                  ? 'dark-gray'
-                  : colorScheme
+                    ? 'dark-gray'
+                    : colorScheme
               }
               className={cn('min-[400px]:hidden mt-2')}
             />
@@ -135,8 +136,8 @@ export const AlertBanner = ({
               variant === 'default'
                 ? 'white'
                 : colorScheme === 'gray'
-                ? 'dark-gray'
-                : colorScheme
+                  ? 'dark-gray'
+                  : colorScheme
             }
             className={cn('max-[399px]:hidden absolute top-3 right-3.5')}
           />
@@ -149,10 +150,10 @@ export const AlertBanner = ({
               variant === 'default'
                 ? 'white'
                 : colorScheme === 'light-gray'
-                ? 'dark-gray'
-                : colorScheme === 'gray'
-                ? 'dark-gray'
-                : colorScheme
+                  ? 'dark-gray'
+                  : colorScheme === 'gray'
+                    ? 'dark-gray'
+                    : colorScheme
             }
             {...closeButtonProps}
             className={cn(

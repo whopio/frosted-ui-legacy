@@ -1,4 +1,4 @@
-import { faLightbulb } from '@fortawesome/free-solid-svg-icons';
+import { faLightbulb } from '@fortawesome/free-solid-svg-icons/faLightbulb';
 import type { Meta, StoryObj } from '@storybook/react';
 import React from 'react';
 import {

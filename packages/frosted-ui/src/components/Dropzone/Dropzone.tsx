@@ -1,9 +1,7 @@
 'use client';
 
-import {
-  faArrowUpFromBracket,
-  faFile,
-} from '@fortawesome/free-solid-svg-icons';
+import { faArrowUpFromBracket } from '@fortawesome/free-solid-svg-icons/faArrowUpFromBracket';
+import { faFile } from '@fortawesome/free-solid-svg-icons/faFile';
 import React from 'react';
 import {
   Accept,
@@ -115,8 +113,8 @@ export const Dropzone = ({
         {errorMessage
           ? errorMessage
           : fileTypesAccepted && (
-              <>Please use {formatFileExtensions(fileTypesAccepted)}</>
-            )}
+            <>Please use {formatFileExtensions(fileTypesAccepted)}</>
+          )}
         {fileSizeLimit && !isDragReject && !hasFileRejections && (
           <> Max {fileSizeLimit}.</>
         )}

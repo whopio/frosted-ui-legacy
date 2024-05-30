@@ -1,7 +1,5 @@
-import {
-  faExclamationCircle,
-  faInfoCircle,
-} from '@fortawesome/free-solid-svg-icons';
+import { faExclamationCircle } from '@fortawesome/free-solid-svg-icons/faExclamationCircle';
+import { faInfoCircle } from '@fortawesome/free-solid-svg-icons/faInfoCircle';
 import React, { InputHTMLAttributes, ReactNode, forwardRef } from 'react';
 import { cn } from '../../lib/classnames';
 import { IconDefinition } from '../../lib/icon-types';

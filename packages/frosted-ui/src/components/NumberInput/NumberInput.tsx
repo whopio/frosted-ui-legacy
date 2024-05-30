@@ -1,11 +1,9 @@
 'use client';
 
-import {
-  faCaretDown,
-  faCaretUp,
-  faPercent,
-  faUsd,
-} from '@fortawesome/free-solid-svg-icons';
+import { faCaretDown } from '@fortawesome/free-solid-svg-icons/faCaretDown';
+import { faCaretUp } from '@fortawesome/free-solid-svg-icons/faCaretUp';
+import { faPercent } from '@fortawesome/free-solid-svg-icons/faPercent';
+import { faUsd } from '@fortawesome/free-solid-svg-icons/faUsd';
 import React, {
   ChangeEvent,
   ChangeEventHandler,
@@ -111,8 +109,8 @@ export const NumberInput = ({
           variant === 'percent'
             ? faPercent
             : variant === 'price'
-            ? faUsd
-            : undefined
+              ? faUsd
+              : undefined
         }
         size={size}
         rightElementSlot={

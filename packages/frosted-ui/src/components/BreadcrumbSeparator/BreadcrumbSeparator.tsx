@@ -1,6 +1,6 @@
 'use client';
 
-import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
+import { faChevronRight } from '@fortawesome/free-solid-svg-icons/faChevronRight';
 import React from 'react';
 import { Icon } from '../Icon';
 

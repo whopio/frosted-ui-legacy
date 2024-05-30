@@ -1,6 +1,6 @@
 'use client';
 
-import { faEllipsis } from '@fortawesome/free-solid-svg-icons';
+import { faEllipsis } from '@fortawesome/free-solid-svg-icons/faEllipsis';
 import React from 'react';
 import { Icon } from '../Icon';
 

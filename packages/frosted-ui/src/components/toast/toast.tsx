@@ -1,6 +1,6 @@
 'use client';
 
-import { faXmark } from '@fortawesome/free-solid-svg-icons';
+import { faXmark } from '@fortawesome/free-solid-svg-icons/faXmark';
 import React from 'react';
 import { ToastBar, toast, type Toast } from 'react-hot-toast';
 import { IconButton } from '../IconButton';

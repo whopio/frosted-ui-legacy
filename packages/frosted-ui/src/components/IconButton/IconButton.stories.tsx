@@ -1,4 +1,4 @@
-import { faEllipsisVertical } from '@fortawesome/free-solid-svg-icons';
+import { faEllipsisVertical } from '@fortawesome/free-solid-svg-icons/faEllipsisVertical';
 import type { Meta, StoryObj } from '@storybook/react';
 import React from 'react';
 import { cn } from '../../lib/classnames';

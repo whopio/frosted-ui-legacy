@@ -1,6 +1,6 @@
 'use client';
 
-import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons/faArrowRight';
 import React, {
   ButtonHTMLAttributes,
   ElementType,
@@ -47,15 +47,15 @@ export type TextButtonColorScheme = Extract<
   | 'warning-yellow'
 >;
 export const TextButtonColorSchemes: { [key: string]: TextButtonColorScheme } =
-  {
-    Black: 'black',
-    'Dark Gray': 'dark-gray',
-    Purple: 'purple',
-    White: 'white',
-    'Success Green': 'success-green',
-    'Warning Yellow': 'warning-yellow',
-    'Error Red': 'error-red',
-  };
+{
+  Black: 'black',
+  'Dark Gray': 'dark-gray',
+  Purple: 'purple',
+  White: 'white',
+  'Success Green': 'success-green',
+  'Warning Yellow': 'warning-yellow',
+  'Error Red': 'error-red',
+};
 
 export interface TextButtonDefaultProps
   extends Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'type' | 'disabled'> {
