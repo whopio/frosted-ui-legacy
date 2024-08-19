@@ -246,7 +246,6 @@ export const CodeInput = forwardRef<AuthCodeRef, AuthCodeProps>(
         Array(length)
           .fill(0)
           .map((_, i) => (el: HTMLInputElement) => {
-            console.log(el);
             inputsRef.current[i] = el;
           }),
       [length],
