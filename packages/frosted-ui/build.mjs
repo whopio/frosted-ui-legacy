@@ -70,11 +70,9 @@ async function transformSingle(file) {
     isModule: true,
   });
 
-  const srcName = basename(file);
-  const srcDir = dirname(file);
-  const relativeDir = relative('./src', srcDir);
-  const distName = srcName.replace(/\.tsx?$/, '.js');
-  const distPath = join('./dist', relativeDir, distName);
+  const relativeDir = relative('./src', dirname(file));
+  const distFileName = basename(file).replace(/\.tsx?$/, '.js');
+  const distPath = join('./dist', relativeDir, distFileName);
 
   await outputFile(distPath, output.code);
 }
