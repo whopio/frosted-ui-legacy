@@ -99,6 +99,7 @@ export const Tooltip = forwardRef<
             buttonClassName,
           )}
           asChild
+          onClick={() => onOpenChange?.(!open)}
         >
           <div>
             {children || <Icon icon={faInfoCircle} className="h-3 w-3" />}
