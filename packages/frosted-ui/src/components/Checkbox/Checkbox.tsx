@@ -60,11 +60,6 @@ export const Checkbox = ({
 }: CheckboxProps & Omit<RadixCheckboxProps, 'disabled' | 'id'>) => {
   const defaultId = useId();
 
-  console.log({
-    checked,
-    defaultChecked,
-    shouldShow: checked === true || defaultChecked === true,
-  });
   return (
     <div className={cn('flex items-center', wrapperClassName)}>
       <Root
